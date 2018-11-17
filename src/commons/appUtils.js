@@ -34,7 +34,9 @@ exports.checkIfLoggedIn = function checkIfLoggedIn(app) {
 exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) {
   const swipeArea = document.getElementsByClassName('swipe-area')[0];
   const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
+  const headerText = document.getElementsByClassName('header-text')[0];
   if (isWide) {
+    if (headerText !== undefined) headerText.style.fontSize = '38px';
     if (drawer !== null && drawer !== undefined) {
       if (app.contentWidth === '0px') { app.contentWidth = '182px'; }
       drawer.style.display = 'block';
@@ -42,7 +44,10 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
       drawerParent.css('display', 'block');
       mobileMenuToggle.style.display = 'none';
     }
-  } else { app.contentWidth = '0px'; }
+  } else {
+    if (headerText !== undefined) headerText.style.fontSize = '24px';
+    app.contentWidth = '0px';
+  }
   const mainP = document.getElementsByClassName('main-panel')[0];
   if (mainP !== null && mainP !== undefined) {
     mainP.style.marginRight = app.contentWidth;

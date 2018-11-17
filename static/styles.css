@@ -201,6 +201,20 @@ audio::-webkit-media-controls-panel {
   background-color: #1e90ff;
 }
 
+.sideNavTopLogo {
+  width: 90px;
+  margin-right: 0;
+  margin-top: 1px
+}
+
+.subTitle {
+  max-width: 80%;
+  font-weight: bold;
+  font-size: 16px;
+  color: #999999;
+  font-family: 'Trebuchet MS', 'ChivoBlack', Arial, Helvetica, sans-serif
+}
+
 .answer {
   margin-bottom: 1em;
   font-style: italic;

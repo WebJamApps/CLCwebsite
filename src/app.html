@@ -2,9 +2,8 @@
   <div class="page-host">
     <div class="${currentStyles.sidebarClass} drawer-container" style="display:none">
       <div class="drawer" style="background-color: #c0c0c0">
-        <div if.bind="fullmenu" class="navImage">
-          <img alt="wjsidelogo" id="webjamwidelogo" src="${currentStyles.sidebarImagePath}" style="width:182px; margin-right:0" if.bind="Menu !== 'charity' && Menu !== 'volunteer' && Menu !== 'ohaf' && role !== 'Charity' && role !=='Volunteer'">
-          <img alt="ohafwidelogo" id="ohafbutterflies" src="${currentStyles.sidebarImagePath}" style="width:182px; margin-right:0; margin-top:-4px" if.bind="Menu === 'charity' || Menu === 'volunteer' || Menu === 'ohaf' || role === 'Charity' || role ==='Volunteer'">
+        <div style="text-align:center; margin:auto;width:182px;background-color:white">
+          <img alt="lutherRose" class="sideNavTopLogo" src="https://dl.dropboxusercontent.com/s/1y33gwwx35m8qgh/Lutherrose.svg?dl=0">
         </div>
         <div if.bind="!fullmenu && (Menu !== 'charity' && Menu !== 'volunteer' && Menu !== 'ohaf' && role !== 'Charity' && role !=='Volunteer')" style="background-color:#2a222a;width:50px;height:91px" class="navImage">
         </div>
@@ -36,7 +35,7 @@
           </div>
           <div class="menu-item" if.bind="(Menu !='wj' && currentRouteFrag !='/dashboard/charity' && currentRouteFrag !='/dashboard/volunteer' && currentRouteFrag !='/dashboard/librarian' && currentRouteFrag !='/dashboard/reader' && currentRouteFrag !='/dashboard/user-account')|| currentRoute=='login' || currentRoute=='register' || currentRoute=='sc2rs'">
             <a paper-drawer-toggle href="/" class="nav-link" click.delegate="close()">
-              <span class="fas fa-arrows"></span>
+              <span class="fa fa-arrows"></span>
               <span class="nav-item" if.bind="fullmenu">CLC</span>
             </a>
           </div>
@@ -57,16 +56,13 @@
         <div class="swipe-area"></div>
         <div class="material-header ${currentStyles.headerClass}">
           <div if.bind="Menu !== 'charity' && Menu !== 'volunteer' && Menu !== 'ohaf' && role !== 'Charity' && role !=='Volunteer'" class="headercontent">
-
           </div>
-
           <div>
             <div style="margin-left:15px; margin-top:-8px">
               <h2 class="header-text" style="margin-bottom:0">College Lutheran Church</h2>
-              <p style="font-weight:bold;font-size:16px;color:#999999;font-family:'Trebuchet MS','ChivoBlack',Arial,Helvetica,sans-serif">We celebrate God's grace and share His love in Christ!</p>
+              <p class="subTitle">We celebrate God's grace and share His love in Christ!</p>
             </div>
           </div>
-
         </div>
         <div style="width:auto;" class="content-block">
           <router-view></router-view>

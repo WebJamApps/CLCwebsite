@@ -95,14 +95,6 @@ export class App {
       {
         route: 'login', name: 'login', moduleId: PLATFORM.moduleName('./login'), nav: false, title: 'Login', settings: 'fa fa-sign-in'
       },
-      // {
-      //   route: 'react-example',
-      //   name: 'react-example',
-      //   moduleId: PLATFORM.moduleName('./react-example'),
-      //   nav: false,
-      //   title: 'React Example',
-      //   settings: ''
-      // },
       {
         route: 'register', name: 'register', moduleId: PLATFORM.moduleName('./register'), nav: false, title: 'Register', settings: 'fa fa-user-plus'
       },
