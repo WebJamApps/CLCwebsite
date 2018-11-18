@@ -35,8 +35,12 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
   const swipeArea = document.getElementsByClassName('swipe-area')[0];
   const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
   const headerText = document.getElementsByClassName('header-text')[0];
+  const subT = document.getElementsByClassName('subTitle')[0];
   if (isWide) {
-    if (headerText !== undefined) headerText.style.fontSize = '38px';
+    if (headerText !== undefined) {
+      headerText.style.fontSize = '34px';
+      subT.style.maxWidth = '100%';
+    }
     if (drawer !== null && drawer !== undefined) {
       if (app.contentWidth === '0px') { app.contentWidth = '182px'; }
       drawer.style.display = 'block';
@@ -45,7 +49,10 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
       mobileMenuToggle.style.display = 'none';
     }
   } else {
-    if (headerText !== undefined) headerText.style.fontSize = '24px';
+    if (headerText !== undefined) {
+      headerText.style.fontSize = '24px';
+      subT.style.maxWidth = '80%';
+    }
     app.contentWidth = '0px';
   }
   const mainP = document.getElementsByClassName('main-panel')[0];

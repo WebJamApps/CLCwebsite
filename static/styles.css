@@ -133,6 +133,14 @@ tbody.regformtbody tr:nth-child(odd) {
   background-color: white;
 }
 
+tr:nth-child(odd).formatting {
+  background-color: transparent;
+}
+
+tbody.formatting tr:nth-child(odd) {
+  background-color: transparent;
+}
+
 th, td {
   border-collapse: collapse;
   border: 1px solid #777;
@@ -210,7 +218,7 @@ audio::-webkit-media-controls-panel {
 .subTitle {
   max-width: 80%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
   color: #999999;
   font-family: 'Trebuchet MS', 'ChivoBlack', Arial, Helvetica, sans-serif
 }
@@ -301,7 +309,7 @@ audio::-webkit-media-controls-panel {
 
 .header-text {
   color: white;
-  font-size: 38px;
+  font-size: 30px;
   font-family: 'TrajanProRegular', Times, 'Times New Roman', serif
 }
 
@@ -380,7 +388,7 @@ audio::-webkit-media-controls-panel {
 .material-header {
   margin-left: auto;
   min-height: 88px;
-  background-color: #2d72ac;
+  background-color: #244a8bff;
   margin-bottom: auto;
 }
 
