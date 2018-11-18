@@ -1,29 +1,33 @@
 <template>
   <div class="page-content">
     <a id="top"></a>
-    <div if.bind="widescreenHomepage">
+    <div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6" style="top:0;padding-right:6px">
-            <p if.bind="widescreenHomepage" style="margin-top:45px; margin-bottom:40px;font-size:18px">
-              Web Jam LLC helps businesses bring their web technologies into the 21st century! Let us
-              help make your website mobile-friendly and grow your business by utilizing the power of online services. More information is available in our
-              <a href="WebJamLLC_FactSheet.pdf" target="_blank">Fact Sheet</a>.
+            <p style="margin-top:38px; margin-bottom:25px;font-size:17px;">
+              College Lutheran Church is located in Southwest Virginia in the beautiful city of Salem, right next to Roanoke, VA. The church is situated on College Avenue,&nbsp;
+              within easy walking distance of Roanoke College.
+              College Lutheran Church is part of the Evangelical Lutheran Church in America (ELCA).<br><br><br>
+              <strong>Join Us for Holy Communion Service</strong>
+              <ul style="margin-bottom:0">
+                <li style="margin-left:-10px">One service of Holy Communion, Sunday at 10:00 am</li>
+                <br>
+                <li style="margin-left:-10px">Sunday school for all ages begins at 9:00 am</li>
+                <br>
+                <li style="margin-left:-10px">Choir reheares on Sunday after Worship</li><br>
+              </ul>
+              <i>Please join us as we celebrate God’s grace and share His love in Christ</i>.
             </p>
-            <h3>FAQs</h3>
-            <p style="font-size:18px"><b><i>Q:</i></b> How can I contact you?</p>
-            <p style="font-size:18px"><b><i>A:</i></b> Send an email to Josh & Maria Sherman<br>
-              <a style="text-decoration: underline;font-size:18px" href="mailto:web.jam.adm@gmail.com"><strong>web.jam.adm@gmail.com</strong></a>
-              <br>or call <a href="tel:5404948035" style="text-decoration: underline;font-size:18px"><strong>540-494-8035</strong></a>
-            </p><br>
-            <p style="font-size:18px"><b><i>Q:</i></b> What does Web Jam LLC do?</p>
-            <p style="font-size:18px"><b><i>A:</i></b> We provide mobile-friendly web technologies and services.</p><br>
-            <p style="font-size:18px"><b><i>Q:</i></b> What is your mission statement?</p>
-            <p style="font-size:18px"><b><i>A:</i></b> To assist small businesses by refactoring their existing websites to be mobile-friendly,
-              providing new online services, empowering business owner, and training staff to use these new services effectively.
+            <p>&nbsp;</p>
+            <p style="padding-right:15px;margin-bottom:0">
+              <strong>What Else is Happening at CLC?</strong><br><br>
+              Click <a href="http://collegelutheran.org/Parish_Forum/">Parish News and Forum</a> to view latest copy of our monthly published Forum letter, which includes our Calendar, where you can see what
+              is happening for a day, a week or a month at a time.
+              <br><br><i>Come join and like us on <a href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i>
             </p>
           </div>
-          <div class="col-md-6" style="padding:1px;right:0;">
+          <div if.bind="widescreenHomepage" class="col-md-6" style="padding:1px;right:0;">
             <div id="slideshow1">
               <img alt="churchBuilding" src="https://dl.dropboxusercontent.com/s/id3jlmwd61su039/CLC_04.jpg?dl=0">
             </div>
@@ -31,74 +35,24 @@
         </div>
       </div>
     </div>
-    <div if.bind="!widescreenHomepage" style="margin-top:1px;">
-      <!-- <div id="slideshow">
-        <img alt="churchBuilding" src="https://dl.dropboxusercontent.com/s/id3jlmwd61su039/CLC_04.jpg?dl=0">
-      </div> -->
-      <div style="padding:10px; margin-bottom:-20px">
-        <p style="font-size:18px">
-          Web Jam LLC helps businesses bring their web technologies into the 21st century! Let us
-          help make your website mobile-friendly and grow your business by utilizing the power of online services.
-          More information is available in our
-          <a href="WebJamLLC_FactSheet.pdf" target="_blank">Fact Sheet</a>.
-        </p>
-        <h3>FAQs</h3>
-        <p style="font-size:18px"><b><i>Q:</i></b> How can I contact you?</p>
-        <p style="font-size:18px"><b><i>A:</i></b> Send an email to Josh & Maria Sherman<br>
-          <a style="text-decoration: underline;font-size:18px" href="mailto:web.jam.adm@gmail.com"><strong>web.jam.adm@gmail.com</strong></a>
-          <br>or call <a href="tel:5404948035" style="text-decoration: underline;font-size:18px"><strong>540-494-8035</strong></a>
-        </p><br>
-        <p style="font-size:18px"><b><i>Q:</i></b> What does Web Jam LLC do?</p>
-        <p style="font-size:18px"><b><i>A:</i></b> We provide mobile-friendly web technologies and services.</p><br>
-        <p style="font-size:18px"><b><i>Q:</i></b> What is your mission statement?</p>
-        <p style="font-size:18px"><b><i>A:</i></b> To assist small businesses by refactoring their existing websites to be mobile-friendly,
-          providing new online services, empowering business owner, and training staff to use these new services effectively.
-        </p>
-      </div>
-    </div>
     <hr>
     <div class="material-content">
-      <!-- <h3 style="text-align:center; margin-top:15px;margin-bottom:15px">Our Current Projects</h3>
-      <div class="elevation2" style="padding:10px; max-width:500px;margin:auto">
-        <h4 style="text-align:center"><strong>Our Hands and Feet (<a href="/ohaf">OHAF</a>)</strong></h4>
-        <p style="text-align:center">This app connects volunteers with charity opportunities.</p>
-        <div style="text-align:center">
-          <img alt="ohafLogo" style="width:260px" src="https://web-jam.com/static/imgs/ohaf/charitylogo.png"><br>
-          <a href="http://www.ourhandsandfeet.org" target="_blank" style="text-decoration:underline; text-align:center">ourhandsandfeet.org</a>
-        </div>
-      </div> -->
-      <!-- <p style="font-size: 6pt; margin-bottom:0">&nbsp;</p> -->
-      <!-- <div class="elevation2" style="padding:10px; max-width:500px;margin:auto">
-        <h4 style="text-align:center"><strong>Street Corner to Rock-Star (<a href="/sc2rs">SC2RS</a>)</strong></h4>
-        <p style="text-align:center">This app connects bands with performance opportunities.</p>
-        <div style="text-align:center">
-
-          <a href="http://www.sc2rs.com" target="_blank" style="text-decoration:underline; text-align:center">sc2rs.com</a><br>
-        </div> -->
-      <!-- </div>
-      <p style="font-size: 6pt; margin-bottom:0">&nbsp;</p>
-      <div class="elevation2" style="padding:10px; max-width:500px;margin:auto">
-        <h4 style="text-align:center"><strong>Web Jam <a href="/library">Library</a></strong></h4>
-        <p style="text-align:center">This app allows Readers to checkout physical books.</p>
-        <div style="text-align:center">
-          <img alt="libraryHomePage" style="width:260px" src="https://web-jam.com/static/imgs/library/books2.jpg"><br>
-        </div>
-      </div> -->
-      <!-- <p style="font-size: 6pt; margin-bottom:0">&nbsp;</p>
-      <div class="elevation2" style="padding:10px; max-width:500px;margin:auto">
-
-
-      </div> -->
-      <!-- <p style="font-size: 6pt; margin-bottom:0">&nbsp;</p> -->
-      <div class="col-md-6" style="max-width:500px;margin:auto">
-        <iframe if.bind="widescreenHomepage" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWebJamLLC%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2207148322688942"
+      <div style="margin-bottom:20px">
+      </div>
+      <div class="col-md-6" style="max-width:500px;margin:auto;margin-bottom:-40px">
+        <iframe if.bind="widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=600&height=427&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
           width="500" height="500" style="border:none;overflow:hidden;margin-left:-14px" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
         </iframe>
       </div>
-      <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto">
-        <iframe if.bind="!widescreenHomepage" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWebJamLLC%2F&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2207148322688942"
+      <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto;margin-bottom:10px">
+        <iframe if.bind="!widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=300&height=500&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
           width="300" height="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
         </iframe>
+      </div>
+      <div style="margin:auto;text-align:center;margin-bottom:10px">
+        <a href="http://www.elca.org/" target="_blank">
+          <img id="elcaLogo" alt="ELCA LOGO" src="http://www.collegelutheran.org/files/1531/Image/elca-logo.png" style="width: 467px;">
+        </a>
       </div>
     </div>
   </div>

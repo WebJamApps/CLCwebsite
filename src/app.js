@@ -239,24 +239,17 @@ export class App {
     const footer = document.getElementById('wjfooter');
     let color = '';
     if (footer !== null) {
-      footer.style.backgroundColor = '#2a222a';
-      if (this.style === 'ohaf') {
-        footer.style.backgroundColor = '#565656';
-        color = '#c09580';
-      }
+      footer.style.backgroundColor = '#244a8bff';
+      color = '#f4c00eff';
       footer.innerHTML = '<div style="text-align: center;padding:6px">'
-      + `<a target="_blank" style="color:${color}; padding-right:5px" href="https://github.com/WebJamApps">`
-      + '<i class="fa fa-github fa-2x footerIcon" aria-hidden="true">'
-      + `</i></a><a target="_blank" style="color:${color};padding-right:5px" href="https://www.linkedin.com/company/webjam/">`
-      + `<i class="fa fa-linkedin fa-2x footerIcon" aria-hidden="true"></i></a><a target="_blank" style="color:${color};padding-right:5px"`
-      + 'href="https://twitter.com/WebJamLLC"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + `<a target="_blank" style="color:${color};padding-right:5px" href="https://www.facebook.com/WebJamLLC/">`
+      + `<a target="_blank" style="color:${color};padding-right:5px"`
+      + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
+      + `<a target="_blank" style="color:${color};padding-right:5px" href="https://www.facebook.com/CollegeLutheranChurch/">`
       + '<i class="fa fa-facebook-square fa-2x footerIcon"'
       + `aria-hidden="true"></i></a><a target="_blank" style="color:${color};padding-right:5px"`
-      + 'href="https://www.instagram.com/joshua.v.sherman/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + `<a target="_blank" style="color:${color};padding-right:5px" href="https://plus.google.com/u/1/109586499331294076292">`
-      + '<i class="fa fa-google-plus-square fa-2x footerIcon" aria-hidden="true"></i></a><p style="color:white; font-size: 9pt;margin-bottom:0">'
-      + 'Powered by <a class="wjllc" target="_blank" href="https://www.web-jam.com">Web Jam LLC</a></p></div>';
+      + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
+      + '<span style="margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
+      + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
     }
   }
 
@@ -297,24 +290,29 @@ export class App {
     const menuDrawer = document.getElementsByClassName('drawer')[0];
     const navList = document.getElementsByClassName('nav-list')[0];
     const mobilemenutoggle = document.getElementById('mobilemenutoggle');
-    if (menuDrawer !== undefined) {
-      if (this.style === 'ohaf') {
-        menuDrawer.style.backgroundColor = '#c09580';
-        navList.style.backgroundColor = '#c09580';
-        if (mobilemenutoggle !== null) {
-          mobilemenutoggle.style.backgroundColor = '#565656';
-        }
-      } else {
-        if (menuDrawer !== null && menuDrawer !== undefined) {
-          menuDrawer.style.backgroundColor = '#c0c0c0';
-          navList.style.backgroundColor = '#c0c0c0';
-        }
-        if (mobilemenutoggle !== null) {
-          mobilemenutoggle.style.backgroundColor = '#2a222a';
-        }
-      }
+    if (menuDrawer !== undefined && menuDrawer !== null) {
+      // if (this.style === 'ohaf') {
+      // menuDrawer.style.backgroundColor = '#c09580';
+      // navList.style.backgroundColor = '#c09580';
+      mobilemenutoggle.style.backgroundColor = '#244a8bff';
+      // if (mobilemenutoggle !== null) {
+      //
+      // }
+      // if (menuDrawer !== null && menuDrawer !== undefined) {
+      menuDrawer.style.backgroundColor = '#c0c0c0';
+      navList.style.backgroundColor = '#c0c0c0';
     }
+    // } else {
+    //   if (menuDrawer !== null && menuDrawer !== undefined) {
+    //     menuDrawer.style.backgroundColor = '#c0c0c0';
+    //     navList.style.backgroundColor = '#c0c0c0';
+    //   }
+    // if (mobilemenutoggle !== null) {
+    //   mobilemenutoggle.style.backgroundColor = '#2a222a';
+    // }
+    // }
   }
+  // }
 
   buildPTag(object, objectSelector, objectSelectorOther, objectStoreResult) {
     for (let l = 0; l < object.length; l += 1) {

@@ -5,16 +5,29 @@
         <div style="text-align:center; margin:auto;width:182px;background-color:#244a8bff" class="navImage">
           <img alt="lutherRose" class="sideNavTopLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Lutherrose.svg/800px-Lutherrose.svg.png">
         </div>
-        <!-- <div if.bind="!fullmenu && (Menu !== 'charity' && Menu !== 'volunteer' && Menu !== 'ohaf' && role !== 'Charity' && role !=='Volunteer')" style="background-color:#2a222a;width:50px;height:91px" class="navImage">
-        </div>
-        <div if.bind="!fullmenu && (Menu === 'charity' || Menu === 'volunteer' || Menu === 'ohaf' || role === 'Charity' || role ==='Volunteer')" style="background-color:#565656;width:50px;height:91px" class="navImage">
-        </div> -->
         <div if.bind="!fullmenu" class="material-header ${currentStyles.headerClass}" style="width: 63px; height:91px"></div>
         <div class="nav-list">
-          <!-- <p if.bind="fullmenu" style="font-size:1px">&nbsp;</p> -->
-          <!-- <div class="menu-item" if.bind="widescreen">
-            <i class="fa fa-bars pull-left fa-1x" click.delegate="toggleMenu()" style="color:#23527c; cursor: pointer; cursor: hand;"></i>
-          </div> -->
+          <div>
+            <p style="font-size:1px;;margin-bottom:2px">&nbsp;</p>
+          </div>
+          <div class="menu-item" style="background-color:#244a8bff">
+            <p style="color:white;margin-bottom:2px">210 S. College Ave<br>Salem, VA 24153<br>
+              <a style="color:#409cff" href="https://www.google.com/maps/dir/Salem,+Virginia+24153/College+Lutheran+Church,+210+S+College+Ave,+Salem,+VA+24153/@37.2925694,-80.056487,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x884d0a3455d08057:0x5a45aeb585040b01!2m2!1d-80.0547626!2d37.2934681!1m5!1m1!1s0x884d0a32d6f01edf:0x88dc0d7faccf632b!2m2!1d-80.053834!2d37.291714">
+                Directions
+              </a>
+            </p>
+          </div>
+          <div>
+            <p style="font-size:1px;;margin-bottom:2px">&nbsp;</p>
+          </div>
+          <div class="menu-item" style="background-color:#244a8bff">
+            <p style="color:white;;margin-bottom:2px"><span style="color:black">ph:</span> <a style="color:#409cff" href="tel:5403894963">(540) 389-4963</a>
+              <br><span style="color:black">fax:</span> (540) 389-4980<br>
+              <a style="color:#409cff" href="mailto:office1@collegelutheran.org">
+                office1@collegelutheran.org
+              </a>
+            </p>
+          </div>
           <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle href="/dashboard" class="nav-link" click.delegate="close()">
               <span class="fa fa-tachometer"></span>
@@ -50,23 +63,17 @@
           <div class="menu-item">
             <p>&nbsp;</p>
           </div>
-          <div class="menu-item" style="background-color:#244a8bff">
-            <p style="color:white;margin-bottom:2px">210 S. College Ave<br>Salem, VA 24153<br>
-              <a style="color:#409cff" href="https://www.google.com/maps/dir/Salem,+Virginia+24153/College+Lutheran+Church,+210+S+College+Ave,+Salem,+VA+24153/@37.2925694,-80.056487,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x884d0a3455d08057:0x5a45aeb585040b01!2m2!1d-80.0547626!2d37.2934681!1m5!1m1!1s0x884d0a32d6f01edf:0x88dc0d7faccf632b!2m2!1d-80.053834!2d37.291714">
-                Directions
-              </a>
-            </p>
+          <div class="menu-item">
+            <p>&nbsp;</p>
           </div>
-          <div>
-            <p style="font-size:1px;;margin-bottom:2px">&nbsp;</p>
+          <div class="menu-item">
+            <p>&nbsp;</p>
           </div>
-          <div class="menu-item" style="background-color:#244a8bff">
-            <p style="color:white;;margin-bottom:2px"><span style="color:black">ph:</span> <a style="color:#409cff" href="tel:5403894963">(540) 389-4963</a>
-              <br><span style="color:black">fax:</span> (540) 389-4980<br>
-              <a style="color:#409cff" href="mailto:office1@collegelutheran.org">
-                office1@collegelutheran.org
-              </a>
-            </p>
+          <div class="menu-item">
+            <p>&nbsp;</p>
+          </div>
+          <div class="menu-item">
+            <p>&nbsp;</p>
           </div>
         </div>
       </div>
@@ -76,10 +83,10 @@
       <div class="mainPanel">
         <div class="swipe-area"></div>
         <div class="material-header ${currentStyles.headerClass}">
-          <div if.bind="Menu !== 'charity' && Menu !== 'volunteer' && Menu !== 'ohaf' && role !== 'Charity' && role !=='Volunteer'" class="headercontent">
+          <div class="headercontent">
           </div>
           <div>
-            <div style="margin-left:5px; margin-top:-4px">
+            <div style="margin-left:5px; margin-top:-8px">
               <table style="margin-left:5px;">
                 <tbody class="formatting" style="background-color:none">
                   <tr class="formatting" style="background-color:none">
@@ -87,21 +94,6 @@
                       <h2 class="header-text" style="margin-bottom:0">College Lutheran Church</h2>
                       <p style="max-width:80%" class="subTitle">We celebrate God's grace and share His love in Christ!</p>
                     </td>
-                    <!-- <td if.bind="widescreen" style="border:none;border-right:2px;padding:0;padding-right:15px">
-                      <p style="color:white">210 S. College Ave<br>Salem, VA 24153<br>
-                        <a style="color:#409cff" href="https://www.google.com/maps/dir/Salem,+Virginia+24153/College+Lutheran+Church,+210+S+College+Ave,+Salem,+VA+24153/@37.2925694,-80.056487,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x884d0a3455d08057:0x5a45aeb585040b01!2m2!1d-80.0547626!2d37.2934681!1m5!1m1!1s0x884d0a32d6f01edf:0x88dc0d7faccf632b!2m2!1d-80.053834!2d37.291714">
-                          Directions
-                        </a>
-                      </p>
-                    </td> -->
-                    <!-- <td if.bind="widescreen" style="border:none;padding:0">
-                      <p style="color:white"><span style="color:black">ph:</span> <a style="color:#409cff" href="tel:5403894963">(540) 389-4963</a>
-                        <br><span style="color:black">fax:</span> (540) 389-4980<br>
-                        <a style="color:#409cff" href="mailto:office1@collegelutheran.org">
-                          office1@collegelutheran.org
-                        </a>
-                      </p>
-                    </td> -->
                   </tr>
                 </tbody>
               </table>

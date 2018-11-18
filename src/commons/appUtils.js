@@ -36,10 +36,13 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
   const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
   const headerText = document.getElementsByClassName('header-text')[0];
   const subT = document.getElementsByClassName('subTitle')[0];
+  const elcaLogo = document.getElementById('elcaLogo');
   if (isWide) {
     if (headerText !== undefined) {
       headerText.style.fontSize = '34px';
       subT.style.maxWidth = '100%';
+      elcaLogo.style.width = '450px';
+      elcaLogo.style.paddingTop = '-20px';
     }
     if (drawer !== null && drawer !== undefined) {
       if (app.contentWidth === '0px') { app.contentWidth = '182px'; }
@@ -52,6 +55,8 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
     if (headerText !== undefined) {
       headerText.style.fontSize = '24px';
       subT.style.maxWidth = '80%';
+      elcaLogo.style.width = '300px';
+      elcaLogo.style.paddingTop = '10px';
     }
     app.contentWidth = '0px';
   }
