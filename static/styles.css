@@ -82,6 +82,11 @@ h1, h2, h3, h4, h5 {
   font-family: 'PT Sans Caption';
 }
 
+p, a, label {
+  font-family: 'Trebuchet MS', 'ChivoBlack', Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
 input {
   min-width: 3in;
   padding-left: 5px;
@@ -421,7 +426,7 @@ audio::-webkit-media-controls-panel {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: 'Roboto', 'Noto', sans-serif;
+  font-family: 'Trebuchet MS', 'ChivoBlack', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   font-weight: 400;
@@ -625,11 +630,6 @@ a:not([href]):not([tabindex]):hover {
   color: #0056b3;
 }
 
-p, a, label {
-  font-family: 'Habibi';
-  font-size: 12pt;
-}
-
 a {
   text-decoration: underline;
   text-align: center;
@@ -722,7 +722,7 @@ a:hover {
   position: fixed;
   top: 91px;
   right: 0;
-  width: 182px;
+  width: 220px;
   height: 100%;
   z-index: 90000;
   background-color: rgb(192, 192, 192);
@@ -732,6 +732,10 @@ a:hover {
   position: fixed;
   top: 0;
   right: 0;
+  width: 220px;
+  background-color: #244a8bff;
+  margin: auto;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {
