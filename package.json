@@ -1,13 +1,13 @@
 {
-  "name": "combined-front",
-  "version": "0.8.2",
-  "description": "Front End of web-jam.com App",
+  "name": "ClCwebsite",
+  "version": "0.0.1",
+  "description": "Front End of collegelutheran.org",
   "main": "dist/index.html",
   "repository": {
-    "url": "git+ssh://git@github.com/WebJamApps/combined-front.git",
+    "url": "git+ssh://git@github.com/WebJamApps/CLCwebsite.git",
     "type": "git"
   },
-  "author": "HandlersAndKickers",
+  "author": "95theses",
   "engines": {
     "node": "10.13.0"
   },

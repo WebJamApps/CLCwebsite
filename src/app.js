@@ -111,7 +111,7 @@ export class App {
   }
 
   configureRouter(config, router) {
-    config.title = 'Web Jam LLC';
+    config.title = 'College Lutheran Church';
     config.options.pushState = true;
     config.options.root = '/';
     config.addPipelineStep('authorize', AuthorizeStep);// Is the actually Authorization to get into the /dashboard
@@ -257,30 +257,12 @@ export class App {
     let result = {};
     this.style = 'wj';
     this.checkNavMenu();
-    if (this.Menu === 'charity' || this.Menu === 'ohaf' || this.Menu === 'volunteer' || this.role === 'Charity' || this.role === 'Volunteer') {
-      this.style = 'ohaf';
-      result = {
-        headerImagePath: '../static/imgs/ohaf/charitylogo.png',
-        headerText1: 'Our',
-        headerText2: 'Hands And',
-        headerText3: 'Feet',
-        headerClass: 'ohaf-header',
-        headerImageClass: 'ohaf-header-image',
-        sidebarClass: 'ohaf-sidebar',
-        menuToggleClass: 'ohaf-menu-toggle'
-      };
-      result.sidebarImagePath = '../static/imgs/ohaf/butterfly.png';
-    } else {
-      result = {
-        headerImagePath: '../static/imgs/webjamicon7.png',
-        headerText1: 'Web Jam LLC',
-        headerClass: 'home-header',
-        headerImageClass: 'home-header-image',
-        sidebarClass: 'home-sidebar',
-        menuToggleClass: 'home-menu-toggle'
-      };
-      result.sidebarImagePath = '../static/imgs/webjamlogo1.png';
-    }
+    result = {
+      headerClass: 'home-header',
+      headerImageClass: 'home-header-image',
+      sidebarClass: 'home-sidebar',
+      menuToggleClass: 'home-menu-toggle'
+    };
     this.setFooter();
     this.setOtherStyles();
     return result;
