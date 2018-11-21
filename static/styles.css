@@ -677,6 +677,10 @@ a:hover {
   color: white;
 }
 
+.footer {
+  z-index: 16777271;
+}
+
 .mySlides {
   display: none;
 }
@@ -694,7 +698,7 @@ a:hover {
     position: relative;
     height: 100%;
     display: block;
-    margin-right: 182px;
+    margin-right: 220px;
   }
 
   .content-block {
@@ -707,10 +711,6 @@ a:hover {
     margin-top: 91px;
     margin-right: inherit;
   }
-
-  /* .footer {
-    width: 100%;
-  } */
 }
 
 .drawer-container {

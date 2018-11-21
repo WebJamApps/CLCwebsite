@@ -25,7 +25,7 @@ export class App {
   authenticated = false;
 
   @bindable
-  drawerWidth = '182px';
+  drawerWidth = '220px';
 
   @bindable
   contentWidth = '0px';
@@ -172,8 +172,8 @@ export class App {
       this.contentWidth = '50px';
     } else {
       this.fullmenu = true;
-      this.drawerWidth = '182px';
-      this.contentWidth = '182px';
+      this.drawerWidth = '220px';
+      this.contentWidth = '220px';
     }
     document.getElementsByClassName('main-panel')[0].style.marginRight = this.contentWidth;
     dc.style.width = this.drawerWidth;
@@ -241,14 +241,15 @@ export class App {
     if (footer !== null) {
       footer.style.backgroundColor = '#244a8bff';
       color = '#f4c00eff';
-      footer.innerHTML = '<div style="text-align: center;padding:6px">'
-      + `<a target="_blank" style="color:${color};padding-right:5px"`
+      footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px">'
+      + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
       + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + `<a target="_blank" style="color:${color};padding-right:5px" href="https://www.facebook.com/CollegeLutheranChurch/">`
+      + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
+      + 'href="https://www.facebook.com/CollegeLutheranChurch/">'
       + '<i class="fa fa-facebook-square fa-2x footerIcon"'
-      + `aria-hidden="true"></i></a><a target="_blank" style="color:${color};padding-right:5px"`
+      + `aria-hidden="true"></i></a><a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:${color};padding-right:5px"`
       + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + '<span style="margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
+      + '<span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
       + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
     }
   }

@@ -217,7 +217,7 @@ describe('the appUtils', () => {
   it('when is wide it sets content width to 0', (done) => {
     document.body.innerHTML = '<div class="mobile-menu-toggle page-host"><div class="swipe-area"></div><div class="drawer"></div></div>';
     const cb = au.returnIsWide({
-      contentWidth: '182px'
+      contentWidth: '220px'
     }, true, null, {
       css() {}
     });

@@ -45,7 +45,7 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
       elcaLogo.style.paddingTop = '-20px';
     }
     if (drawer !== null && drawer !== undefined) {
-      if (app.contentWidth === '0px') { app.contentWidth = '182px'; }
+      if (app.contentWidth === '0px') { app.contentWidth = '220px'; }
       drawer.style.display = 'block';
       swipeArea.style.display = 'none';
       drawerParent.css('display', 'block');
