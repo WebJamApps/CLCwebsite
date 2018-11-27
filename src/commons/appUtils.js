@@ -41,7 +41,7 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
     if (headerText !== undefined) {
       headerText.style.fontSize = '34px';
       subT.style.maxWidth = '100%';
-      elcaLogo.style.width = '450px';
+      elcaLogo.style.width = '380px';
       elcaLogo.style.paddingTop = '-20px';
     }
     if (drawer !== null && drawer !== undefined) {
@@ -55,8 +55,9 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
     if (headerText !== undefined) {
       headerText.style.fontSize = '24px';
       subT.style.maxWidth = '80%';
-      elcaLogo.style.width = '300px';
+      elcaLogo.style.width = '290px';
       elcaLogo.style.paddingTop = '10px';
+      elcaLogo.style.marginLeft = '-2px';
     }
     app.contentWidth = '0px';
   }
