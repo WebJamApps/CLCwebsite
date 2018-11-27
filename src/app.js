@@ -241,7 +241,7 @@ export class App {
     if (footer !== null) {
       footer.style.backgroundColor = '#244a8bff';
       color = '#f4c00eff';
-      footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px">'
+      footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:50px">'
       + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
       + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
       + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
