@@ -89,7 +89,7 @@
     "react-player": "^1.6.4",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "snyk": "latest",
+    "snyk": "^1.111.1",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",
@@ -165,7 +165,8 @@
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
-    "server:prod": "pushstate-server dist"
+    "server:prod": "pushstate-server dist",
+    "prepare": "npm run snyk-protect"
   },
   "snyk": true
 }
