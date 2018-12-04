@@ -106,7 +106,15 @@ export class App {
       },
       {
         route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home'
-      }
+      },
+      {
+        route: 'beliefs',
+        name: 'beliefs',
+        moduleId: PLATFORM.moduleName('./beliefs'),
+        nav: false,
+        title: 'Our Lutheran Beliefs',
+        settings: 'fa fa-sign-in'
+      },
     ]);
   }
 
@@ -204,6 +212,7 @@ export class App {
   }
 
   get currentRoute() {
+    // console.log(this.router.currentInstruction.config.name);
     if (this.router.currentInstruction) return this.router.currentInstruction.config.name;
     return null;
   }

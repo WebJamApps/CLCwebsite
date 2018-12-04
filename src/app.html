@@ -28,38 +28,44 @@
               </a>
             </p>
           </div>
-          <div class="menu-item" if.bind="authenticated">
+          <!-- <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle href="/dashboard" class="nav-link" click.delegate="close()">
               <span class="fa fa-tachometer"></span>
               <span if.bind="fullmenu" class="nav-item">${dashboardTitle}</span>
             </a>
-          </div>
-          <div class="menu-item" if.bind="authenticated">
+          </div> -->
+          <!-- <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle href="/dashboard/user-account" class="nav-link" click.delegate="close()">
               <span class="fa fa-user"></span>
               <span if.bind="fullmenu" class="nav-item">User Account</span>
             </a>
+          </div> -->
+          <div class="menu-item" if.bind="currentRoute !='beliefs'">
+            <a paper-drawer-toggle href="/beliefs" class="nav-link" click.delegate="close()">
+              <span class="fa fa-arrows"></span>
+              <span class="nav-item" if.bind="fullmenu">Our Lutheran Beliefs</span>
+            </a>
           </div>
-          <div class="menu-item" if.bind="(Menu == 'wj' && currentRoute !='sc2rs' && currentRouteFrag !='/music') || (Menu =='music'  && currentRouteFrag !='/music')">
+          <div class="menu-item" if.bind="currentRoute !='music-router'">
             <a paper-drawer-toggle href="/music" class="nav-link" click.delegate="close()">
               <span class="fa fa-music"></span>
               <span class="nav-item" if.bind="fullmenu">Music</span>
             </a>
           </div>
-          <div class="menu-item" if.bind="(Menu !='wj' && currentRouteFrag !='/dashboard/charity' && currentRouteFrag !='/dashboard/volunteer' && currentRouteFrag !='/dashboard/librarian' && currentRouteFrag !='/dashboard/reader' && currentRouteFrag !='/dashboard/user-account')|| currentRoute=='login' || currentRoute=='register' || currentRoute=='sc2rs'">
+          <div class="menu-item" if.bind="currentRoute !='' && currentRoute !='home'">
             <a paper-drawer-toggle href="/" class="nav-link" click.delegate="close()">
               <span class="fa fa-arrows"></span>
-              <span class="nav-item" if.bind="fullmenu">CLC</span>
+              <span class="nav-item" if.bind="fullmenu">Home</span>
             </a>
           </div>
-          <div class="menu-item" if.bind="authenticated">
+          <!-- <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle class="nav-link" click.delegate="logout()" style=" padding-right:4px">
               <span class="fa fa-sign-out nav-item" style="cursor: pointer; cursor: hand;"></span>
             </a>
             <button if.bind="fullmenu" click.delegate="logout()" class="material-content-button">
               Logout
             </button>
-          </div>
+          </div> -->
           <div class="menu-item">
             <p>&nbsp;</p>
           </div>
