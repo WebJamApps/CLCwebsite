@@ -688,7 +688,7 @@ a:hover {
 @media screen and (min-width: 900px) {
   .drawer-container {
     float: right;
-    position: fixed;
+    /*position: fixed;*/
     right: 0;
     /* display:inline-block; */
   }
