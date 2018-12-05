@@ -636,6 +636,7 @@ a {
   cursor: pointer;
   cursor: hand;
   border: none !important;
+  color: #409cff
 }
 
 button {
@@ -647,7 +648,7 @@ button:hover {
   background-color: #ddffcc;
 }
 
-a:hover {
+.header-text:hover, a:hover {
   color: #0056b3;
 }
 
