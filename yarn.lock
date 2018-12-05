@@ -878,6 +878,21 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@snyk/gemfile/-/gemfile-1.1.0.tgz#8c254dfc7739b2e8513c44c976fc41872d5f6af0"
 
+"@snyk/dep-graph@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.1.2.tgz#a0377fbb29dd42bc12d1c2493b51a7b7fe0d334a"
+  integrity sha512-mCoAFKtmezBL61JOzLMzqqd/sXXxp0iektEwf4zw+sM3zuG4Tnmhf8OqNO6Wscn84bMIfLlI/nvECdxvSS7MTw==
+  dependencies:
+    graphlib "^2.1.5"
+    lodash "^4"
+    source-map-support "^0.5.9"
+    tslib "^1.9.3"
+
+"@snyk/gemfile@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@snyk/gemfile/-/gemfile-1.1.0.tgz#8c254dfc7739b2e8513c44c976fc41872d5f6af0"
+  integrity sha512-mLwF+ccuvRZMS0SxUAxA3dAp8mB3m2FxIsBIUWFTYvzxl+E4XTZb8uFrUqXHbcxhZH1Z8taHohNTbzXZn3M8ag==
+
 "@types/debug@^0.0.29":
   version "0.0.29"
   resolved "http://registry.npmjs.org/@types/debug/-/debug-0.0.29.tgz#a1e514adfbd92f03a224ba54d693111dbf1f3754"
@@ -10571,6 +10586,15 @@ snyk-docker-plugin@1.12.3:
     dockerfile-ast "0.0.12"
     tslib "^1"
 
+snyk-docker-plugin@1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.13.1.tgz#4d5ad62fe76b03e36b2c414b9576e67daef21f73"
+  integrity sha512-rhVPwMryfGanLXeDoDzjQabGq8VlEPSkvDvraiOhm/F9o5E4zam6vDlVQXsYVRb4ydVKPLgux2ejWyFiG6shFA==
+  dependencies:
+    debug "^3"
+    dockerfile-ast "0.0.12"
+    tslib "^1"
+
 snyk-go-plugin@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.6.0.tgz#4b312db52fdde6d9b2ac75fe1f9712b88563737d"
@@ -10599,6 +10623,18 @@ snyk-mvn-plugin@2.0.0:
 snyk-nodejs-lockfile-parser@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.7.1.tgz#499fd29db9a9185e3cb90a314b204fa1244fffb6"
+  dependencies:
+    "@yarnpkg/lockfile" "^1.0.2"
+    graphlib "^2.1.5"
+    lodash "4.17.10"
+    source-map-support "^0.5.7"
+    tslib "^1.9.3"
+    uuid "^3.3.2"
+
+snyk-nodejs-lockfile-parser@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.8.0.tgz#f79d33c3d37d85ac1bd71a8bfaf037974b614c9d"
+  integrity sha512-oby7WPZzAwusgAiNVnh84z7NP7ES/XiImk5GF03L7KrA5axv8J9jO1MN0XPBa1ODoavggGIBvtHFKUsk8Mtswg==
   dependencies:
     "@yarnpkg/lockfile" "^1.0.2"
     graphlib "^2.1.5"
