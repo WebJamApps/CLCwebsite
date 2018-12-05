@@ -115,6 +115,14 @@ export class App {
         title: 'Our Lutheran Beliefs',
         settings: 'fa fa-sign-in'
       },
+      {
+        route: 'staff',
+        name: 'staff',
+        moduleId: PLATFORM.moduleName('./staff'),
+        nav: false,
+        title: 'Church Staff',
+        settings: 'fa fa-users'
+      },
     ]);
   }
 

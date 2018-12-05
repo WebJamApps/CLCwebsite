@@ -12,7 +12,7 @@
           </div>
           <div class="menu-item" style="background-color:#244a8bff">
             <p style="color:white;margin-bottom:2px">210 S. College Ave<br>Salem, VA 24153<br>
-              <a style="color:#409cff;" href="https://www.google.com/maps/dir/Salem,+Virginia+24153/College+Lutheran+Church,+210+S+College+Ave,+Salem,+VA+24153/@37.2925694,-80.056487,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x884d0a3455d08057:0x5a45aeb585040b01!2m2!1d-80.0547626!2d37.2934681!1m5!1m1!1s0x884d0a32d6f01edf:0x88dc0d7faccf632b!2m2!1d-80.053834!2d37.291714">
+              <a href="https://www.google.com/maps/dir/Salem,+Virginia+24153/College+Lutheran+Church,+210+S+College+Ave,+Salem,+VA+24153/@37.2925694,-80.056487,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x884d0a3455d08057:0x5a45aeb585040b01!2m2!1d-80.0547626!2d37.2934681!1m5!1m1!1s0x884d0a32d6f01edf:0x88dc0d7faccf632b!2m2!1d-80.053834!2d37.291714">
                 Directions
               </a>
             </p>
@@ -21,9 +21,10 @@
             <p style="font-size:1px;margin-bottom:2px">&nbsp;</p>
           </div>
           <div class="menu-item" style="background-color:#244a8bff">
-            <p style="color:white;margin-bottom:2px"><span style="color:white">ph:</span> <a style="color:#409cff" href="tel:5403894963">(540) 389-4963</a>
+            <p style="color:white;margin-bottom:2px"><span style="color:white">ph:</span>
+              <a href="tel:5403894963">(540) 389-4963</a>
               <br><span style="color:white">fax:</span> (540) 389-4980<br>
-              <a style="color:#409cff;word-wrap: break-word;" href="mailto:office1@collegelutheran.org">
+              <a style="word-wrap: break-word;" href="mailto:office1@collegelutheran.org">
                 office1@collegelutheran.org
               </a>
             </p>
@@ -46,6 +47,12 @@
               <span class="nav-item" if.bind="fullmenu">Our Lutheran Beliefs</span>
             </a>
           </div>
+          <div class="menu-item" if.bind="currentRoute !='staff'">
+            <a paper-drawer-toggle href="/staff" class="nav-link" click.delegate="close()">
+              <span class="fa fa-users"></span>
+              <span class="nav-item" if.bind="fullmenu">Church Staff</span>
+            </a>
+          </div>
           <div class="menu-item" if.bind="currentRoute !='music-router'">
             <a paper-drawer-toggle href="/music" class="nav-link" click.delegate="close()">
               <span class="fa fa-music"></span>
@@ -66,21 +73,6 @@
               Logout
             </button>
           </div> -->
-          <div class="menu-item">
-            <p>&nbsp;</p>
-          </div>
-          <div class="menu-item">
-            <p>&nbsp;</p>
-          </div>
-          <div class="menu-item">
-            <p>&nbsp;</p>
-          </div>
-          <div class="menu-item">
-            <p>&nbsp;</p>
-          </div>
-          <div class="menu-item">
-            <p>&nbsp;</p>
-          </div>
         </div>
       </div>
     </div>
@@ -97,7 +89,9 @@
                 <tbody class="formatting" style="background-color:none">
                   <tr class="formatting" style="background-color:none">
                     <td style="border:none;padding:0;width:80%">
-                      <h2 class="header-text" style="margin-bottom:0">College Lutheran Church</h2>
+                      <a href="/" style="text-align:left;text-decoration: none">
+                        <h2 class="header-text" style="margin-bottom:0">College Lutheran Church</h2>
+                      </a>
                       <p style="max-width:80%" class="subTitle">We celebrate God's grace and share His love in Christ!</p>
                     </td>
                   </tr>
