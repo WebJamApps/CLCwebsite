@@ -21,9 +21,14 @@ describe('aurelia skeleton app', () => {
     await expect(poSkeleton.getCurrentPageTitle()).toBe('College Lutheran Church');
   });
 
-  it('should navigate to Music page', async () => {
-    await poSkeleton.navigateTo('/music');
-    await expect(poSkeleton.getCurrentPageTitle()).toBe('Music | College Lutheran Church');
+  it('should navigate to staff page', async () => {
+    await poSkeleton.navigateTo('/staff');
+    await expect(poSkeleton.getCurrentPageTitle()).toBe('Church Staff | College Lutheran Church');
+  });
+
+  it('should navigate to beliefs page', async () => {
+    await poSkeleton.navigateTo('/beliefs');
+    await expect(poSkeleton.getCurrentPageTitle()).toBe('Our Lutheran Beliefs | College Lutheran Church');
   });
 
   // it('should navigate to OHAF page', async () => {
