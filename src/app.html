@@ -41,25 +41,27 @@
               <span if.bind="fullmenu" class="nav-item">User Account</span>
             </a>
           </div> -->
-          <div class="menu-item" if.bind="currentRoute !='beliefs'">
+          <div class="menu-item">
+            <!-- <div style="background-color:white" if.bind="currentRoute =='beliefs'"> -->
             <a paper-drawer-toggle href="/beliefs" class="nav-link" click.delegate="close()">
               <span class="fa fa-arrows"></span>
               <span class="nav-item" if.bind="fullmenu">Our Lutheran Beliefs</span>
             </a>
+            <!-- </div> -->
           </div>
-          <div class="menu-item" if.bind="currentRoute !='staff'">
+          <div class="menu-item">
             <a paper-drawer-toggle href="/staff" class="nav-link" click.delegate="close()">
               <span class="fa fa-users"></span>
               <span class="nav-item" if.bind="fullmenu">Church Staff</span>
             </a>
           </div>
-          <div class="menu-item" if.bind="currentRoute !='music-router'">
+          <!-- <div class="menu-item">
             <a paper-drawer-toggle href="/music" class="nav-link" click.delegate="close()">
               <span class="fa fa-music"></span>
               <span class="nav-item" if.bind="fullmenu">Music</span>
             </a>
-          </div>
-          <div class="menu-item" if.bind="currentRoute !='' && currentRoute !='home'">
+          </div> -->
+          <div class="menu-item">
             <a paper-drawer-toggle href="/" class="nav-link" click.delegate="close()">
               <span class="fa fa-arrows"></span>
               <span class="nav-item" if.bind="fullmenu">Home</span>
