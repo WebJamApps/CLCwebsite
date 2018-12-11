@@ -32,8 +32,6 @@ exports.checkIfLoggedIn = function checkIfLoggedIn(app) {
 };
 
 exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) {
-  const swipeArea = document.getElementsByClassName('swipe-area')[0];
-  const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
   const headerText = document.getElementsByClassName('header-text')[0];
   const subT = document.getElementsByClassName('subTitle')[0];
   const elcaLogo = document.getElementById('elcaLogo');
@@ -45,11 +43,11 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
       elcaLogo.style.paddingTop = '-20px';
     }
     if (drawer !== null && drawer !== undefined) {
-      if (app.contentWidth === '0px') { app.contentWidth = '220px'; }
+      app.contentWidth = app.contentWidth === '0px' ? '220px' : app.contentWidth;
       drawer.style.display = 'block';
-      swipeArea.style.display = 'none';
+      document.getElementsByClassName('swipe-area')[0].style.display = 'none';
       drawerParent.css('display', 'block');
-      mobileMenuToggle.style.display = 'none';
+      document.getElementsByClassName('mobile-menu-toggle')[0].style.display = 'none';
     }
   } else {
     if (headerText !== undefined) {
@@ -62,9 +60,7 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
     app.contentWidth = '0px';
   }
   const mainP = document.getElementsByClassName('main-panel')[0];
-  if (mainP !== null && mainP !== undefined) {
-    mainP.style.marginRight = app.contentWidth;
-  }
+  if (mainP !== null && mainP !== undefined) { mainP.style.marginRight = app.contentWidth; }
   return isWide;
 };
 
