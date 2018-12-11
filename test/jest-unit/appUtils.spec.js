@@ -137,6 +137,8 @@ describe('the appUtils', () => {
     }
   });
   it('checks if widescreen and returns false', (done) => {
+    document.body.innerHTML = '<div class="swipe-area" id="elcaLogo"></div><div class="main-panel">'
+      + '</div><div class="drawer-parent header-text"><div class="drawer"></div><button class="mobile-menu-toggle subTitle"> </button></div>';
     const app = {
       menuToggled: false,
       contentWidth: '100px'
@@ -156,8 +158,8 @@ describe('the appUtils', () => {
     done();
   });
   it('checks if widescreen and returns true', (done) => {
-    document.body.innerHTML = '<div class="swipe-area"></div><div class="main-panel">'
-      + '</div><div class="drawer-parent"><div class="drawer"></div><button class="mobile-menu-toggle"></button></div>';
+    document.body.innerHTML = '<div class="swipe-area" id="elcaLogo"></div><div class="main-panel">'
+      + '</div><div class="drawer-parent header-text"><div class="drawer"></div><button class="mobile-menu-toggle subTitle"> </button></div>';
     const app = {
       menuToggled: false,
       contentWidth: '100px'
