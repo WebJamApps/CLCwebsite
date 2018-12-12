@@ -165,8 +165,7 @@
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
-    "server:prod": "pushstate-server dist",
-    "prepare": "npm run snyk-protect"
+    "server:prod": "pushstate-server dist"
   },
   "snyk": true
 }
