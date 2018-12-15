@@ -35,23 +35,25 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
   const headerText = document.getElementsByClassName('header-text')[0];
   const subT = document.getElementsByClassName('subTitle')[0];
   const elcaLogo = document.getElementById('elcaLogo');
-  if (isWide && headerText !== undefined) {
+  if (isWide && headerText) {
     headerText.style.fontSize = '34px';
     subT.style.maxWidth = '100%';
     elcaLogo.style.width = '380px';
     elcaLogo.style.paddingTop = '-20px';
-  } else if (isWide && drawer !== null && drawer !== undefined) {
+  }
+  if (isWide && drawer) {
     app.contentWidth = app.contentWidth === '0px' ? '220px' : app.contentWidth;
     drawer.style.display = 'block';
     document.getElementsByClassName('swipe-area')[0].style.display = 'none';
     drawerParent.css('display', 'block');
     document.getElementsByClassName('mobile-menu-toggle')[0].style.display = 'none';
-  } else if (headerText !== undefined) {
+  } else if (headerText) {
     headerText.style.fontSize = '24px';
     subT.style.maxWidth = '80%';
     elcaLogo.style.width = '290px';
     elcaLogo.style.paddingTop = '10px';
     elcaLogo.style.marginLeft = '-2px';
+    app.contentWidth = '0px';
   } else {
     app.contentWidth = '0px';
   }
