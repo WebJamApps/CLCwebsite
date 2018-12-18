@@ -314,7 +314,7 @@ audio::-webkit-media-controls-panel {
 
 .header-text {
   color: white;
-  font-size: 30px;
+  font-size: 19pt;
   font-family: 'TrajanProRegular', Times, 'Times New Roman', serif
 }
 
@@ -648,7 +648,7 @@ button:hover {
   background-color: #ddffcc;
 }
 
-.header-text:hover, a:hover {
+a:hover {
   color: #0056b3;
 }
 
@@ -784,7 +784,7 @@ button:hover {
 
 @media screen and (max-width: 400px) {
   ::-webkit-scrollbar:vertical {
-  width: 0;
+    width: 0;
   }
 }
 
