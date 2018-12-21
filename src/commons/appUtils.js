@@ -38,8 +38,8 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
   if (isWide && headerText) {
     headerText.style.fontSize = '34px';
     subT.style.maxWidth = '100%';
-    elcaLogo.style.width = '360px';
-    elcaLogo.style.paddingTop = '10px';
+    elcaLogo.style.width = '340px';
+    elcaLogo.style.paddingTop = '30px';
   }
   if (isWide && drawer) {
     app.contentWidth = app.contentWidth === '0px' ? '220px' : app.contentWidth;
