@@ -110,6 +110,14 @@ export class App {
         settings: 'fa fa-music'
       },
       {
+        route: 'giving',
+        name: 'giving',
+        moduleId: PLATFORM.moduleName('./giving'),
+        nav: false,
+        title: 'Giving',
+        settings: 'fa fa-handshake-o'
+      },
+      {
         route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home'
       },
       {

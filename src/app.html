@@ -62,6 +62,12 @@
             </a>
           </div>
           <div class="menu-item">
+            <a paper-drawer-toggle href="/giving" class="nav-link" click.delegate="close()">
+              <span class="fa fa-handshake-o"></span>
+              <span class="nav-item" if.bind="fullmenu">Giving</span>
+            </a>
+          </div>
+          <div class="menu-item">
             <a paper-drawer-toggle href="/" class="nav-link" click.delegate="close()">
               <span class="fa fa-heart"></span>
               <span class="nav-item" if.bind="fullmenu">Home</span>
