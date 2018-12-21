@@ -61,11 +61,6 @@ export class App {
   }
 
   configHttpClient() {
-    this.backend = '';
-    /* istanbul ignore else */
-    if (process.env.NODE_ENV !== 'production') {
-      this.backend = process.env.BackendUrl;
-    }
     this.httpClient.configure((httpConfig) => {
       httpConfig
         .withDefaults({
@@ -76,7 +71,7 @@ export class App {
           }
         })
         .useStandardConfiguration()
-        .withBaseUrl(this.backend)
+        .withBaseUrl(process.env.BackendUrl)
         .withInterceptor(this.auth.tokenInterceptor); // Adds bearer token to every HTTP request.
     });
   }
