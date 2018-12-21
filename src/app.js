@@ -110,6 +110,14 @@ export class App {
         settings: 'fa fa-music'
       },
       {
+        route: 'prayer',
+        name: 'prayer',
+        moduleId: PLATFORM.moduleName('./prayer'),
+        nav: false,
+        title: 'Prayer & Study',
+        settings: 'fa fa-book'
+      },
+      {
         route: 'giving',
         name: 'giving',
         moduleId: PLATFORM.moduleName('./giving'),
