@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=10.14.1"
+    "node": ">=11.5.0"
   },
   "files": [
     "webpack.config.js",

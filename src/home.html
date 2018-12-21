@@ -27,11 +27,6 @@
               is happening for a day, a week or a month at a time.
               <br><br>
             </p>
-            <div style="text-align:left;margin-bottom:0">
-              <a href="http://www.elca.org/" target="_blank">
-                <img id="elcaLogo" alt="ELCA LOGO" src="http://www.collegelutheran.org/files/1531/Image/elca-logo.png" style="width: 380px;margin:auto;">
-              </a>
-            </div>
           </div>
           <div if.bind="widescreenHomepage" class="col-xl-6" style="padding:1px;right:0;">
             <div id="slideshow1">
@@ -42,19 +37,44 @@
       </div>
     </div>
     <hr>
-    <div class="material-content">
-      <p style="text-align:center;font-size:10pt"><i>Come join and like us on <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
-      <div if.bind="!widescreenHomepage" style="margin-bottom:10px">&nbsp;
-      </div>
-      <div class="col-md-6" style="max-width:500px;margin:auto;margin-bottom:-40px">
-        <iframe if.bind="widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=600&height=427&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
-          width="500" height="400" style="border:none;overflow:hidden;margin-left:-14px" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+    <div class="material-content" style="padding:0;margin-top:-14px">
+      <table if.bind="widescreenHomepage">
+        <tr>
+          <td style="padding:0">
+            <div if.bind="widescreenHomepage" style="width:499px;margin:auto;">
+              <p style="text-align:center;font-size:10pt;margin-top:5px"><i>CLC Events Calendar</i></p>
+              <iframe if.bind="widescreenHomepage" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=family18083373936733298689%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FNew_York"
+                style="border-width:0" width="499" height="400" frameborder="0" scrolling="no">
+              </iframe>
+            </div>
+          </td>
+          <td style="padding:0">
+            <div if.bind="widescreenHomepage" style="width:500px;margin:auto;">
+              <p style="text-align:center;font-size:10pt;margin-top:10px"><i>Come join and like us on <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
+              <iframe if.bind="widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=600&height=427&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
+                width="500" height="400" style="border:none;overflow:hidden;margin-left:0" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+              </iframe>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:30px;margin-bottom:0;padding-bottom:2px"><i>CLC Events Calendar</i></p>
+      <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto;margin-bottom:0">
+        <iframe if.bind="!widescreenHomepage" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=family18083373936733298689%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FNew_York"
+          style="border-width:0" width="300" height="300" frameborder="0" scrolling="no">
         </iframe>
       </div>
+      <hr if.bind="!widescreenHomepage">
+      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:10px;margin-bottom:0;padding-bottom:4px"><i>Come join and like us on <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
       <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto;margin-bottom:-40px">
         <iframe if.bind="!widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=300&height=500&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
           width="300" height="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
         </iframe>
+      </div>
+      <div style="text-align:center;margin:auto;padding-top:25px;padding-bottom:-40px">
+        <a href="http://www.elca.org/" target="_blank">
+          <img id="elcaLogo" alt="ELCA LOGO" src="http://www.collegelutheran.org/files/1531/Image/elca-logo.png" style="width: 350px;margin:auto;">
+        </a>
       </div>
     </div>
   </div>
