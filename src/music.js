@@ -1,26 +1,17 @@
-const showSlides = require('./commons/showSlides');
-
-export class Music {
+export class Beliefs {
   constructor() {
-    this.showSlides = showSlides;
-    this.slideshow_data = {
-      id: 'slideshowMusic',
-      slideshow_images: ['../../static/imgs/martinsville2017.png', '../../static/imgs/fifthWedAnniversary.png', '../../static/imgs/prom2015.png',
-        '../../static/imgs/hiddenValleyTalentShow.png', '../../static/imgs/ourWedding.png']
-    };
+    this.top = null;
   }
 
-  jump(h) {
-    document.getElementById(h).scrollIntoView();
-  }
+  get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }
 
   attached() {
-    const musicTimer = setInterval(() => {
-      const ms1 = document.getElementById('musicSlide1');
-      if (ms1 !== null && ms1 !== undefined) {
-        ms1.style.display = 'none';
-      } else { return clearInterval(musicTimer); }
-      return this.showSlides.showSlides(['slideshowMusic'], document);
-    }, 5400);
+    this.searchParams = new URLSearchParams(window.location.search);
+    if (this.searchParams.get('reload')) {
+      /* istanbul ignore if */
+      if (process.env.NODE_ENV !== 'test') window.location.href = window.location.href.split('?')[0];
+    }
+    this.top = document.getElementsByClassName('material-header')[0];
+    if (this.top !== null && this.top !== undefined) this.top.scrollIntoView();
   }
 }
