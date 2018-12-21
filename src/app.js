@@ -102,7 +102,12 @@ export class App {
         route: 'userutil', name: 'userutil', moduleId: PLATFORM.moduleName('./userutil'), nav: false, title: ''
       },
       {
-        route: 'music', name: 'music-router', moduleId: PLATFORM.moduleName('./music-router'), nav: false, title: '', settings: 'fa fa-music'
+        route: 'music',
+        name: 'music',
+        moduleId: PLATFORM.moduleName('./music'),
+        nav: false,
+        title: 'Music',
+        settings: 'fa fa-music'
       },
       {
         route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home'

@@ -814,15 +814,14 @@ a:hover {
   font-size: 0.8em;
 }
 
-#playSection audio {
+/* #playSection audio {
   background-image: url("../static/imgs/webjamlogo1.png");
   background-position: center;
   background-size: 80%;
   background-repeat: no-repeat;
   border-radius: 0 !important;
   background-color: #2a222a !important;
-}
-
+} */
 button.on {
   background-color: #c0c0c0 !important;
 }
