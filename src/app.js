@@ -110,6 +110,14 @@ export class App {
         settings: 'fa fa-music'
       },
       {
+        route: 'news',
+        name: 'news',
+        moduleId: PLATFORM.moduleName('./news'),
+        nav: false,
+        title: 'News & Forum',
+        settings: 'fa fa-newspaper-o'
+      },
+      {
         route: 'prayer',
         name: 'prayer',
         moduleId: PLATFORM.moduleName('./prayer'),
