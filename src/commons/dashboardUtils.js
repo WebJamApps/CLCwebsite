@@ -1,15 +1,18 @@
 exports.childRoute = function childroute(module) {
+  console.log(module.user.userType);
   if (module.user.userStatus === 'disabled') {
     return module.app.router.navigate('dashboard/user-account');
   }
-  if (module.user.userType === undefined || module.user.userType === '') {
-    module.user.userDetails = 'newUser';
-    if (module.user.isOhafUser) module.user.userType = 'Volunteer';
-    else module.user.userType = 'user-account';
-    module.app.appState.setUser(module.user);
-    return module.app.router.navigate('dashboard/user-account');
+  if (module.user.userType === undefined || module.user.userType === ''
+  || (module.user.userType !== 'Developer' && module.user.userType !== 'clc-admin')) {
+    // module.user.userDetails = 'newUser';
+    // if (module.user.isOhafUser) module.user.userType = 'Volunteer';
+    // else module.user.userType = 'user-account';
+    // module.app.appState.setUser(module.user);
+    return module.app.router.navigate('/');
   }
-  return module.app.router.navigate(`dashboard/${module.user.userType.toLowerCase()}`);
+  return module.app.router.navigate('dashboard/clc-admin');
+  // return module.app.router.navigate(`dashboard/${module.user.userType.toLowerCase()}`);
 };
 
 exports.subRoute = async function subRoute(module, ls) {
