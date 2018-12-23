@@ -31,21 +31,21 @@ describe('the dashboard utils', () => {
     expect(res).toBe('dashboard/user-account');
     done();
   });
-  it('routes new users', (done) => {
-    dashboardStub.user.userStatus = '';
-    dashboardStub.user.userType = '';
-    const res = dashboardUtils.childRoute(dashboardStub);
-    expect(res).toBe('dashboard/user-account');
-    done();
-  });
-  it('routes new ohaf users', (done) => {
-    dashboardStub.user.userStatus = '';
-    dashboardStub.user.userType = '';
-    dashboardStub.user.isOhafUser = true;
-    const res = dashboardUtils.childRoute(dashboardStub);
-    expect(res).toBe('dashboard/user-account');
-    done();
-  });
+  // it('routes new users', (done) => {
+  //   dashboardStub.user.userStatus = '';
+  //   dashboardStub.user.userType = '';
+  //   const res = dashboardUtils.childRoute(dashboardStub);
+  //   expect(res).toBe('dashboard/user-account');
+  //   done();
+  // });
+  // it('routes new ohaf users', (done) => {
+  //   dashboardStub.user.userStatus = '';
+  //   dashboardStub.user.userType = '';
+  //   dashboardStub.user.isOhafUser = true;
+  //   const res = dashboardUtils.childRoute(dashboardStub);
+  //   expect(res).toBe('dashboard/user-account');
+  //   done();
+  // });
   it('logs out a users', async () => {
     dashboardStub2.user.userStatus = '';
     dashboardStub2.user.userType = '';
