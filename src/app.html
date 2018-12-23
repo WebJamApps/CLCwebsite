@@ -29,12 +29,12 @@
               </a>
             </p>
           </div>
-          <!-- <div class="menu-item" if.bind="authenticated">
+          <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle href="/dashboard" class="nav-link" click.delegate="close()">
               <span class="fa fa-tachometer"></span>
-              <span if.bind="fullmenu" class="nav-item">${dashboardTitle}</span>
+              <span class="nav-item">${dashboardTitle}</span>
             </a>
-          </div> -->
+          </div>
           <!-- <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle href="/dashboard/user-account" class="nav-link" click.delegate="close()">
               <span class="fa fa-user"></span>
@@ -42,12 +42,10 @@
             </a>
           </div> -->
           <div class="menu-item">
-            <!-- <div style="background-color:white" if.bind="currentRoute =='beliefs'"> -->
             <a paper-drawer-toggle href="/beliefs" class="nav-link" click.delegate="close()">
               <span class="fa fa-arrows" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Our Lutheran Beliefs</span>
             </a>
-            <!-- </div> -->
           </div>
           <div class="menu-item">
             <a paper-drawer-toggle href="/staff" class="nav-link" click.delegate="close()">
@@ -85,14 +83,20 @@
               <span class="nav-item" if.bind="fullmenu">Home</span>
             </a>
           </div>
-          <!-- <div class="menu-item" if.bind="authenticated">
+          <div class="menu-item" if.bind="!authenticated" style="text-align:center;margin:center">
+            <a paper-drawer-toggle class="nav-link" click.delegate="authenticate('google')" style=" padding-right:4px">
+              <span class="fa fa-sign-out nav-item" style="cursor: pointer; cursor: hand;"></span>
+            </a>
+            <button click.delegate="authenticate('google')">Login</button>
+          </div>
+          <div class="menu-item" if.bind="authenticated">
             <a paper-drawer-toggle class="nav-link" click.delegate="logout()" style=" padding-right:4px">
               <span class="fa fa-sign-out nav-item" style="cursor: pointer; cursor: hand;"></span>
             </a>
-            <button if.bind="fullmenu" click.delegate="logout()" class="material-content-button">
+            <button click.delegate="logout()" class="material-content-button">
               Logout
             </button>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

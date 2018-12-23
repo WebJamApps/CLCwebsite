@@ -9,12 +9,12 @@ export class DashboardRouter {
         route: '', name: 'dashboard', moduleId: PLATFORM.moduleName('./dashboard'), nav: false, title: 'Dashboard', auth: true
       },
       {
-        route: 'developer',
-        name: 'developer',
-        moduleId: PLATFORM.moduleName('./dashboard-child-routes/developer'),
+        route: 'clc-admin',
+        name: 'clc-admin',
+        moduleId: PLATFORM.moduleName('./dashboard-child-routes/clc-admin'),
         nav:
         false,
-        title: 'Developer',
+        title: 'CLC Admin Dashboard',
         auth: true
       },
       {
