@@ -4,19 +4,14 @@
       <p>There are currently no pdfs links to display</p>
     </div>
     <div if.bind="books.length > 0">
-      <div style="z-index:10; position:relative;">
-        <div style="width: 4.5in; margin:auto">
-          <h3 class="material-content-h3" style="margin-bottom: 10px">Newsletters & Forums
-          </h3>
-        </div>
-      </div>
+      <h4 class="material-content-h3" style="margin-bottom: 6px">Newsletters & Forums </h4>
       <div class="search-table-outer" style="position:relative;overflow-x:auto;">
         <table aurelia-table="data.bind: books; display-data.bind: $displayData; filters.bind: filters" class="bookshelf">
           <thead>
             <tr>
-              <th style="padding:8px" aut-sort="key: title; default: asc">Title</th>
+              <th style="padding:8px" aut-sort="key: title">Title</th>
               <th style="padding:8px" aut-sort="key: type">Type</th>
-              <th style="padding:8px">Date</th>
+              <th style="padding:8px;min-width:100px" aut-sort="key: created_at; default: desc">Date</th>
             </tr>
           </thead>
           <tbody>
