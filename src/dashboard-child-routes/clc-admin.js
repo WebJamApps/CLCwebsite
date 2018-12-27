@@ -26,6 +26,7 @@ export class ClcAdmin {
     this.existingBooks = [];
     this.titleSelected = '';
     this.showDeleteButton = false;
+    this.homePageContent = { title: '', comments: '', type: 'homePageContent' };
   }
 
   types = ['Forum', 'Newsletter'];
@@ -121,6 +122,16 @@ export class ClcAdmin {
     })
       .then(() => {
         this.app.router.navigate('/news');
+      });
+  }
+  async changeHomePage() {
+    console.log(this.homePageContent);
+    this.app.httpClient.fetch('/book/homepage', {
+      method: 'put',
+      body: json(this.homePageContent)
+    })
+      .then(() => {
+        this.app.router.navigate('/?reload=true');
       });
   }
 }

@@ -38,5 +38,18 @@
         </button>
       </form>
     </div>
+    <p style="font-size:2pt">&nbsp;</p>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Change Homepage Section</h4>
+      <form>
+        <label>Title</label>
+        <input value.two-way="homePageContent.title">
+        <label>Content</label>
+        <textarea rows="15" cols="30" value.two-way="homePageContent.comments"></textarea>
+        <button id="changeStuff" class="button-lib" raised click.trigger="changeHomePage()">
+          Submit
+        </button>
+      </form>
+    </div>
   </div>
 </template>

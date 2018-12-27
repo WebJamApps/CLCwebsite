@@ -17,6 +17,7 @@ export class Home {
       res = await this.app.httpClient.fetch('/book/getHomeContent');
     } catch (e) { console.log(e.message); }
     if (res !== null && res !== undefined) this.homeContent = await res.json();
+    console.log(this.homeContent);
   }
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }
