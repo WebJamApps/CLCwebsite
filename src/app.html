@@ -111,9 +111,9 @@
                     <td style="border:none;padding:0;width:80%">
                       <h2 class="header-text" style="margin-bottom:0">
                         <a class="header-text" href="/" style="text-align:left;text-decoration: none">
-                          College Lutheran
+                          College Lutheran <span if.bind="widescreen" style="font-size:19pt">Church</span>
                         </a>
-                        <span style="font-size:19pt">Church</span></h2>
+                        <span if.bind="!widescreen" style="font-size:19pt">Church</span></h2>
                       <p style="max-width:80%" class="subTitle">We celebrate God's grace and share His love in Christ!</p>
                     </td>
                   </tr>
@@ -124,7 +124,26 @@
         </div>
         <div style="width:auto;" class="content-block">
           <router-view></router-view>
-          <div id="wjfooter" class="footer" style="margin-top:10px"></div>
+          <div id="wjfooter" class="footer" style="margin-top:20px">
+            <div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:0">
+              <a target="_blank" style="z-index:16777271;color:#f4c00eff;padding-right:5px;text-decoration:none; border:none" href="https://twitter.com/CollegeLutheran">
+                <i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true">
+                </i>
+              </a>
+              <a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:#f4c00eff;padding-right:5px" href="https://www.facebook.com/CollegeLutheranChurch/">
+                <i class="fa fa-facebook-square fa-2x footerIcon" aria-hidden="true">
+                </i>
+              </a>
+              <a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:#f4c00eff;padding-right:5px" href="https://www.instagram.com/collegelutheranchurch/">
+                <i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true">
+                </i>
+              </a>
+              <span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">
+                Powered by <a class="wjllc" target="_blank" href="https://www.web-jam.com">Web Jam LLC
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -278,20 +278,20 @@ export class App {
 
   setFooter() {
     const footer = document.getElementById('wjfooter');
-    let color = '';
+    // let color = '';
     if (footer !== null) {
       footer.style.backgroundColor = '#244a8bff';
-      color = '#f4c00eff';
-      footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:20px">'
-      + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
-      + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
-      + 'href="https://www.facebook.com/CollegeLutheranChurch/">'
-      + '<i class="fa fa-facebook-square fa-2x footerIcon"'
-      + `aria-hidden="true"></i></a><a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:${color};padding-right:5px"`
-      + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + '<span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
-      + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
+      // color = '#f4c00eff';
+      // footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:0">'
+      // + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
+      // + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
+      // + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
+      // + 'href="https://www.facebook.com/CollegeLutheranChurch/">'
+      // + '<i class="fa fa-facebook-square fa-2x footerIcon"'
+      // + `aria-hidden="true"></i></a><a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:${color};padding-right:5px"`
+      // + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
+      // + '<span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
+      // + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
     }
   }
 
