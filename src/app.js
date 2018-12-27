@@ -105,6 +105,14 @@ export class App {
         settings: 'fa fa-music'
       },
       {
+        route: 'calendar',
+        name: 'calendar',
+        moduleId: PLATFORM.moduleName('./calendar'),
+        nav: false,
+        title: 'Calendar',
+        settings: 'fa fa-music'
+      },
+      {
         route: 'news',
         name: 'news',
         moduleId: PLATFORM.moduleName('./news'),

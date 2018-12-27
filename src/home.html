@@ -10,13 +10,16 @@
               The church is situated on College Avenue,
               within easy walking distance of Roanoke College.
               College Lutheran Church is part of the Evangelical Lutheran Church in America (ELCA).<br><br><br>
-              <span style="font-size:18px"> <strong>Join Us for Holy Communion Service</strong></span>
+              <span style="font-size:18px"> <strong>Join Us for Holy Communion</strong></span>
               <ul style="margin-bottom:0;padding-top:0">
-                <li style="margin-left:-10px">One service of Holy Communion, Sunday at 10:00 am</li>
+                <li style="margin-left:-10px">Service of Holy Communion, Sunday at 10:00 am</li>
                 <br>
                 <li style="margin-left:-10px">Sunday school for all ages begins at 9:00 am</li>
                 <br>
-                <li style="margin-left:-10px">Choir rehearses on Sunday after Worship</li><br>
+                <li style="margin-left:-10px">Choir rehearses on Sunday after Worship</li>
+                <br>
+                <li style="margin-left:-10px">Wednesday Bible study at 11:15 am followed by Holy Communion at 12:15 pm</li>
+                <br>
               </ul>
               <i>Please join us as we celebrate God’s grace and share His love in Christ</i>.
             </p>
@@ -41,33 +44,52 @@
     <hr>
     <div class="material-content" style="padding:0;margin-top:-14px">
       <table if.bind="widescreenHomepage">
-        <tr>
-          <td style="padding:0">
-            <div if.bind="widescreenHomepage" style="width:499px;margin:auto;">
-              <p style="text-align:center;font-size:10pt;margin-top:5px"><i>CLC Events Calendar</i></p>
-              <iframe if.bind="widescreenHomepage" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=family18083373936733298689%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FNew_York"
+        <!-- <thead>
+          <tr>
+            <th style="padding:8px"><i>CLC Events Calendar</i></th>
+            <th style="padding:8px"><i>Like Us On <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <tr>
+            <td style="padding:0">
+              <div if.bind="widescreenHomepage" style="width:499px;margin:auto;text-align:center">
+                <p style="text-align:center;font-size:10pt;margin-top:5px">
+                  <a style="font-size:10pt" href="/calendar">
+                    <i>View Full Calendar</i>
+                  </a>
+                </p>
+                <!-- <iframe if.bind="widescreenHomepage" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=family18083373936733298689%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FNew_York"
                 style="border-width:0" width="499" height="400" frameborder="0" scrolling="no">
-              </iframe>
-            </div>
-          </td>
-          <td style="padding:0">
-            <div if.bind="widescreenHomepage" style="width:500px;margin:auto;">
-              <p style="text-align:center;font-size:10pt;margin-top:10px"><i>Come join and like us on <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
-              <iframe if.bind="widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=600&height=427&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
-                width="500" height="400" style="border:none;overflow:hidden;margin-left:0" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
-              </iframe>
-            </div>
-          </td>
-        </tr>
+              </iframe> -->
+                <iframe src="https://calendar.google.com/calendar/embed?title=College%20Lutheran%20Events%20Calendar&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ra8um2u26p59a2t92lfooq4els%40group.calendar.google.com&amp;color=%23060D5E&amp;ctz=America%2FNew_York"
+                  style="border-width:0" width="400" height="400" frameborder="0" scrolling="no">
+                </iframe>
+              </div>
+            </td>
+            <td style="padding:0">
+              <div if.bind="widescreenHomepage" style="width:500px;margin:auto;">
+                <p style="text-align:center;font-size:10pt;margin-top:5px"><i>Like Us On <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
+                <iframe if.bind="widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=600&height=427&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
+                  width="500" height="400" style="border:none;overflow:hidden;margin-left:0" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+                </iframe>
+              </div>
+            </td>
+          </tr>
+        </tbody>
       </table>
-      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:30px;margin-bottom:0;padding-bottom:2px"><i>CLC Events Calendar</i></p>
+      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:30px;margin-bottom:0;padding-bottom:2px">
+        <a style="font-size:10pt" href="/calendar">
+          <i>View Full Calendar</i>
+        </a>
+      </p>
       <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto;margin-bottom:0">
-        <iframe if.bind="!widescreenHomepage" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=family18083373936733298689%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FNew_York"
+        <iframe src="https://calendar.google.com/calendar/embed?title=College%20Lutheran%20Events%20Calendar&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ra8um2u26p59a2t92lfooq4els%40group.calendar.google.com&amp;color=%23060D5E&amp;ctz=America%2FNew_York"
           style="border-width:0" width="300" height="300" frameborder="0" scrolling="no">
         </iframe>
       </div>
       <hr if.bind="!widescreenHomepage">
-      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:10px;margin-bottom:0;padding-bottom:4px"><i>Come join and like us on <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
+      <p if.bind="!widescreenHomepage" style="text-align:center;font-size:10pt;margin-top:10px;margin-bottom:0;padding-bottom:4px"><i>Like Us On <a style="font-size:10pt" href="https://www.facebook.com/CollegeLutheranChurch/">Facebook</a></i></p>
       <div if.bind="!widescreenHomepage" style="max-width:300px;margin:auto;margin-bottom:-40px">
         <iframe if.bind="!widescreenHomepage" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCollegeLutheranChurch&width=300&height=500&colorscheme=light&show_faces=false&header=true&stream=true&show_border=false"
           width="300" height="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
