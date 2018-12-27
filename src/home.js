@@ -1,6 +1,23 @@
+import {
+  inject
+} from 'aurelia-framework';
+import {
+  App
+} from './app';
+@inject(App)
 export class Home {
-  constructor() {
+  constructor(app) {
+    this.app = app;
     this.top = null;
+    this.homeContent = { title: '', comments: '' };
+  }
+  async activate() {
+    let res;
+    try {
+      res = await this.app.httpClient.fetch('/book/getHomeContent');
+    } catch (e) { console.log(e.message); }
+    if (res !== null && res !== undefined) this.homeContent = await res.json();
+    console.log(this.homeContent);
   }
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }

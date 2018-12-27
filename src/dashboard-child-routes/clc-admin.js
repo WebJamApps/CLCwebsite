@@ -23,6 +23,10 @@ export class ClcAdmin {
     this.controller.validateTrigger = validateTrigger.changeOrBlur;
     this.canSubmit = false; // the button on the form
     this.validType = false;
+    this.existingBooks = [];
+    this.titleSelected = '';
+    this.showDeleteButton = false;
+    this.homePageContent = { title: '', comments: '', type: 'homePageContent' };
   }
 
   types = ['Forum', 'Newsletter'];
@@ -34,6 +38,42 @@ export class ClcAdmin {
     this.app.role = this.user.userType;
     this.types.sort();
     await this.setupValidation();
+    let res;
+    try {
+      res = await this.app.httpClient.fetch('/book/getall');
+    } catch (e) { console.log(e.message); }
+    if (res !== null && res !== undefined) this.existingBooks = await res.json();
+    return this.fixBooks(this.existingBooks);
+  }
+  fixBooks(books) {
+    console.log('here?');
+    const booksArr = [];
+    for (let i = 0; i < books.length; i += 1) {
+      if ((books[i].type === 'Forum' || books[i].type === 'Newsletter') && books[i].access === 'CLC') booksArr.push(books[i]);
+      if (books[i].created_at !== null && books[i].created_at !== undefined) {
+        books[i].created_at = books[i].created_at.split('T')[0];
+      }
+    }
+    this.existingBooks = booksArr;
+    console.log(this.existingBooks);
+  }
+  showDelete() {
+    this.showDeleteButton = true;
+    if (this.titleSelected === '') this.showDeleteButton = false;
+  }
+  async deleteBook() {
+    const selectBookTitle = document.getElementById('selectBookTitle');
+    const id = selectBookTitle.options[selectBookTitle.selectedIndex].value;
+    console.log(id);
+    let res, message;
+    try {
+      res = await this.app.httpClient.fetch(`/book/${id}`, {
+        method: 'delete'
+      });
+      message = await res.json();
+    } catch (e) { return console.log(e.message); }
+    console.log(message.message);
+    return this.app.router.navigate('/news');
   }
   setupValidation() {
     ValidationRules
@@ -61,14 +101,11 @@ export class ClcAdmin {
   }
   setTitle() {
     this.newBook.title = this.newBook.url;
-    // https://www.dropbox.com/s/b0x8winvr2ecuay/December%20Forum%202018.pdf?dl=0
     let urlArr = this.newBook.title.split('/');
     urlArr = urlArr[5].split('.pdf');
     this.newBook.title = urlArr[0].replace('%20', ' ');
     this.newBook.title = this.newBook.title.replace('%20', ' ');
     this.newBook.title = `${this.newBook.title}.pdf`;
-    // console.log(this.newBook.title);
-    // console.log(urlArr);
     return Promise.resolve(true);
   }
   fixUrl() {
@@ -85,6 +122,16 @@ export class ClcAdmin {
     })
       .then(() => {
         this.app.router.navigate('/news');
+      });
+  }
+  async changeHomePage() {
+    console.log(this.homePageContent);
+    this.app.httpClient.fetch('/book/homepage', {
+      method: 'put',
+      body: json(this.homePageContent)
+    })
+      .then(() => {
+        this.app.router.navigate('/?reload=true');
       });
   }
 }

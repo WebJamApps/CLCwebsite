@@ -432,7 +432,7 @@ audio::-webkit-media-controls-panel {
   font-weight: 400;
   line-height: 24px;
   position: relative;
-  min-height: 48px;
+  min-height: 46px;
   padding-top: 0;
   padding-right: 16px;
   box-sizing: border-box;
@@ -653,6 +653,8 @@ a:hover {
 }
 
 .nav-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 0;
   display: block !important;
   color: #23527c;
