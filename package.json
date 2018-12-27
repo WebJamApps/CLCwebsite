@@ -65,6 +65,8 @@
     "dotenv": "latest",
     "expose-loader": "^0.7.5",
     "extract-text-webpack-plugin": "next",
+    "express": "latest",
+    "express-sslify": "latest",
     "file-loader": "^1.1.11",
     "file-saver": "^1.3.8",
     "font-awesome": "^4.7.0",
@@ -165,7 +167,7 @@
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
-    "server:prod": "pushstate-server dist"
+    "server:prod": "node server.js"
   },
   "snyk": true
 }
