@@ -1,4 +1,4 @@
-export class Beliefs {
+export class Calendar {
   constructor() {
     this.top = null;
   }

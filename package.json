@@ -1,15 +1,15 @@
 {
-  "name": "combined-front",
-  "version": "0.8.2",
-  "description": "Front End of web-jam.com App",
+  "name": "ClCwebsite",
+  "version": "0.0.1",
+  "description": "Front End of collegelutheran.org",
   "main": "dist/index.html",
   "repository": {
-    "url": "git+ssh://git@github.com/WebJamApps/combined-front.git",
+    "url": "git+ssh://git@github.com/WebJamApps/CLCwebsite.git",
     "type": "git"
   },
-  "author": "HandlersAndKickers",
+  "author": "95theses",
   "engines": {
-    "node": "10.13.0"
+    "node": ">=11.5.0"
   },
   "files": [
     "webpack.config.js",
@@ -83,12 +83,13 @@
     "postcss": "^6.0.14",
     "postcss-loader": "latest",
     "postcss-sass": "^0.2.0",
+    "pushstate-server": "latest",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-player": "^1.6.4",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "snyk": "latest",
+    "snyk": "^1.111.1",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",
@@ -163,7 +164,8 @@
     "postinstall": "npm run fix:aurelia-val && npm start -- build",
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
-    "test:html": "htmlhint src/**/*.html"
+    "test:html": "htmlhint src/**/*.html",
+    "server:prod": "pushstate-server dist"
   },
   "snyk": true
 }

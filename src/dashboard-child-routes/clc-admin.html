@@ -1,0 +1,55 @@
+<template>
+  <div class="page-content">
+    <a id="top"></a>
+    <h3 style="margin-top:20px;padding:10px;text-align:center">${app.dashboardTitle} Dashboard</h3>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Add Forum or Newsletter</h4>
+      <form>
+        <label>Type</label>
+        <select id="mediaType" class="form-control" value.bind="newBook.type & validate" style="margin-top:0;width: 2.35in">
+          <option value=""></option>
+          <option repeat.for="type of types" model.bind="type">${type}</option>
+        </select>
+        <label>Dropbox URL to PDF</label>
+        <input value.two-way="newBook.url & validate">
+        <div validation-errors.bind="errors" class="form-group" style="max-width: 3in;padding:10px">
+          <ul if.bind="controller.errors" style="padding:0">
+            <li repeat.for="error of controller.errors" style="color:red">
+              ${error.message}
+            </li>
+          </ul>
+        </div>
+        <button id="createMediaButton" class="button-lib" raised click.trigger="createBook()" style="display:none">
+          Submit
+        </button>
+      </form>
+    </div>
+    <p style="font-size:2pt">&nbsp;</p>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Delete Forum or Newsletter</h4>
+      <form>
+        <label>Select</label>
+        <select id="selectBookTitle" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
+          <option value=""></option>
+          <option repeat.for="book of existingBooks" value="${book._id}" model.bind="existingBooks">${book.title}</option>
+        </select>
+        <button if.bind="showDeleteButton" id="deleteStuff" class="button-lib" raised click.trigger="deleteBook()">
+          Delete
+        </button>
+      </form>
+    </div>
+    <p style="font-size:2pt">&nbsp;</p>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Change Homepage Section</h4>
+      <form>
+        <label>Title</label>
+        <input value.two-way="homePageContent.title">
+        <label>Content</label>
+        <textarea rows="15" cols="32" value.two-way="homePageContent.comments"></textarea>
+        <button id="changeStuff" class="button-lib" raised click.trigger="changeHomePage()">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</template>

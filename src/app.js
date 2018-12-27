@@ -25,7 +25,7 @@ export class App {
   authenticated = false;
 
   @bindable
-  drawerWidth = '182px';
+  drawerWidth = '220px';
 
   @bindable
   contentWidth = '0px';
@@ -37,13 +37,13 @@ export class App {
     this.configHttpClient();
     this.appState = new AppState(this.httpClient);
     this.userAccess = new UserAccess(this.appState);
-    this.states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
-      'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
-      'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
+    /* this.states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+       'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+     'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
       'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-      'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina',
+    'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina',
       'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
-    this.states.sort();
+  this.states.sort(); */
     await this.appUtils.checkUser(this);
   }
 
@@ -61,11 +61,6 @@ export class App {
   }
 
   configHttpClient() {
-    this.backend = '';
-    /* istanbul ignore else */
-    if (process.env.NODE_ENV !== 'production') {
-      this.backend = process.env.BackendUrl;
-    }
     this.httpClient.configure((httpConfig) => {
       httpConfig
         .withDefaults({
@@ -76,7 +71,7 @@ export class App {
           }
         })
         .useStandardConfiguration()
-        .withBaseUrl(this.backend)
+        .withBaseUrl(process.env.BackendUrl)
         .withInterceptor(this.auth.tokenInterceptor); // Adds bearer token to every HTTP request.
     });
   }
@@ -102,16 +97,69 @@ export class App {
         route: 'userutil', name: 'userutil', moduleId: PLATFORM.moduleName('./userutil'), nav: false, title: ''
       },
       {
-        route: 'music', name: 'music-router', moduleId: PLATFORM.moduleName('./music-router'), nav: false, title: '', settings: 'fa fa-music'
+        route: 'music',
+        name: 'music',
+        moduleId: PLATFORM.moduleName('./music'),
+        nav: false,
+        title: 'Music',
+        settings: 'fa fa-music'
+      },
+      {
+        route: 'calendar',
+        name: 'calendar',
+        moduleId: PLATFORM.moduleName('./calendar'),
+        nav: false,
+        title: 'Calendar',
+        settings: 'fa fa-music'
+      },
+      {
+        route: 'news',
+        name: 'news',
+        moduleId: PLATFORM.moduleName('./news'),
+        nav: false,
+        title: 'News & Forum',
+        settings: 'fa fa-newspaper-o'
+      },
+      {
+        route: 'prayer',
+        name: 'prayer',
+        moduleId: PLATFORM.moduleName('./prayer'),
+        nav: false,
+        title: 'Prayer & Study',
+        settings: 'fa fa-book'
+      },
+      {
+        route: 'giving',
+        name: 'giving',
+        moduleId: PLATFORM.moduleName('./giving'),
+        nav: false,
+        title: 'Giving',
+        settings: 'fa fa-handshake-o'
       },
       {
         route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home'
-      }
+      },
+      {
+        route: 'beliefs',
+        name: 'beliefs',
+        moduleId: PLATFORM.moduleName('./beliefs'),
+        nav: false,
+        title: 'Our Lutheran Beliefs',
+        settings: 'fa fa-sign-in'
+      },
+      {
+        route: 'staff',
+        name: 'staff',
+        moduleId: PLATFORM.moduleName('./staff'),
+        nav: false,
+        title: 'Church Staff',
+        settings: 'fa fa-users'
+      },
     ]);
   }
 
   configureRouter(config, router) {
-    config.title = 'Web Jam LLC';
+    config.title = 'College Lutheran Church';
     config.options.pushState = true;
     config.options.root = '/';
     config.addPipelineStep('authorize', AuthorizeStep);// Is the actually Authorization to get into the /dashboard
@@ -172,8 +220,8 @@ export class App {
       this.contentWidth = '50px';
     } else {
       this.fullmenu = true;
-      this.drawerWidth = '182px';
-      this.contentWidth = '182px';
+      this.drawerWidth = '220px';
+      this.contentWidth = '220px';
     }
     document.getElementsByClassName('main-panel')[0].style.marginRight = this.contentWidth;
     dc.style.width = this.drawerWidth;
@@ -204,6 +252,7 @@ export class App {
   }
 
   get currentRoute() {
+    // console.log(this.router.currentInstruction.config.name);
     if (this.router.currentInstruction) return this.router.currentInstruction.config.name;
     return null;
   }
@@ -237,19 +286,20 @@ export class App {
 
   setFooter() {
     const footer = document.getElementById('wjfooter');
-    let color = '';
+    // let color = '';
     if (footer !== null) {
       footer.style.backgroundColor = '#244a8bff';
-      color = '#f4c00eff';
-      footer.innerHTML = '<div style="text-align: center;padding:6px">'
-      + `<a target="_blank" style="color:${color};padding-right:5px"`
-      + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + `<a target="_blank" style="color:${color};padding-right:5px" href="https://www.facebook.com/CollegeLutheranChurch/">`
-      + '<i class="fa fa-facebook-square fa-2x footerIcon"'
-      + `aria-hidden="true"></i></a><a target="_blank" style="color:${color};padding-right:5px"`
-      + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
-      + '<span style="margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
-      + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
+      // color = '#f4c00eff';
+      // footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:0">'
+      // + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
+      // + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
+      // + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
+      // + 'href="https://www.facebook.com/CollegeLutheranChurch/">'
+      // + '<i class="fa fa-facebook-square fa-2x footerIcon"'
+      // + `aria-hidden="true"></i></a><a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:${color};padding-right:5px"`
+      // + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
+      // + '<span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
+      // + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
     }
   }
 
@@ -257,30 +307,12 @@ export class App {
     let result = {};
     this.style = 'wj';
     this.checkNavMenu();
-    if (this.Menu === 'charity' || this.Menu === 'ohaf' || this.Menu === 'volunteer' || this.role === 'Charity' || this.role === 'Volunteer') {
-      this.style = 'ohaf';
-      result = {
-        headerImagePath: '../static/imgs/ohaf/charitylogo.png',
-        headerText1: 'Our',
-        headerText2: 'Hands And',
-        headerText3: 'Feet',
-        headerClass: 'ohaf-header',
-        headerImageClass: 'ohaf-header-image',
-        sidebarClass: 'ohaf-sidebar',
-        menuToggleClass: 'ohaf-menu-toggle'
-      };
-      result.sidebarImagePath = '../static/imgs/ohaf/butterfly.png';
-    } else {
-      result = {
-        headerImagePath: '../static/imgs/webjamicon7.png',
-        headerText1: 'Web Jam LLC',
-        headerClass: 'home-header',
-        headerImageClass: 'home-header-image',
-        sidebarClass: 'home-sidebar',
-        menuToggleClass: 'home-menu-toggle'
-      };
-      result.sidebarImagePath = '../static/imgs/webjamlogo1.png';
-    }
+    result = {
+      headerClass: 'home-header',
+      headerImageClass: 'home-header-image',
+      sidebarClass: 'home-sidebar',
+      menuToggleClass: 'home-menu-toggle'
+    };
     this.setFooter();
     this.setOtherStyles();
     return result;
@@ -291,28 +323,11 @@ export class App {
     const navList = document.getElementsByClassName('nav-list')[0];
     const mobilemenutoggle = document.getElementById('mobilemenutoggle');
     if (menuDrawer !== undefined && menuDrawer !== null) {
-      // if (this.style === 'ohaf') {
-      // menuDrawer.style.backgroundColor = '#c09580';
-      // navList.style.backgroundColor = '#c09580';
       mobilemenutoggle.style.backgroundColor = '#244a8bff';
-      // if (mobilemenutoggle !== null) {
-      //
-      // }
-      // if (menuDrawer !== null && menuDrawer !== undefined) {
       menuDrawer.style.backgroundColor = '#c0c0c0';
       navList.style.backgroundColor = '#c0c0c0';
     }
-    // } else {
-    //   if (menuDrawer !== null && menuDrawer !== undefined) {
-    //     menuDrawer.style.backgroundColor = '#c0c0c0';
-    //     navList.style.backgroundColor = '#c0c0c0';
-    //   }
-    // if (mobilemenutoggle !== null) {
-    //   mobilemenutoggle.style.backgroundColor = '#2a222a';
-    // }
-    // }
   }
-  // }
 
   buildPTag(object, objectSelector, objectSelectorOther, objectStoreResult) {
     for (let l = 0; l < object.length; l += 1) {

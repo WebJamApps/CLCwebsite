@@ -41,11 +41,17 @@ export class UserAccess {
 
 
         for (let i = 0; i < userRoles.length; i += 1) {
-          // console.log(routingContext.params.childRoute);
-          // console.log(userRoles[i].toLowerCase());
+          console.log(userRoles[i].toLowerCase());
+          console.log(routingContext.params.childRoute);
           // in this case the user is only in one role at a time.
-          if (userRoles.indexOf('disabled') === -1 && (routingContext.params.childRoute === userRoles[i].toLowerCase()
-          || (routingContext.params.childRoute.indexOf('vol-ops/') !== -1 && userRoles[i].toLowerCase() === 'charity'))) {
+          if (userRoles[i].indexOf('disabled') === -1
+          && (routingContext.params.childRoute === userRoles[i].toLowerCase()
+          || routingContext.params.childRoute.indexOf('vol-ops/') !== -1 && userRoles[i].toLowerCase() === 'charity')) {
+            return next();
+          }
+
+          if (userRoles[i].toLowerCase() === 'developer' && routingContext.params.childRoute.indexOf('clc-admin') !== -1) {
+            console.log('allowed');
             return next();
           }
           // if (routingContext.params.childRoute.indexOf('vol-ops/') !== -1 && userRoles[i].toLowerCase() === 'charity') {
@@ -54,6 +60,7 @@ export class UserAccess {
           //   return next();
           // }
         }
+        console.log('not allowed');
         return next.cancel();
       }
       // console.log('this route does not require auth, so let them go through');

@@ -1,0 +1,27 @@
+<template>
+  <div class="page-content">
+    <a id="top"></a>
+    <div>
+      <div class="container-fluid">
+        <p style="font-size:4pt;margin:0">&nbsp;</p>
+        <div class="material-content elevation2" style="max-width:998px;padding-bottom:-80px;margin:auto">
+          <h3 style="padding-bottom:15px;font-weight:100">Giving</h3>
+          <p>
+            College Lutheran Church now accepts online gifts through GivePlus and Vanco Payment Services. Giving with your credit card is easy. Just complete the form below to support the ministries of CLC with your offering!
+          </p>
+        </div>
+        <p style="font-size:4pt;margin:0">&nbsp;</p>
+        <div style="margin:auto;text-align:center;padding:0;margin-left:-15px">
+          <iframe if.bind="widescreenHomepage" id="givingFrame" src="https://gp.vancopayments.com/gpo/#/195e5d99-170c-4f3a-b5eb-e61ff13" style="width: 600px; height: 700px; border: 1px solid #d3d3d3"></iframe>
+          <iframe if.bind="!widescreenHomepage" id="givingFrameSmall" src="https://gp.vancopayments.com/gpo/#/195e5d99-170c-4f3a-b5eb-e61ff13" style="width:320px; height: 500px; border: 1px solid #d3d3d3"></iframe>
+        </div>
+        <div style="text-align:center;margin:auto;padding-top:0;padding-bottom:-40px">
+          <a href="http://www.elca.org/" target="_blank">
+            <img id="elcaLogo" alt="ELCA LOGO" src="http://www.collegelutheran.org/files/1531/Image/elca-logo.png" style="width: 350px;margin:auto;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</template>

@@ -1,0 +1,33 @@
+<template>
+  <div class="page-content">
+    <div if.bind="books.length < 1">
+      <p>There are currently no pdfs links to display</p>
+    </div>
+    <div if.bind="books.length > 0">
+      <h4 class="material-content-h3" style="margin-bottom: 6px">Newsletters & Forums </h4>
+      <div class="search-table-outer" style="position:relative;overflow-x:auto;">
+        <table aurelia-table="data.bind: books; display-data.bind: $displayData; filters.bind: filters" class="bookshelf">
+          <thead>
+            <tr>
+              <th style="padding:8px" aut-sort="key: title">Title</th>
+              <th style="padding:8px" aut-sort="key: type">Type</th>
+              <th style="padding:8px;min-width:100px" aut-sort="key: created_at; default: desc">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr repeat.for="book of $displayData">
+              <td style="padding:8px">
+                <a style="font-size:11pt" show.bind="book.url" href="${book.url}" target="_blank" innerhtml.bind="book.title | sanitizeHTML">
+                </a>
+                <a style="font-size:11pt" if.bind="!book.url && reader" href="/dashboard/reader" innerhtml.bind="book.title | sanitizeHTML"></a>
+                <p if.bind="!book.url && !reader" innerhtml.bind="book.title | sanitizeHTML"></p>
+              </td>
+              <td style="padding:8px" innerhtml.bind="book.type | sanitizeHTML"></td>
+              <td style="padding:8px">${book.created_at}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</template>

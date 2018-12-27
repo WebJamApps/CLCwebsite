@@ -1,10 +1,12 @@
-export class Beliefs {
+export class Staff {
   constructor() {
     this.top = null;
   }
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }
-
+  jump(h) {
+    document.getElementById(h).scrollIntoView();
+  }
   attached() {
     this.searchParams = new URLSearchParams(window.location.search);
     if (this.searchParams.get('reload')) {
