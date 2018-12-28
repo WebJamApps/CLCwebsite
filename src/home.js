@@ -30,5 +30,6 @@ export class Home {
     }
     this.top = document.getElementsByClassName('material-header')[0];
     if (this.top !== null && this.top !== undefined) this.top.scrollIntoView();
+    document.querySelector('div.content-block').scrollTo(0, 0);
   }
 }
