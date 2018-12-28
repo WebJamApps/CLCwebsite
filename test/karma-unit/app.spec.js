@@ -91,6 +91,28 @@ describe('the App module', () => {
   it('leaves the styles set to wj if undefined route frag', (done) => {
     done();
   });
+  it('should be able to configure router', (done) => {
+    const config = {
+      options: {},
+      addPipelineStep(a, b) { return null; },
+      addPostRenderStep(obj) { return obj; },
+      map(list) { return this; },
+      fallbackRoute(arg) { return arg; }
+    };
+    app1.configureRouter(config, {});
+    expect(typeof app1.router).toBe('object');
+    done();
+  });
+  it('gets the current styles with login route', (done) => {
+    const routre = new RouterStub();
+    routre.currentInstruction.config.name = 'login';
+    document.body.innerHTML = '<div id="wjfooter" class="footer drawer nav-list"><i id="mobilemenutoggle"></i></div>';
+    app1.router = routre;
+    const cs = app1.currentStyles;
+    expect(app1.Menu).toBe('wj');
+    expect(cs).toBeDefined();
+    done();
+  });
   it('should toggle mobile menu', (done) => {
     spyOn(document, ['getElementsByClassName']).and.returnValue([
       {
@@ -109,7 +131,13 @@ describe('the App module', () => {
     // expect(toggleIcon.style.display).toBe('none');
     done();
   });
-
+  it('should toggle menu to be icons with text', () => {
+    // document.body.innerHTML = '<div class="main-panel"></div><div class="drawer-container"></div><div class="nav-list"></div>';
+    // app1.fullmenu = false;
+    // app1.toggleMenu();
+    // expect(app1.fullmenu).toBe(true);
+    // expect(app1.drawerWidth).toBe('182px');
+  });
   it('should detach', (done) => {
     spyOn(document, ['getElementsByClassName']).and.returnValue([
       {

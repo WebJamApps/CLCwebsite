@@ -407,6 +407,8 @@ export class App {
       footer.parentNode.removeChild(footer);
       header.parentNode.removeChild(header);
     }
+    document.querySelectorAll('body > div > div.au-target.home-sidebar.drawer-container > div > div.nav-list > div.menu-item > a')
+      .forEach((el) => { el.addEventListener('click', appUtils.menuClick); });
   }
 
   detached() {
