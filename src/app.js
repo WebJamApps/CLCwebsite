@@ -88,15 +88,6 @@ export class App {
         settings: 'fa fa-tachometer'
       },
       {
-        route: 'login', name: 'login', moduleId: PLATFORM.moduleName('./login'), nav: false, title: 'Login', settings: 'fa fa-sign-in'
-      },
-      {
-        route: 'register', name: 'register', moduleId: PLATFORM.moduleName('./register'), nav: false, title: 'Register', settings: 'fa fa-user-plus'
-      },
-      {
-        route: 'userutil', name: 'userutil', moduleId: PLATFORM.moduleName('./userutil'), nav: false, title: ''
-      },
-      {
         route: 'music',
         name: 'music',
         moduleId: PLATFORM.moduleName('./music'),
