@@ -20,11 +20,7 @@ module.exports = (api) => {
         "@babel/env", {
         "targets": process.env.BABEL_TARGET === 'node' ? {
           "node": process.env.IN_PROTRACTOR ? '6' : 'current'
-        } : {
-          "browsers": [
-            "last 2 versions"
-          ]
-        },
+        } : "since 2015",
         "loose": true,
         "modules": process.env.BABEL_TARGET === 'node' ? 'commonjs' : false,
         "useBuiltIns": false
