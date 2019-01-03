@@ -7,4 +7,4 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/webjamapps/CLCwebsite/badge.svg)](https://snyk.io/test/github/webjamapps/CLCwebsite)
 <br>
 <br>
-College Lutheran Church Website, Salem VA
+College Lutheran Church Website, 210 S. College Ave, Salem VA 24153
