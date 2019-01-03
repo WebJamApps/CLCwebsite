@@ -74,6 +74,7 @@ exports.handleScreenSize = function handleScreenSize(app, isWide, drawerParent) 
     /* istanbul ignore else */
     if (drawer !== null && drawer !== undefined) {
       drawer.style.display = 'none';
+      drawer.init = 'none';
       drawerParent.css('display', 'none');
       mobileMenuToggle.style.display = 'block';
       swipeArea.style.display = 'block';
@@ -87,10 +88,15 @@ exports.clickFunc = function clickFunc(event) {
   const toggleIcon = document.getElementsByClassName('mobile-menu-toggle')[0];
   /* istanbul ignore else */
   if (event.target.className !== 'menu-item') {
-    document.getElementsByClassName('swipe-area')[0].style.display = 'none';
+    // document.getElementsByClassName('swipe-area')[0].style.display = 'none';
     drawer.style.display = 'none';
     $(drawer).parent().css('display', 'none');
     toggleIcon.style.display = 'block';
     document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
+    drawer.init = 'none';
   }
+};
+
+exports.menuClick = function menuClick(event) {
+  document.querySelector('body > div > div.main-panel > div > div.content-block').scrollTo(0, 0);
 };

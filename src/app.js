@@ -88,15 +88,6 @@ export class App {
         settings: 'fa fa-tachometer'
       },
       {
-        route: 'login', name: 'login', moduleId: PLATFORM.moduleName('./login'), nav: false, title: 'Login', settings: 'fa fa-sign-in'
-      },
-      {
-        route: 'register', name: 'register', moduleId: PLATFORM.moduleName('./register'), nav: false, title: 'Register', settings: 'fa fa-user-plus'
-      },
-      {
-        route: 'userutil', name: 'userutil', moduleId: PLATFORM.moduleName('./userutil'), nav: false, title: ''
-      },
-      {
         route: 'music',
         name: 'music',
         moduleId: PLATFORM.moduleName('./music'),
@@ -181,6 +172,7 @@ export class App {
   }
 
   toggleMobileMenu(toggle) {
+    console.log(toggle);
     document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
     if (toggle !== 'close') {
       document.getElementsByClassName('page-host')[0].style.overflow = 'hidden';
@@ -211,22 +203,22 @@ export class App {
     }
   }
 
-  toggleMenu() {
-    const dc = document.getElementsByClassName('drawer-container')[0];
-    const nl = document.getElementsByClassName('nav-list')[0];
-    if (this.fullmenu) {
-      this.fullmenu = false;
-      this.drawerWidth = '50px';
-      this.contentWidth = '50px';
-    } else {
-      this.fullmenu = true;
-      this.drawerWidth = '220px';
-      this.contentWidth = '220px';
-    }
-    document.getElementsByClassName('main-panel')[0].style.marginRight = this.contentWidth;
-    dc.style.width = this.drawerWidth;
-    nl.style.width = this.drawerWidth;
-  }
+  // toggleMenu() {
+  //   const dc = document.getElementsByClassName('drawer-container')[0];
+  //   const nl = document.getElementsByClassName('nav-list')[0];
+  //   if (this.fullmenu) {
+  //     this.fullmenu = false;
+  //     this.drawerWidth = '50px';
+  //     this.contentWidth = '50px';
+  //   } else {
+  //     this.fullmenu = true;
+  //     this.drawerWidth = '220px';
+  //     this.contentWidth = '220px';
+  //   }
+  //   document.getElementsByClassName('main-panel')[0].style.marginRight = this.contentWidth;
+  //   dc.style.width = this.drawerWidth;
+  //   nl.style.width = this.drawerWidth;
+  // }
 
   ohafLogin() {
     this.menu = 'ohaf';
@@ -407,6 +399,8 @@ export class App {
       footer.parentNode.removeChild(footer);
       header.parentNode.removeChild(header);
     }
+    document.querySelectorAll('body > div > div.au-target.home-sidebar.drawer-container > div > div.nav-list > div.menu-item > a')
+      .forEach((el) => { el.addEventListener('click', appUtils.menuClick); });
   }
 
   detached() {

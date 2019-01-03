@@ -1,7 +1,7 @@
 <template>
   <div class="page-host">
     <div class="${currentStyles.sidebarClass} drawer-container" style="display:none">
-      <div class="drawer" style="background-color: #c0c0c0">
+      <div class="drawer" style="display: none !important;background-color: #c0c0c0">
         <div class="navImage">
           <img alt="lutherRose" class="sideNavTopLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Lutherrose.svg/800px-Lutherrose.svg.png">
         </div>
@@ -30,61 +30,61 @@
             </p>
           </div>
           <div class="menu-item" if.bind="authenticated">
-            <a paper-drawer-toggle href="/dashboard" class="nav-link" click.delegate="close()">
+            <a href="/dashboard" class="nav-link" click.delegate="close()">
               <span class="fa fa-tachometer"></span>
               <span class="nav-item">${dashboardTitle}</span>
             </a>
           </div>
           <div class="menu-item">
-            <a paper-drawer-toggle href="/beliefs" class="nav-link" click.delegate="close()">
+            <a href="/beliefs" class="nav-link" click.delegate="close()">
               <span class="fa fa-arrows" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Our Lutheran Beliefs</span>
             </a>
           </div>
           <div class="menu-item" if.bind="currentRoute !=='staff'">
-            <a paper-drawer-toggle href="/staff" class="nav-link" click.delegate="close()">
+            <a href="/staff" class="nav-link" click.delegate="close()">
               <span class="fa fa-users" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Church Staff</span>
             </a>
           </div>
           <div class="menu-item">
-            <a paper-drawer-toggle href="/music" class="nav-link" click.delegate="close()">
+            <a href="/music" class="nav-link" click.delegate="close()">
               <span class="fa fa-music" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Music</span>
             </a>
           </div>
           <div class="menu-item">
-            <a paper-drawer-toggle href="/giving" class="nav-link" click.delegate="close()">
+            <a href="/giving" class="nav-link" click.delegate="close()">
               <span class="fa fa-handshake-o" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Giving</span>
             </a>
           </div>
           <!-- <div class="menu-item">
-            <a paper-drawer-toggle href="/prayer" class="nav-link" click.delegate="close()">
+            <a  href="/prayer" class="nav-link" click.delegate="close()">
               <span class="fa fa-book" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Prayer & Study</span>
             </a>
           </div> -->
           <div class="menu-item">
-            <a paper-drawer-toggle href="/news" class="nav-link" click.delegate="close()">
+            <a href="/news" class="nav-link" click.delegate="close()">
               <span class="fa fa-newspaper-o" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">News & Forum</span>
             </a>
           </div>
           <div class="menu-item" if.bind="currentRoute !=='' && currentRoute !=='home'">
-            <a paper-drawer-toggle href="/" class="nav-link" click.delegate="close()">
+            <a href="/" class="nav-link" click.delegate="close()">
               <span class="fa fa-heart" aria-hidden="true"></span>
               <span class="nav-item" if.bind="fullmenu">Home</span>
             </a>
           </div>
           <div class="menu-item" if.bind="!authenticated && currentRoute ==='staff'" style="text-align:center;margin:center">
-            <a paper-drawer-toggle class="nav-link" click.delegate="authenticate('google')" style=" padding-right:4px">
+            <a class="nav-link" click.delegate="authenticate('google')" style=" padding-right:4px">
               <span class="fa fa-sign-out nav-item" style="cursor: pointer; cursor: hand;"></span>
             </a>
             <button click.delegate="authenticate('google')">Login</button>
           </div>
           <div class="menu-item" if.bind="authenticated">
-            <a paper-drawer-toggle class="nav-link" click.delegate="logout()" style=" padding-right:4px">
+            <a class="nav-link" click.delegate="logout()" style=" padding-right:4px">
               <span class="fa fa-sign-out nav-item" style="cursor: pointer; cursor: hand;"></span>
             </a>
             <button click.delegate="logout()" class="material-content-button">
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div main class="main-panel">
-      <i click.delegate="toggleMobileMenu()" id="mobilemenutoggle" class="fa fa-bars pull-right fa-1.5x mobile-menu-toggle" paper-drawer-toggle aria-hidden="true" show.bind="!widescreen"></i>
+      <i click.delegate="toggleMobileMenu('open')" id="mobilemenutoggle" class="fa fa-bars pull-right fa-1.5x mobile-menu-toggle" aria-hidden="true" show.bind="!widescreen"></i>
       <div class="mainPanel">
         <div class="swipe-area">
           <div class="p-5 d-block"></div>
