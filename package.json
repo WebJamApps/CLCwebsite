@@ -91,7 +91,7 @@
     "react-player": "^1.6.4",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "snyk": "^1.111.1",
+    "snyk": "^1.124.1",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",
