@@ -146,6 +146,22 @@ export class App {
         title: 'Church Staff',
         settings: 'fa fa-users'
       },
+      {
+        route: 'youth',
+        name: 'youth',
+        moduleId: PLATFORM.moduleName('./youth'),
+        nav: false,
+        title: 'Youth Ministry',
+        settings: 'fa fa-users'
+      },
+      {
+        route: 'family',
+        name: 'family',
+        moduleId: PLATFORM.moduleName('./family'),
+        nav: false,
+        title: 'Children & Families',
+        settings: 'fa fa-users'
+      },
     ]);
   }
 

@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=11.6.0"
+    "node": ">=11.8.0"
   },
   "files": [
     "webpack.config.js",
@@ -85,7 +85,6 @@
     "postcss": "^6.0.14",
     "postcss-loader": "latest",
     "postcss-sass": "^0.2.0",
-    "pushstate-server": "latest",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-player": "^1.6.4",
@@ -140,7 +139,7 @@
     "karma-coverage-istanbul-reporter": "latest",
     "karma-jasmine": "latest",
     "karma-mocha-reporter": "latest",
-    "karma-webpack": "^4.0.0-rc.2",
+    "karma-webpack": "^4.0.0-rc.3",
     "protractor": "^5.4.1",
     "sinon": "latest",
     "stylelint": "latest",
@@ -163,7 +162,7 @@
     "snyk-protect": "snyk protect",
     "eslint:fix": "./node_modules/eslint/bin/eslint.js --fix .",
     "fix:aurelia-val": "rm -rf ./node_modules/aurelia-validation/node_modules",
-    "postinstall": "npm run fix:aurelia-val && npm start -- build",
+    "postinstall": "yarn fix:aurelia-val && yarn start -- build",
     "protractor": "nps e2e",
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
