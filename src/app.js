@@ -188,7 +188,7 @@ export class App {
   }
 
   toggleMobileMenu(toggle) {
-    console.log(toggle);
+    console.log(toggle);// eslint-disable-line no-console
     document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
     if (toggle !== 'close') {
       document.getElementsByClassName('page-host')[0].style.overflow = 'hidden';
