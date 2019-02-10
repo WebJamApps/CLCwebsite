@@ -1,7 +1,16 @@
 <template>
+  <require from="./components/pic-slider"></require>
   <div class="page-content">
     <a id="top"></a>
     <div>
+      <div>
+        <div id="youthSlideshow" if.bind="!widescreenHomepage">
+          <picture-slider data.bind="slideshowImages"></picture-slider>
+        </div>
+        <div id="youthSlideshowWide" if.bind="widescreenHomepage">
+          <picture-slider data.bind="slideshowImages"></picture-slider>
+        </div>
+      </div>
       <div class="container-fluid">
         <p style="font-size:4pt;margin:0">&nbsp;</p>
         <!-- <div class="row" style="padding:15px;margin-top:1px"> -->
