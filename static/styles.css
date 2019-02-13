@@ -191,7 +191,11 @@ audio::-webkit-media-controls-panel {
   margin: auto;
 }
 
-#familySlideshow img, #familySlideshow1 img, #youthSlideshow img, #youthSlideshow1 img, #slideshowMusic img, #slideshow1 img, #slideshow img, #musicSlide1 img, #musicSlide2 img, #lSlide1 img, #lSlide2 img {
+#slideshow1 img, #musicSlide1 img {
+  width: 100%
+}
+
+#familySlideshow img, #familySlideshow1 img, #youthSlideshow img, #youthSlideshow1 img, #slideshowMusic img, #slideshow img, #musicSlide2 img, #lSlide1 img, #lSlide2 img {
   /* width: 100%; */
   margin: auto;
   max-height: 3in;
