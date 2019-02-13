@@ -49,9 +49,11 @@ exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) 
     document.getElementsByClassName('swipe-area')[0].style.display = 'none';
     drawerParent.css('display', 'block');
     document.getElementsByClassName('mobile-menu-toggle')[0].style.display = 'none';
+    document.getElementsByClassName('nav-list')[0].style.top = '91px';
   } else if (headerText) {
     headerText.style.fontSize = '24px';
     subT.style.maxWidth = '80%';
+    document.getElementsByClassName('nav-list')[0].style.top = '0px';
     if (elcaLogo !== null) {
       elcaLogo.style.width = '290px';
       elcaLogo.style.paddingTop = '30px';
