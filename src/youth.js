@@ -1,8 +1,18 @@
+import {
+  inject
+} from 'aurelia-framework';
+import {
+  App
+} from './app';
+
 const showSlides = require('./commons/showSlides');
 
+@inject(App)
 export class Youth {
-  constructor() {
+  constructor(app) {
+    this.app = app;
     this.top = null;
+    this.youthContent = { title: '', comments: '' };
   }
   slideshowImages = [
     { src: 'https://dl.dropboxusercontent.com/s/kifthze5olgkuub/image013.jpg?dl=0', style: 'max-height:5in' },
@@ -14,4 +24,12 @@ export class Youth {
   ];
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }
+  async activate() {
+    let res;
+    try {
+      res = await this.app.httpClient.fetch('/book/getYouthContent');
+    } catch (e) { console.log(e.message); }
+    if (res !== null && res !== undefined) this.youthContent = await res.json();
+    console.log(this.homeContent);
+  }
 }
