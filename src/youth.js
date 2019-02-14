@@ -30,6 +30,5 @@ export class Youth {
       res = await this.app.httpClient.fetch('/book/getYouthContent');
     } catch (e) { console.log(e.message); }
     if (res !== null && res !== undefined) this.youthContent = await res.json();
-    console.log(this.homeContent);
   }
 }
