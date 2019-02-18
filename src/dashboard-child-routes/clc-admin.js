@@ -27,6 +27,7 @@ export class ClcAdmin {
     this.titleSelected = '';
     this.showDeleteButton = false;
     this.homePageContent = { title: '', comments: '', type: 'homePageContent' };
+    this.youthPageContent = { title: '', comments: '', type: 'youthPageContent' };
   }
 
   types = ['Forum', 'Newsletter'];
@@ -132,6 +133,16 @@ export class ClcAdmin {
     })
       .then(() => {
         this.app.router.navigate('/?reload=true');
+      });
+  }
+  async changeYouthPage() {
+    console.log(this.youthPageContent);
+    this.app.httpClient.fetch('/book/youthpage', {
+      method: 'put',
+      body: json(this.youthPageContent)
+    })
+      .then(() => {
+        this.app.router.navigate('/youth?reload=true');
       });
   }
 }
