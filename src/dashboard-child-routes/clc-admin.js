@@ -28,6 +28,7 @@ export class ClcAdmin {
     this.showDeleteButton = false;
     this.homePageContent = { title: '', comments: '', type: 'homePageContent' };
     this.youthPageContent = { title: '', comments: '', type: 'youthPageContent' };
+    this.familyPageContent = { title: '', comments: '', type: 'familyPageContent' };
   }
 
   types = ['Forum', 'Newsletter'];
@@ -143,6 +144,16 @@ export class ClcAdmin {
     })
       .then(() => {
         this.app.router.navigate('/youth?reload=true');
+      });
+  }
+  async changeFamilyPage() {
+    console.log(this.familyPageContent);
+    this.app.httpClient.fetch('/book/familypage', {
+      method: 'put',
+      body: json(this.familyPageContent)
+    })
+      .then(() => {
+        this.app.router.navigate('/family?reload=true');
       });
   }
 }
