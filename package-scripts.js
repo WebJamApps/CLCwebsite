@@ -101,6 +101,6 @@ module.exports = {
         hmr: 'webpack-dev-server -d --inline --hot --env.server'
       }
     },
-    serve: 'pushstate-server dist'
+    serve: 'node server.js'
   }
 };
