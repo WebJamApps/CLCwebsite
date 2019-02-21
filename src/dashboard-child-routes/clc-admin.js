@@ -80,7 +80,6 @@ export class ClcAdmin {
       });
       message = await res.json();
     } catch (e) { return console.log(e.message); }
-    console.log(message.message);
     return this.app.router.navigate('/news');
   }
   async deleteYouthPic() {
@@ -94,7 +93,6 @@ export class ClcAdmin {
       });
       message = await res.json();
     } catch (e) { return console.log(e.message); }
-    console.log(message.message);
     return this.app.router.navigate('/youth');
   }
   async deleteFamilyPic() {
