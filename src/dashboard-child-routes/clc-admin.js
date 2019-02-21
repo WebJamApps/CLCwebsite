@@ -141,6 +141,21 @@ export class ClcAdmin {
         this.app.router.navigate('/youth');
       });
   }
+  async createFamilyPic() {
+    console.log(this.newBook);
+    await this.fixUrl();
+    this.newBook.type = 'familyPics';
+    this.newBook.title = 'familyPics';
+    this.newBook.comments = this.newBook.url;
+    console.log(this.newBook);
+    this.app.httpClient.fetch('/book/create', {
+      method: 'post',
+      body: json(this.newBook)
+    })
+      .then(() => {
+        this.app.router.navigate('/family');
+      });
+  }
   async changeHomePage() {
     console.log(this.homePageContent);
     this.app.httpClient.fetch('/book/homepage', {
