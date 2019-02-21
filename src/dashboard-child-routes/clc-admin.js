@@ -29,6 +29,8 @@ export class ClcAdmin {
     this.homePageContent = { title: '', comments: '', type: 'homePageContent' };
     this.youthPageContent = { title: '', comments: '', type: 'youthPageContent' };
     this.familyPageContent = { title: '', comments: '', type: 'familyPageContent' };
+    this.youthPicsArr = [];
+    this.familyPicsArr = [];
   }
 
   types = ['Forum', 'Newsletter'];
@@ -43,21 +45,25 @@ export class ClcAdmin {
     let res;
     try {
       res = await this.app.httpClient.fetch('/book/getall');
-    } catch (e) { console.log(e.message); }
+    } catch (e) { console.log(e.message); }// eslint-disable-line no-console
     if (res !== null && res !== undefined) this.existingBooks = await res.json();
     return this.fixBooks(this.existingBooks);
   }
   fixBooks(books) {
-    console.log('here?');
+    // console.log('here?');
     const booksArr = [];
+    this.youthPicsArr = [];
+    this.familyPicsArr = [];
     for (let i = 0; i < books.length; i += 1) {
       if ((books[i].type === 'Forum' || books[i].type === 'Newsletter') && books[i].access === 'CLC') booksArr.push(books[i]);
-      if (books[i].created_at !== null && books[i].created_at !== undefined) {
-        books[i].created_at = books[i].created_at.split('T')[0];
-      }
+      if (books[i].type === 'youthPics') this.youthPicsArr.push(books[i]);
+      if (books[i].type === 'familyPics') this.familyPicsArr.push(books[i]);
+      // if (books[i].created_at !== null && books[i].created_at !== undefined) {
+      //   books[i].created_at = books[i].created_at.split('T')[0];
+      // }
     }
     this.existingBooks = booksArr;
-    console.log(this.existingBooks);
+    // console.log(this.existingBooks);
   }
   showDelete() {
     this.showDeleteButton = true;
@@ -76,6 +82,34 @@ export class ClcAdmin {
     } catch (e) { return console.log(e.message); }
     console.log(message.message);
     return this.app.router.navigate('/news');
+  }
+  async deleteYouthPic() {
+    const selectYouthPic = document.getElementById('selectYouthPic');
+    const id = selectYouthPic.options[selectYouthPic.selectedIndex].value;
+    console.log(id);
+    let res, message;
+    try {
+      res = await this.app.httpClient.fetch(`/book/${id}`, {
+        method: 'delete'
+      });
+      message = await res.json();
+    } catch (e) { return console.log(e.message); }
+    console.log(message.message);
+    return this.app.router.navigate('/youth');
+  }
+  async deleteFamilyPic() {
+    const selectFamilyPic = document.getElementById('selectFamilyPic');
+    const id = selectFamilyPic.options[selectFamilyPic.selectedIndex].value;
+    console.log(id);
+    let res, message;
+    try {
+      res = await this.app.httpClient.fetch(`/book/${id}`, {
+        method: 'delete'
+      });
+      message = await res.json();
+    } catch (e) { return console.log(e.message); }
+    console.log(message.message);
+    return this.app.router.navigate('/family');
   }
   setupValidation() {
     ValidationRules
