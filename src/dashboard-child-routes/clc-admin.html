@@ -51,5 +51,73 @@
         </button>
       </form>
     </div>
+    <p style="font-size:2pt">&nbsp;</p>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Change Youthpage Section</h4>
+      <form>
+        <label>Content</label>
+        <textarea rows="15" cols="32" value.two-way="youthPageContent.comments"></textarea>
+        <button id="changeYouth" class="button-lib" raised click.trigger="changeYouthPage()">
+          Submit
+        </button>
+      </form>
+      <p>&nbsp;</p>
+        <hr>
+      <h4 class="material-header-h4">Add Youthpage Picture</h4>
+      <form>
+      <label>Dropbox URL to Picture</label>
+      <input value.two-way="newBook.url & validate">
+      <button id="createYouthPic" class="button-lib" style="width:70px" raised click.trigger="createYouthPic()">
+        Add Pic
+      </button>
+    </form>
+    <p>&nbsp;</p>
+      <hr>
+    <h4 class="material-header-h4">Delete Youthpage Picture</h4>
+    <form>
+      <label>Select</label>
+      <select id="selectYouthPic" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
+        <option value=""></option>
+        <option repeat.for="pic of youthPicsArr" value="${pic._id}" model.bind="youthPicsArr">${pic.comments}</option>
+      </select>
+      <button if.bind="showDeleteButton" id="deleteYouth" class="button-lib" raised click.trigger="deleteYouthPic()">
+        Delete
+      </button>
+    </form>
+    </div>
+    <p style="font-size:2pt">&nbsp;</p>
+    <div class="material-content elevation3" style="max-width:5in; margin:auto">
+      <h4 class="material-header-h4">Change Familypage Section</h4>
+      <form>
+        <label>Content</label>
+        <textarea rows="15" cols="32" value.two-way="familyPageContent.comments"></textarea>
+        <button id="changeFamily" class="button-lib" raised click.trigger="changeFamilyPage()">
+          Submit
+        </button>
+      </form>
+      <p>&nbsp;</p>
+        <hr>
+      <h4 class="material-header-h4">Add Familypage Picture</h4>
+      <form>
+      <label>Dropbox URL to Picture</label>
+      <input value.two-way="newBook.url & validate">
+      <button id="createFamilyPic" class="button-lib" style="width:70px" raised click.trigger="createFamilyPic()">
+        Add Pic
+      </button>
+    </form>
+    <p>&nbsp;</p>
+      <hr>
+    <h4 class="material-header-h4">Delete Familypage Picture</h4>
+    <form>
+      <label>Select</label>
+      <select id="selectFamilyPic" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
+        <option value=""></option>
+        <option repeat.for="pic of familyPicsArr" value="${pic._id}" model.bind="familyPicsArr">${pic.comments}</option>
+      </select>
+      <button if.bind="showDeleteButton" id="deleteFamily" class="button-lib" raised click.trigger="deleteFamilyPic()">
+        Delete
+      </button>
+    </form>
+    </div>
   </div>
 </template>
