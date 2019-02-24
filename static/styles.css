@@ -186,8 +186,13 @@ audio::-webkit-media-controls-panel {
 
 /* Slideshow container */
 #youthSlideshow, #youthSlideshow1, #familySlideshow, #familySlideshow1, #slideshowMusic, #slideshow1, #slideshow, #musicSlide1, #musicSlide2, #lSlide1, #lSlide2 {
-  max-width: 1000px;
+  max-width: 600px;
   position: relative;
+  margin: auto;
+}
+
+#familySlideshowWide, #youthSlideshowWide {
+  max-width: 600px;
   margin: auto;
 }
 
@@ -198,7 +203,7 @@ audio::-webkit-media-controls-panel {
 #familySlideshow img, #familySlideshow1 img, #youthSlideshow img, #youthSlideshow1 img, #slideshowMusic img, #slideshow img, #musicSlide2 img, #lSlide1 img, #lSlide2 img {
   /* width: 100%; */
   margin: auto;
-  max-height: 3in;
+  max-height: 5in;
   /* max-height: 5in; */
 }
 
