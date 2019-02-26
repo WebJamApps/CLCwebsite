@@ -50,20 +50,18 @@ export class ClcAdmin {
     return this.fixBooks(this.existingBooks);
   }
   fixBooks(books) {
-    // console.log('here?');
     const booksArr = [];
     this.youthPicsArr = [];
     this.familyPicsArr = [];
     for (let i = 0; i < books.length; i += 1) {
-      if ((books[i].type === 'Forum' || books[i].type === 'Newsletter') && books[i].access === 'CLC') booksArr.push(books[i]);
+      if ((books[i].type === 'Forum' || books[i].type === 'Newsletter' || books[i].type === 'Weekly'
+      || books[i].type === 'Monthly') && books[i].access === 'CLC') {
+        booksArr.push(books[i]);
+      }
       if (books[i].type === 'youthPics') this.youthPicsArr.push(books[i]);
       if (books[i].type === 'familyPics') this.familyPicsArr.push(books[i]);
-      // if (books[i].created_at !== null && books[i].created_at !== undefined) {
-      //   books[i].created_at = books[i].created_at.split('T')[0];
-      // }
     }
     this.existingBooks = booksArr;
-    // console.log(this.existingBooks);
   }
   showDelete() {
     this.showDeleteButton = true;
@@ -72,47 +70,43 @@ export class ClcAdmin {
   async deleteBook() {
     const selectBookTitle = document.getElementById('selectBookTitle');
     const id = selectBookTitle.options[selectBookTitle.selectedIndex].value;
-    console.log(id);
     let res, message;
     try {
       res = await this.app.httpClient.fetch(`/book/${id}`, {
         method: 'delete'
       });
       message = await res.json();
-    } catch (e) { return console.log(e.message); }
+    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
     return this.app.router.navigate('/news');
   }
   async deleteYouthPic() {
     const selectYouthPic = document.getElementById('selectYouthPic');
     const id = selectYouthPic.options[selectYouthPic.selectedIndex].value;
-    console.log(id);
     let res, message;
     try {
       res = await this.app.httpClient.fetch(`/book/${id}`, {
         method: 'delete'
       });
       message = await res.json();
-    } catch (e) { return console.log(e.message); }
+    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
     return this.app.router.navigate('/youth');
   }
   async deleteFamilyPic() {
     const selectFamilyPic = document.getElementById('selectFamilyPic');
     const id = selectFamilyPic.options[selectFamilyPic.selectedIndex].value;
-    console.log(id);
     let res, message;
     try {
       res = await this.app.httpClient.fetch(`/book/${id}`, {
         method: 'delete'
       });
       message = await res.json();
-    } catch (e) { return console.log(e.message); }
-    console.log(message.message);
+    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
     return this.app.router.navigate('/family');
   }
   setupValidation() {
     ValidationRules
       .ensure('url').required().withMessage('URL to PDF is required')
-      .ensure('type').required().withMessage('Select Forum or Newsletter')
+      .ensure('type').required().withMessage('Select Weekly or Monthly')
       .on(this.newBook);
     return Promise.resolve(true);
   }
@@ -137,8 +131,9 @@ export class ClcAdmin {
     this.newBook.title = this.newBook.url;
     let urlArr = this.newBook.title.split('/');
     urlArr = urlArr[5].split('.pdf');
-    this.newBook.title = urlArr[0].replace('%20', ' ');
-    this.newBook.title = this.newBook.title.replace('%20', ' ');
+    this.newBook.title = urlArr[0].replace('%20', '_');
+    const spacesArr = this.newBook.title.split('%20');
+    for (let i = 0; i < spacesArr.length; i += 1) this.newBook.title = this.newBook.title.replace('%20', '_');
     this.newBook.title = `${this.newBook.title}.pdf`;
     return Promise.resolve(true);
   }
@@ -149,7 +144,6 @@ export class ClcAdmin {
   async createBook() {
     await this.setTitle();
     await this.fixUrl();
-    console.log(this.newBook);
     this.app.httpClient.fetch('/book/create', {
       method: 'post',
       body: json(this.newBook)
@@ -159,12 +153,10 @@ export class ClcAdmin {
       });
   }
   async createYouthPic() {
-    console.log(this.newBook);
     await this.fixUrl();
     this.newBook.type = 'youthPics';
     this.newBook.title = 'youthPics';
     this.newBook.comments = this.newBook.url;
-    console.log(this.newBook);
     this.app.httpClient.fetch('/book/create', {
       method: 'post',
       body: json(this.newBook)
@@ -174,12 +166,10 @@ export class ClcAdmin {
       });
   }
   async createFamilyPic() {
-    console.log(this.newBook);
     await this.fixUrl();
     this.newBook.type = 'familyPics';
     this.newBook.title = 'familyPics';
     this.newBook.comments = this.newBook.url;
-    console.log(this.newBook);
     this.app.httpClient.fetch('/book/create', {
       method: 'post',
       body: json(this.newBook)
@@ -189,7 +179,6 @@ export class ClcAdmin {
       });
   }
   async changeHomePage() {
-    console.log(this.homePageContent);
     this.app.httpClient.fetch('/book/homepage', {
       method: 'put',
       body: json(this.homePageContent)
@@ -199,7 +188,6 @@ export class ClcAdmin {
       });
   }
   async changeYouthPage() {
-    console.log(this.youthPageContent);
     this.app.httpClient.fetch('/book/youthpage', {
       method: 'put',
       body: json(this.youthPageContent)
@@ -209,7 +197,6 @@ export class ClcAdmin {
       });
   }
   async changeFamilyPage() {
-    console.log(this.familyPageContent);
     this.app.httpClient.fetch('/book/familypage', {
       method: 'put',
       body: json(this.familyPageContent)
