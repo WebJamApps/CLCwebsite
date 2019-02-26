@@ -260,7 +260,6 @@ export class App {
   }
 
   get currentRoute() {
-    // console.log(this.router.currentInstruction.config.name);
     if (this.router.currentInstruction) return this.router.currentInstruction.config.name;
     return null;
   }
