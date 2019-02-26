@@ -33,7 +33,7 @@ export class ClcAdmin {
     this.familyPicsArr = [];
   }
 
-  types = ['Forum', 'Newsletter'];
+  types = ['Weekly', 'Monthly'];
 
   async activate() {
     this.app.dashboardTitle = 'CLC Admin';
