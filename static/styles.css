@@ -185,10 +185,15 @@ audio::-webkit-media-controls-panel {
 }
 
 /* Slideshow container */
-#youthSlideshow, #youthSlideshow1, #familySlideshow, #familySlideshow1, #slideshowMusic, #slideshow1, #slideshow, #musicSlide1, #musicSlide2, #lSlide1, #lSlide2 {
+#youthSlideshow, #youthSlideshow1, #familySlideshow, #familySlideshow1, #slideshowMusic, #slideshow1, #slideshow, #musicSlide2, #lSlide1, #lSlide2 {
   max-width: 600px;
   position: relative;
   margin: auto;
+}
+
+#musicSlide1 {
+  max-width: 998px !important;
+  margin: auto !important;
 }
 
 #familySlideshowWide, #youthSlideshowWide {
@@ -197,7 +202,7 @@ audio::-webkit-media-controls-panel {
 }
 
 #slideshow1 img, #musicSlide1 img {
-  width: 100%
+  width: 100%;
 }
 
 #familySlideshow img, #familySlideshow1 img, #youthSlideshow img, #youthSlideshow1 img, #slideshowMusic img, #slideshow img, #musicSlide2 img, #lSlide1 img, #lSlide2 img {
@@ -812,6 +817,18 @@ a:hover {
 @media screen and (max-width: 400px) {
   ::-webkit-scrollbar:vertical {
     width: 0;
+  }
+  #familySlideshow, #youthSlideshow {
+    padding: 0 15px;
+  }
+
+  #familySlideshow img, #youthSlideshow img {
+    width: 100%;
+    margin: auto;
+  }
+
+  #familySlideshow img {
+    height: 50vh;
   }
 }
 
