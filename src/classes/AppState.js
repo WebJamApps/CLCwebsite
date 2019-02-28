@@ -47,7 +47,7 @@ export class AppState {
       const thisuserrole = this.user.userType;
       this.setRoles([thisuserrole.toLowerCase()]);
     } else {
-      this.setRoles(['charity', 'volunteer', 'developer', 'reader', 'librarian']);
+      this.setRoles(['charity', 'volunteer', 'developer', 'reader', 'librarian', 'clc-admin']);
       // this.app.router.navigate('dashboard/developer');
     }
   }
