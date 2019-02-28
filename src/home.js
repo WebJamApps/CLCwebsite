@@ -13,7 +13,6 @@ export class Home {
   }
   async activate() {
     let res;
-    // const query = encodeURIComponent('?type=homePageContent');
     try {
       res = await this.app.httpClient.fetch('/book/findOne?type=homePageContent');
       if (res !== null && res !== undefined) this.homeContent = await res.json();
