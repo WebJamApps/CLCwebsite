@@ -23,20 +23,15 @@ export class Youth {
       res = await this.app.httpClient.fetch('/book/findOne?type=youthPageContent');
       if (res !== null && res !== undefined) this.youthContent = await res.json();
       picUrls = await this.app.httpClient.fetch('/book?type=youthPics');
-      if (picUrls !== null && picUrls !== undefined) {
-        picUrls = await picUrls.json();
-        // console.log(picUrls);
-        this.slideshowImage = [];
-        for (let i = 0; i < picUrls.length; i += 1) {
-          if (picUrls[i].url === null || picUrls[i].url === undefined || picUrls[i].url === '') picUrls[i].url = picUrls[i].comments;
-          this.slideshowImages.push({ src: picUrls[i].url });
-        }
-        // console.log(this.slideshowImages);
-      }
+      if (picUrls !== null && picUrls !== undefined) picUrls = await picUrls.json();
     } catch (e) { sessionStorage.setItem('youthError', `${e.message}`); }
-    // try {
-    //   picUrls = await this.app.httpClient.fetch('/book/getYouthPics');
-    // } catch (e) { console.log(e.message); }
-    // console.log('fetched');
+    return this.setYouthPics(picUrls);
+  }
+  setYouthPics(picUrls) {
+    this.slideshowImages = [];
+    for (let i = 0; i < picUrls.length; i += 1) {
+      if (picUrls[i].url === null || picUrls[i].url === undefined || picUrls[i].url === '') picUrls[i].url = picUrls[i].comments;
+      this.slideshowImages.push({ src: picUrls[i].url });
+    }
   }
 }
