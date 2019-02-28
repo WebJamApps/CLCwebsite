@@ -14,9 +14,10 @@ export class Home {
   async activate() {
     let res;
     try {
-      res = await this.app.httpClient.fetch('/book/findOne?type=homePageContent');
+      res = await this.app.httpClient.fetch('/book/one?type=homePageContent');
       if (res !== null && res !== undefined) this.homeContent = await res.json();
-    } catch (e) { sessionStorage.setItem('homeError', `${e.message}`); }
+    } catch (e) { return sessionStorage.setItem('homeError', `${e.message}`); }
+    return true;
   }
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }

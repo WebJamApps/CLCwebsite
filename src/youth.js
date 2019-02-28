@@ -20,11 +20,11 @@ export class Youth {
   async activate() {
     let res, picUrls;
     try {
-      res = await this.app.httpClient.fetch('/book/findOne?type=youthPageContent');
+      res = await this.app.httpClient.fetch('/book/one?type=youthPageContent');
       if (res !== null && res !== undefined) this.youthContent = await res.json();
       picUrls = await this.app.httpClient.fetch('/book?type=youthPics');
       if (picUrls !== null && picUrls !== undefined) picUrls = await picUrls.json();
-    } catch (e) { sessionStorage.setItem('youthError', `${e.message}`); }
+    } catch (e) { return sessionStorage.setItem('youthError', `${e.message}`); }
     return this.setYouthPics(picUrls);
   }
   setYouthPics(picUrls) {

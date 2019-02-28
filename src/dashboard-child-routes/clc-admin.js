@@ -44,9 +44,9 @@ export class ClcAdmin {
     await this.setupValidation();
     let res;
     try {
-      res = await this.app.httpClient.fetch('/book/getall');
-    } catch (e) { console.log(e.message); }// eslint-disable-line no-console
-    if (res !== null && res !== undefined) this.existingBooks = await res.json();
+      res = await this.app.httpClient.fetch('/book');
+      if (res !== null && res !== undefined) this.existingBooks = await res.json();
+    } catch (e) { return sessionStorage.setItem('adminError', `${e.message}`); }// eslint-disable-line no-console
     return this.fixBooks(this.existingBooks);
   }
   fixBooks(books) {
@@ -157,7 +157,7 @@ export class ClcAdmin {
     this.newBook.type = 'youthPics';
     this.newBook.title = 'youthPics';
     this.newBook.comments = this.newBook.url;
-    this.app.httpClient.fetch('/book/create', {
+    this.app.httpClient.fetch('/book', {
       method: 'post',
       body: json(this.newBook)
     })
@@ -170,7 +170,7 @@ export class ClcAdmin {
     this.newBook.type = 'familyPics';
     this.newBook.title = 'familyPics';
     this.newBook.comments = this.newBook.url;
-    this.app.httpClient.fetch('/book/create', {
+    this.app.httpClient.fetch('/book', {
       method: 'post',
       body: json(this.newBook)
     })
@@ -179,7 +179,7 @@ export class ClcAdmin {
       });
   }
   async changeHomePage() {
-    this.app.httpClient.fetch('/book/homepage', {
+    this.app.httpClient.fetch('/book/one?type=homePageContent', {
       method: 'put',
       body: json(this.homePageContent)
     })
@@ -188,7 +188,7 @@ export class ClcAdmin {
       });
   }
   async changeYouthPage() {
-    this.app.httpClient.fetch('/book/youthpage', {
+    this.app.httpClient.fetch('/book/one?type=youthPageContent', {
       method: 'put',
       body: json(this.youthPageContent)
     })
@@ -197,7 +197,7 @@ export class ClcAdmin {
       });
   }
   async changeFamilyPage() {
-    this.app.httpClient.fetch('/book/familypage', {
+    this.app.httpClient.fetch('/book/one?type=familyPageContent', {
       method: 'put',
       body: json(this.familyPageContent)
     })
