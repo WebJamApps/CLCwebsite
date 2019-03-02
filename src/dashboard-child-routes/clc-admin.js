@@ -144,7 +144,7 @@ export class ClcAdmin {
   async createBook() {
     await this.setTitle();
     await this.fixUrl();
-    this.app.httpClient.fetch('/book/create', {
+    this.app.httpClient.fetch('/book', {
       method: 'post',
       body: json(this.newBook)
     })

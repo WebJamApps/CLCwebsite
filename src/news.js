@@ -16,7 +16,7 @@ export class Beliefs {
   async activate() {
     let res;
     try {
-      res = await this.app.httpClient.fetch('/book/getall');
+      res = await this.app.httpClient.fetch('/book');
     } catch (e) { console.log(e.message); } // eslint-disable-line no-console
     if (res !== null && res !== undefined) this.books = await res.json();
     return this.fixBooks(this.books);
