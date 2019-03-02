@@ -2,6 +2,25 @@ const csvjson = require('csvjson');
 const filesaver = require('file-saver');
 const showSlides = require('./showSlides');
 
+exports.setupPage = async function setupPage(controller, text, pics) {
+  let res, picUrls = [];
+  try {
+    res = await controller.app.httpClient.fetch(`/book/one?type=${text}`);
+    if (res !== null && res !== undefined) controller[text] = await res.json();
+    picUrls = await controller.app.httpClient.fetch(`/book?type=${pics}`);
+    if (picUrls !== null && picUrls !== undefined) picUrls = await picUrls.json();
+  } catch (e) { return Promise.reject(e); }
+  return Promise.resolve(picUrls);
+};
+
+exports.setupPics = function setupPics(picUrls, controller) {
+  controller.slideshowImages = [];
+  for (let i = 0; i < picUrls.length; i += 1) {
+    if (picUrls[i].url === null || picUrls[i].url === undefined || picUrls[i].url === '') picUrls[i].url = picUrls[i].comments;
+    controller.slideshowImages.push({ src: picUrls[i].url });
+  }
+};
+
 exports.fixDates = function fixDates(myevents) {
   for (let i = 0; i < myevents.length; i += 1) {
     const startDate = myevents[i].voStartDate;

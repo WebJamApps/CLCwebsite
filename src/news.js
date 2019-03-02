@@ -32,6 +32,9 @@ export class Beliefs {
         books[i].created_at = books[i].created_at.split('T')[0];
       }
     }
+    return this.continueFixBooks(booksArr);
+  }
+  continueFixBooks(booksArr) {
     for (let j = 0; j < booksArr.length; j += 1) {
       if (booksArr[j].type === 'Forum') booksArr[j].type = 'Monthly';
       if (booksArr[j].type === 'Newsletter') booksArr[j].type = 'Weekly';

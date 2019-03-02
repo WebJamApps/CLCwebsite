@@ -77,7 +77,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jasmine-spec-reporter": "latest",
     "jquery": "^3.2.1",
-    "material-ui-time-picker": "latest",
     "mini-css-extract-plugin": "^0.4.0",
     "minimatch": "^3.0.4",
     "nps": "latest",
