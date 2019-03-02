@@ -2,6 +2,38 @@ const csvjson = require('csvjson');
 const filesaver = require('file-saver');
 const showSlides = require('./showSlides');
 
+exports.filterNews = function filterNews(books) {
+  const newsArr = [];
+  for (let i = 0; i < books.length; i += 1) {
+    if ((books[i].type === 'Forum' || books[i].type === 'Newsletter' || books[i].type === 'Weekly'
+     || books[i].type === 'Monthly') && books[i].access === 'CLC') {
+      newsArr.push(books[i]);
+    }
+  }
+  return newsArr;
+};
+
+exports.createBook = async function createBook(controller, doneRoute, json) {
+  try {
+    await controller.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(controller.newBook)
+    });
+  } catch (e) { return sessionStorage.setItem(`create${doneRoute}Error`, `${e.message}`); }
+  return controller.app.router.navigate(`/${doneRoute}`);
+};
+
+exports.deleteBookById = async function deleteBookById(id, controller, doneRoute) {
+  let res, message;
+  try {
+    res = await controller.app.httpClient.fetch(`/book/${id}`, {
+      method: 'delete'
+    });
+    message = await res.json();
+  } catch (e) { return sessionStorage.setItem(`delete${doneRoute}Error`, `${e.message}`); }
+  return controller.app.router.navigate(`/${doneRoute}`);
+};
+
 exports.setupPage = async function setupPage(controller, text, pics) {
   let res, picUrls = [];
   try {

@@ -50,58 +50,32 @@ export class ClcAdmin {
     return this.fixBooks(this.existingBooks);
   }
   fixBooks(books) {
-    const booksArr = [];
+    this.existingBooks = this.utils.filterNews(books);
     this.youthPicsArr = [];
     this.familyPicsArr = [];
     for (let i = 0; i < books.length; i += 1) {
-      if ((books[i].type === 'Forum' || books[i].type === 'Newsletter' || books[i].type === 'Weekly'
-      || books[i].type === 'Monthly') && books[i].access === 'CLC') {
-        booksArr.push(books[i]);
-      }
       if (books[i].type === 'youthPics') this.youthPicsArr.push(books[i]);
       if (books[i].type === 'familyPics') this.familyPicsArr.push(books[i]);
     }
-    this.existingBooks = booksArr;
   }
   showDelete() {
     this.showDeleteButton = true;
     if (this.titleSelected === '') this.showDeleteButton = false;
   }
-  async deleteBook() {
+  deleteBook() {
     const selectBookTitle = document.getElementById('selectBookTitle');
     const id = selectBookTitle.options[selectBookTitle.selectedIndex].value;
-    let res, message;
-    try {
-      res = await this.app.httpClient.fetch(`/book/${id}`, {
-        method: 'delete'
-      });
-      message = await res.json();
-    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
-    return this.app.router.navigate('/news');
+    return this.utils.deleteBookById(id, this, 'news');
   }
   async deleteYouthPic() {
     const selectYouthPic = document.getElementById('selectYouthPic');
     const id = selectYouthPic.options[selectYouthPic.selectedIndex].value;
-    let res, message;
-    try {
-      res = await this.app.httpClient.fetch(`/book/${id}`, {
-        method: 'delete'
-      });
-      message = await res.json();
-    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
-    return this.app.router.navigate('/youth');
+    return this.utils.deleteBookById(id, this, 'youth');
   }
   async deleteFamilyPic() {
     const selectFamilyPic = document.getElementById('selectFamilyPic');
     const id = selectFamilyPic.options[selectFamilyPic.selectedIndex].value;
-    let res, message;
-    try {
-      res = await this.app.httpClient.fetch(`/book/${id}`, {
-        method: 'delete'
-      });
-      message = await res.json();
-    } catch (e) { return console.log(e.message); }// eslint-disable-line no-console
-    return this.app.router.navigate('/family');
+    return this.utils.deleteBookById(id, this, 'family');
   }
   setupValidation() {
     ValidationRules
@@ -144,39 +118,19 @@ export class ClcAdmin {
   async createBook() {
     await this.setTitle();
     await this.fixUrl();
-    this.app.httpClient.fetch('/book', {
-      method: 'post',
-      body: json(this.newBook)
-    })
-      .then(() => {
-        this.app.router.navigate('/news');
-      });
+    return this.utils.createBook(this, 'news', json);
   }
   async createYouthPic() {
     await this.fixUrl();
     this.newBook.type = 'youthPics';
     this.newBook.title = 'youthPics';
-    this.newBook.comments = this.newBook.url;
-    this.app.httpClient.fetch('/book', {
-      method: 'post',
-      body: json(this.newBook)
-    })
-      .then(() => {
-        this.app.router.navigate('/youth');
-      });
+    return this.utils.createBook(this, 'youth', json);
   }
   async createFamilyPic() {
     await this.fixUrl();
     this.newBook.type = 'familyPics';
     this.newBook.title = 'familyPics';
-    this.newBook.comments = this.newBook.url;
-    this.app.httpClient.fetch('/book', {
-      method: 'post',
-      body: json(this.newBook)
-    })
-      .then(() => {
-        this.app.router.navigate('/family');
-      });
+    return this.utils.createBook(this, 'family', json);
   }
   async changeHomePage() {
     this.app.httpClient.fetch('/book/one?type=homePageContent', {
