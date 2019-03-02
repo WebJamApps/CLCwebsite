@@ -207,38 +207,7 @@ export class App {
   }
 
   close() {
-    if (!this.widescreen) {
-      this.toggleMobileMenu('close');
-    }
-  }
-
-  // toggleMenu() {
-  //   const dc = document.getElementsByClassName('drawer-container')[0];
-  //   const nl = document.getElementsByClassName('nav-list')[0];
-  //   if (this.fullmenu) {
-  //     this.fullmenu = false;
-  //     this.drawerWidth = '50px';
-  //     this.contentWidth = '50px';
-  //   } else {
-  //     this.fullmenu = true;
-  //     this.drawerWidth = '220px';
-  //     this.contentWidth = '220px';
-  //   }
-  //   document.getElementsByClassName('main-panel')[0].style.marginRight = this.contentWidth;
-  //   dc.style.width = this.drawerWidth;
-  //   nl.style.width = this.drawerWidth;
-  // }
-
-  ohafLogin() {
-    this.menu = 'ohaf';
-    this.appState.isOhafLogin = true;
-    this.router.navigate('/login');
-  }
-
-  wjLogin() {
-    this.menu = 'wj';
-    this.appState.isOhafLogin = false;
-    this.router.navigate('/login');
+    if (!this.widescreen) this.toggleMobileMenu('close');
   }
 
   async logout() {
@@ -262,51 +231,15 @@ export class App {
     return null;
   }
 
-  checkNavMenu() {
-    this.Menu = 'wj';
-    if (this.currentRoute === 'ohaf' || this.currentRouteFrag === '/ohaf') this.Menu = 'ohaf';
-    else if (this.currentRoute === 'music-router') this.Menu = 'music';
-    else if (this.currentRoute === 'library') this.Menu = 'library';
-    else if (this.currentRoute === 'login') {
-      if (this.appState.isOhafLogin) this.Menu = 'ohaf';
-      else this.Menu = 'wj';
-    } else if (this.currentRouteFrag === '/dashboard') this.Menu = 'dashboard';
-    else if (this.currentRouteFrag === '/bookshelf') this.Menu = 'bookshelf';
-    else if (this.currentRouteFrag === '/dashboard/developer') this.Menu = 'developer';
-    else if (this.currentRouteFrag === '/dashboard/reader') this.Menu = 'reader';
-    else if (this.currentRouteFrag === '/dashboard/librarian') this.Menu = 'librarian';
-    else if (this.currentRouteFrag === '/dashboard/charity') this.Menu = 'charity';
-    else if (this.currentRouteFrag === '/dashboard/volunteer') this.Menu = 'volunteer';
-    else if (this.currentRouteFrag === '/dashboard/user-account') this.Menu = 'user-account';
-    else if (this.currentRouteFrag) {
-      if (this.currentRouteFrag.indexOf('vol-ops/') !== -1) this.Menu = 'charity';
-      else this.Menu = 'wj';
-    } else this.Menu = 'wj';
-  }
-
   setFooter() {
     const footer = document.getElementById('wjfooter');
-    // let color = '';
     if (footer !== null) {
       footer.style.backgroundColor = '#244a8bff';
-      // color = '#f4c00eff';
-      // footer.innerHTML = '<div style="text-align: center;padding:16px;margin-bottom:0;padding-bottom:8px;margin-top:0">'
-      // + `<a target="_blank" style="z-index:16777271;color:${color};padding-right:5px;text-decoration:none; border:none;"`
-      // + 'href="https://twitter.com/CollegeLutheran"><i class="fa fa-twitter fa-2x footerIcon" aria-hidden="true"></i></a>'
-      // + `<a target="_blank" style="text-decoration:none; border:none;z-index:16777271;color:${color};padding-right:5px"`
-      // + 'href="https://www.facebook.com/CollegeLutheranChurch/">'
-      // + '<i class="fa fa-facebook-square fa-2x footerIcon"'
-      // + `aria-hidden="true"></i></a><a target="_blank" style="text-decoration:none;border:none;z-index:16777271;color:${color};padding-right:5px"`
-      // + 'href="https://www.instagram.com/collegelutheranchurch/"><i class="fa fa-instagram fa-2x footerIcon" aria-hidden="true"></i></a>'
-      // + '<span style="z-index: 16777271;margin-left:26px;color:white; font-size: 9pt;margin-bottom:0">Powered by <a class="wjllc" target="_blank"'
-      // + 'href="https://www.web-jam.com">Web Jam LLC</a></span></div>';
     }
   }
 
   get currentStyles() {
     let result = {};
-    this.style = 'wj';
-    this.checkNavMenu();
     result = {
       headerClass: 'home-header',
       headerImageClass: 'home-header-image',
