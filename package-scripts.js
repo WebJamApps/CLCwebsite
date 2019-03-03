@@ -26,7 +26,7 @@ module.exports = {
       },
       lint: {
         default: 'eslint .',
-        fix: 'eslint --fix'
+        fix: 'eslint . --fix'
       },
       react: {
         default: crossEnv('BABEL_TARGET=node jest --no-cache --config jest.React.json --notify'),

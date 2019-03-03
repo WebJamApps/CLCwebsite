@@ -14,22 +14,11 @@ export class Home {
   async activate() {
     let res;
     try {
-      res = await this.app.httpClient.fetch('/book/getHomeContent');
-    } catch (e) { sessionStorage.setItem('homeError', `${e.message}`); }
-    if (res !== null && res !== undefined) this.homeContent = await res.json();
-    // console.log(this.homeContent);
+      res = await this.app.httpClient.fetch('/book/one?type=homePageContent');
+      if (res !== null && res !== undefined) this.homeContent = await res.json();
+    } catch (e) { return sessionStorage.setItem('homeError', `${e.message}`); }
+    return true;
   }
 
   get widescreenHomepage() { return document.documentElement.clientWidth > 1200; }
-
-  // attached() {
-  //   this.searchParams = new URLSearchParams(window.location.search);
-  //   if (this.searchParams.get('reload')) {
-  //     /* istanbul ignore if */
-  //     if (process.env.NODE_ENV !== 'test') window.location.href = window.location.href.split('?')[0];
-  //   }
-  //   this.top = document.getElementsByClassName('material-header')[0];
-  //   if (this.top !== null && this.top !== undefined) this.top.scrollIntoView();
-  //   document.querySelector('div.content-block').scrollTo(0, 0);
-  // }
 }
