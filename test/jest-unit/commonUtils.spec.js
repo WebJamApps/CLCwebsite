@@ -23,12 +23,93 @@ const event = [{
   voContactEmail: '',
   voContactPhone: ''
 }];
-
+// const controllerStub = { app: { router: { navigate() { return Promise.resolve(true); } },
+//   httpClient: { fetch() { return Promise.resolve(true); } } } };
 
 describe('the common utils', () => {
+  let controllerStub;
   beforeEach((done) => {
+    controllerStub = { app: { router: { navigate() { return Promise.resolve(true); } },
+      httpClient: { fetch() { return Promise.resolve({ json() { return Promise.resolve({ something: true }); } }); } } } };
     jest.useFakeTimers();
     done();
+  });
+  it('filters news', (done) => {
+    const newsArr = utils.filterNews([{ type: 'Monthly', access: 'CLC' }]);
+    expect(newsArr.length).toBe(1);
+    done();
+  });
+  it('filters news but finds none', (done) => {
+    const newsArr = utils.filterNews([{ type: 'Weekly', access: 'public' }]);
+    expect(newsArr.length).toBe(0);
+    done();
+  });
+  it('sets up the slideshow', (done) => {
+    utils.setupPics([{ type: 'family', comments: 'hi' }], controllerStub);
+    expect(controllerStub.slideshowImages.length).toBe(1);
+    done();
+  });
+  it('sets up the slideshow with correct urls', (done) => {
+    utils.setupPics([{ type: 'family', comments: 'hi', url: 'hi' }], controllerStub);
+    expect(controllerStub.slideshowImages.length).toBe(1);
+    done();
+  });
+  it('creates a book', async () => {
+    let result;
+    try {
+      result = await utils.createBook(controllerStub, '', () => {});
+      expect(result).toBe(true);
+    } catch (e) { throw e; }
+  });
+  it('catches error on creates a book', async () => {
+    controllerStub.app.httpClient.fetch = function fetch() { return Promise.reject(new Error('bad')); };
+    window.sessionStorage = {
+      setItem(key, string) {
+        expect(string).toBe('bad');
+      }
+    };
+    try {
+      await utils.createBook(controllerStub, '', () => {});
+    } catch (e) { throw e; }
+  });
+  it('deletes a book by id', async () => {
+    let result;
+    try {
+      result = await utils.deleteBookById('', controllerStub, '');
+      expect(result).toBe(true);
+    } catch (e) { throw e; }
+  });
+  it('catches error on delete a book by id', async () => {
+    controllerStub.app.httpClient.fetch = function fetch() { return Promise.reject(new Error('bad')); };
+    window.sessionStorage = {
+      setItem(key, string) {
+        expect(string).toBe('bad');
+      }
+    };
+    try {
+      await utils.deleteBookById('', controllerStub, '');
+    } catch (e) { throw e; }
+  });
+  it('sets up the page', async () => {
+    let result;
+    try {
+      result = await utils.setupPage(controllerStub, 'howdy', 'cool');
+      expect(result.something).toBe(true);
+    } catch (e) { throw e; }
+  });
+  it('sets up the page but finds nothing', async () => {
+    let result;
+    controllerStub.app.httpClient.fetch = function fetch() { return Promise.resolve(null); };
+    try {
+      result = await utils.setupPage(controllerStub, 'howdy', 'cool');
+      expect(result).toBe(null);
+    } catch (e) { throw e; }
+  });
+  it('tries to set up the page but catches error', async () => {
+    controllerStub.app.httpClient.fetch = function fetch() { return Promise.reject(new Error('bad')); };
+    try {
+      await utils.setupPage(controllerStub, 'howdy', 'cool');
+    } catch (e) { expect(e.message).toBe('bad'); }
   });
   it('starts a slide show', (done) => {
     sMock = sinon.mock(showSlides);

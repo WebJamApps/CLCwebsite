@@ -2,6 +2,57 @@ const csvjson = require('csvjson');
 const filesaver = require('file-saver');
 const showSlides = require('./showSlides');
 
+exports.filterNews = function filterNews(books) {
+  const newsArr = [];
+  for (let i = 0; i < books.length; i += 1) {
+    if ((books[i].type === 'Forum' || books[i].type === 'Newsletter' || books[i].type === 'Weekly'
+     || books[i].type === 'Monthly') && books[i].access === 'CLC') {
+      newsArr.push(books[i]);
+    }
+  }
+  return newsArr;
+};
+
+exports.createBook = async function createBook(controller, doneRoute, json) {
+  try {
+    await controller.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(controller.newBook)
+    });
+  } catch (e) { return sessionStorage.setItem(`create${doneRoute}Error`, `${e.message}`); }
+  return controller.app.router.navigate(`/${doneRoute}`);
+};
+
+exports.deleteBookById = async function deleteBookById(id, controller, doneRoute) {
+  let res;
+  try {
+    res = await controller.app.httpClient.fetch(`/book/${id}`, {
+      method: 'delete'
+    });
+    await res.json();
+  } catch (e) { return sessionStorage.setItem(`delete${doneRoute}Error`, `${e.message}`); }
+  return controller.app.router.navigate(`/${doneRoute}`);
+};
+
+exports.setupPage = async function setupPage(controller, text, pics) {
+  let res, picUrls = [];
+  try {
+    res = await controller.app.httpClient.fetch(`/book/one?type=${text}`);
+    if (res !== null && res !== undefined) controller[text] = await res.json();
+    picUrls = await controller.app.httpClient.fetch(`/book?type=${pics}`);
+    if (picUrls !== null && picUrls !== undefined) picUrls = await picUrls.json();
+  } catch (e) { return Promise.reject(e); }
+  return Promise.resolve(picUrls);
+};
+
+exports.setupPics = function setupPics(picUrls, controller) {
+  controller.slideshowImages = [];
+  for (let i = 0; i < picUrls.length; i += 1) {
+    if (picUrls[i].url === null || picUrls[i].url === undefined || picUrls[i].url === '') picUrls[i].url = picUrls[i].comments;
+    controller.slideshowImages.push({ src: picUrls[i].url });
+  }
+};
+
 exports.fixDates = function fixDates(myevents) {
   for (let i = 0; i < myevents.length; i += 1) {
     const startDate = myevents[i].voStartDate;
@@ -82,32 +133,32 @@ exports.makeFilterDropdown = function makeFilterDropdown(filterName, model, attr
   }
 };
 
-exports.finishFiltering = function finishFiltering(myModule) {
-  for (let s = 0; s < myModule.selectedFilter.length; s += 1) {
-    for (let u = 0; u < myModule.filters.length; u += 1) {
-      if (myModule.filters[u].filterby === myModule.selectedFilter[s]) {
-        myModule[myModule.filters[u].filterby] = true;
-      }
-    }
-  }
-  for (let a = 0; a < myModule.filters.length; a += 1) {
-    if (myModule.selectedFilter.indexOf(myModule.filters[a].filterby) === -1) {
-      myModule[myModule.filters[a].filterby] = false;
-      myModule.filters[a].value = '';
-    }
-  }
-};
+// exports.finishFiltering = function finishFiltering(myModule) {
+//   for (let s = 0; s < myModule.selectedFilter.length; s += 1) {
+//     for (let u = 0; u < myModule.filters.length; u += 1) {
+//       if (myModule.filters[u].filterby === myModule.selectedFilter[s]) {
+//         myModule[myModule.filters[u].filterby] = true;
+//       }
+//     }
+//   }
+//   for (let a = 0; a < myModule.filters.length; a += 1) {
+//     if (myModule.selectedFilter.indexOf(myModule.filters[a].filterby) === -1) {
+//       myModule[myModule.filters[a].filterby] = false;
+//       myModule.filters[a].value = '';
+//     }
+//   }
+// };
 
-exports.filterSelected = function filterSelected(myModule) {
-  if (myModule.selectedFilter.length === 0) {
-    for (let i = 0; i < myModule.filters.length; i += 1) {
-      myModule.filters[i].value = '';
-      myModule[myModule.filters[i].filterby] = false;
-    }
-    return;
-  }
-  this.finishFiltering(myModule);
-};
+// exports.filterSelected = function filterSelected(myModule) {
+//   if (myModule.selectedFilter.length === 0) {
+//     for (let i = 0; i < myModule.filters.length; i += 1) {
+//       myModule.filters[i].value = '';
+//       myModule[myModule.filters[i].filterby] = false;
+//     }
+//     return;
+//   }
+//   this.finishFiltering(myModule);
+// };
 
 exports.startSlides = function startSlides(idArray1, errorMsg, idArray2, doc) {
   const slideshowTimer = setInterval(() => {
@@ -141,33 +192,33 @@ exports.showCheckboxes = function showCheckboxes(id, forceOpen) {
   return true;
 };
 
-exports.nevermind = function nevermind(className) {
-  const regform1 = document.getElementsByClassName(className);
-  if (regform1[0] !== undefined) {
-    regform1[0].style.display = 'none';
-  }
-};
+// exports.nevermind = function nevermind(className) {
+//   const regform1 = document.getElementsByClassName(className);
+//   if (regform1[0] !== undefined) {
+//     regform1[0].style.display = 'none';
+//   }
+// };
 
-exports.textFileValidate = function textFileValidate() {
-  const nub = document.getElementById('deleteCreateButton');
-  document.getElementsByClassName('errorMessage')[0].innerHTML = '';
-  nub.style.display = 'none';
-  let valid = false;
-  for (let i = 0; i < CSVFilePath.files.length; i += 1) {
-    const oInput = CSVFilePath.files[i];
-    // the type is determined automatically during the creation of the Blob.
-    // this value cannot be controlled by developer, hence cannot test it.
-    /* istanbul ignore if */
-    if (oInput.type === 'text/plain') {
-      nub.style.display = 'block';
-      valid = true;
-    } else {
-      document.getElementsByClassName('errorMessage')[0].innerHTML = `Sorry, ${oInput.type} is an invalid file type.`;
-      valid = false;
-    }
-  }
-  return valid;
-};
+// exports.textFileValidate = function textFileValidate() {
+//   const nub = document.getElementById('deleteCreateButton');
+//   document.getElementsByClassName('errorMessage')[0].innerHTML = '';
+//   nub.style.display = 'none';
+//   let valid = false;
+//   for (let i = 0; i < CSVFilePath.files.length; i += 1) {
+//     const oInput = CSVFilePath.files[i];
+//     // the type is determined automatically during the creation of the Blob.
+//     // this value cannot be controlled by developer, hence cannot test it.
+//     /* istanbul ignore if */
+//     if (oInput.type === 'text/plain') {
+//       nub.style.display = 'block';
+//       valid = true;
+//     } else {
+//       document.getElementsByClassName('errorMessage')[0].innerHTML = `Sorry, ${oInput.type} is an invalid file type.`;
+//       valid = false;
+//     }
+//   }
+//   return valid;
+// };
 
 exports.makeCSVfile = function makeCSVfile(fetchClient, route, fileName) {
   return fetchClient.fetch(route)

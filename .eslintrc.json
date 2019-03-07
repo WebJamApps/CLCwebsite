@@ -11,6 +11,7 @@
     "global-require": 0,
     "import/no-extraneous-dependencies": 0,
     "no-unused-vars": 0,
+    "jest/no-jasmine-globals": 0,
     "security/detect-object-injection": 0,
     "node/no-unsupported-features/es-syntax": 0,
     "no-mixed-operators": 0,

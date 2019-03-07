@@ -1,5 +1,4 @@
 exports.childRoute = function childroute(module, ls) {
-  console.log(module.user.userType);
   if (module.user.userStatus === 'disabled') {
     return module.app.router.navigate('dashboard/user-account');
   }
