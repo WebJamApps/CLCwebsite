@@ -8,8 +8,9 @@ import * as Hammer from 'hammerjs';
 import { UserAccess } from './classes/UserAccess';
 import { AppState } from './classes/AppState';
 
-const appUtils = require('./commons/appUtils');
+const appUtils = require('wj-common-front').appUtils;
 const utils = require('./commons/utils');
+const CLCappUtils = require('./commons/appUtils');
 @inject(AuthService, HttpClient)
 export class App {
   constructor(auth, httpClient) {
@@ -21,6 +22,7 @@ export class App {
     this.style = 'wj';
     this.appUtils = appUtils;
     this.commonUtils = utils;
+    this.clcAppUtils = CLCappUtils;
   }
 
   authenticated = false;
@@ -41,9 +43,7 @@ export class App {
     await this.appUtils.checkUser(this);
   }
 
-  showForm(appName, className) {
-    className.startup(appName);
-  }
+  showForm(appName, className) { className.startup(appName); }
 
   async authenticate(name) {
     let ret;
@@ -305,7 +305,7 @@ export class App {
   }
 
   get widescreen() {
-    return this.appUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
+    return this.clcAppUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
       $(document.getElementsByClassName('drawer')).parent());
   }
 
@@ -333,8 +333,8 @@ export class App {
       footer.parentNode.removeChild(footer);
       header.parentNode.removeChild(header);
     }
-    document.querySelectorAll('body > div > div.au-target.home-sidebar.drawer-container > div > div.nav-list > div.menu-item > a')
-      .forEach((el) => { el.addEventListener('click', appUtils.menuClick); });
+    // document.querySelectorAll('body > div > div.au-target.home-sidebar.drawer-container > div > div.nav-list > div.menu-item > a')
+    //   .forEach((el) => { el.addEventListener('click', appUtils.menuClick); });
   }
 
   detached() {

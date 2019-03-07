@@ -36,7 +36,7 @@ exports.deleteBookById = async function deleteBookById(id, controller, doneRoute
 exports.pageSetup = async function pageSetup(controller, page, sessionStorage) {
   let picUrls = [];
   try {
-    picUrls = await this.setupPage(controller, `${page}PageContent`, `${page}youthPics`);
+    picUrls = await this.setupPage(controller, `${page}PageContent`, `${page}Pics`);
   } catch (e) { return sessionStorage.setItem(`${page}Error`, `${e.message}`); }
   return this.setupPics(picUrls, controller);
 };
