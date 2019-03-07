@@ -33,6 +33,13 @@ exports.deleteBookById = async function deleteBookById(id, controller, doneRoute
   } catch (e) { return sessionStorage.setItem(`delete${doneRoute}Error`, `${e.message}`); }
   return controller.app.router.navigate(`/${doneRoute}`);
 };
+exports.pageSetup = async function pageSetup(controller, page, sessionStorage) {
+  let picUrls = [];
+  try {
+    picUrls = await this.setupPage(controller, `${page}PageContent`, `${page}youthPics`);
+  } catch (e) { return sessionStorage.setItem(`${page}Error`, `${e.message}`); }
+  return this.setupPics(picUrls, controller);
+};
 
 exports.setupPage = async function setupPage(controller, text, pics) {
   let res, picUrls = [];

@@ -9,7 +9,7 @@ import { UserAccess } from './classes/UserAccess';
 import { AppState } from './classes/AppState';
 
 const appUtils = require('./commons/appUtils');
-
+const utils = require('./commons/utils');
 @inject(AuthService, HttpClient)
 export class App {
   constructor(auth, httpClient) {
@@ -20,6 +20,7 @@ export class App {
     this.menuToggled = false;
     this.style = 'wj';
     this.appUtils = appUtils;
+    this.commonUtils = utils;
   }
 
   authenticated = false;
@@ -103,14 +104,6 @@ export class App {
         nav: false,
         title: 'News & Forum',
         settings: 'fa fa-newspaper-o'
-      },
-      {
-        route: 'prayer',
-        name: 'prayer',
-        moduleId: PLATFORM.moduleName('./prayer'),
-        nav: false,
-        title: 'Prayer & Study',
-        settings: 'fa fa-book'
       },
       {
         route: 'giving',
