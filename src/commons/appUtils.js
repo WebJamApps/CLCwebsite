@@ -1,36 +1,3 @@
-exports.checkUser = async function checkUser(app) {
-  let uid;
-  if (app.auth.isAuthenticated()) {
-    app.authenticated = true; // Logout element is reliant upon a local var;
-    try {
-      uid = app.auth.getTokenPayload().sub;
-    } catch (e) {
-      app.logout();
-      return Promise.resolve('bad token');
-    }
-    app.user = await app.appState.getUser(uid);
-    if (app.user !== undefined) app.role = app.user.userType;
-  }
-  return Promise.resolve(true);
-};
-
-exports.checkIfLoggedIn = function checkIfLoggedIn(app) {
-  const token = localStorage.getItem('aurelia_id_token');
-  if (token !== null && token !== undefined) {
-    try {
-      app.auth.getTokenPayload();
-      app.auth.setToken(token);
-      app.authenticated = true;
-      app.router.navigate('dashboard');
-      return true;
-    } catch (e) {
-      app.logout();
-      return false;
-    }
-  }
-  return false;
-};
-
 exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) {
   const headerText = document.getElementsByClassName('header-text')[0];
   const subT = document.getElementsByClassName('subTitle')[0];
@@ -92,22 +59,4 @@ exports.handleScreenSize = function handleScreenSize(app, isWide, drawerParent) 
     this.hiddenAlready = false;
   }
   return this.returnIsWide(app, isWide, drawer, drawerParent);
-};
-
-exports.clickFunc = function clickFunc(event) {
-  const drawer = document.getElementsByClassName('drawer')[0];
-  const toggleIcon = document.getElementsByClassName('mobile-menu-toggle')[0];
-  /* istanbul ignore else */
-  if (event.target.className !== 'menu-item') {
-    // document.getElementsByClassName('swipe-area')[0].style.display = 'none';
-    drawer.style.display = 'none';
-    $(drawer).parent().css('display', 'none');
-    toggleIcon.style.display = 'block';
-    document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
-    drawer.init = 'none';
-  }
-};
-
-exports.menuClick = function menuClick(event) {
-  document.querySelector('body > div > div.main-panel > div > div.content-block').scrollTo(0, 0);
 };

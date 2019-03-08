@@ -16,16 +16,17 @@ export class DashboardRouter {
         false,
         title: 'CLC Admin Dashboard',
         auth: true
-      },
-      {
-        route: 'user-account',
-        name: 'user-account',
-        moduleId: PLATFORM.moduleName('./dashboard-child-routes/user-account'),
-        nav:
-        true,
-        title: 'User Account',
-        auth: true
       }
+      // ,
+      // {
+      //   route: 'user-account',
+      //   name: 'user-account',
+      //   moduleId: PLATFORM.moduleName('./dashboard-child-routes/user-account'),
+      //   nav:
+      //   true,
+      //   title: 'User Account',
+      //   auth: true
+      // }
     ]);
     this.router = router;
   }

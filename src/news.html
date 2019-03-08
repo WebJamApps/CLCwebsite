@@ -1,5 +1,6 @@
 <template>
   <div class="page-content">
+    <a id="top"></a>
     <div if.bind="books.length < 1">
       <p>There are currently no pdfs links to display</p>
     </div>
@@ -29,14 +30,10 @@
         </table>
       </div>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div style="text-align:center;margin:auto;padding-top:30px;padding-bottom:-40px">
+    <div style="text-align:center;margin:auto;padding-top:0;padding-bottom:-40px">
       <a href="http://www.elca.org/" target="_blank">
         <img id="elcaLogo" alt="ELCA LOGO" src="https://dl.dropboxusercontent.com/s/wkzubcmmm3pqst4/elca-logo.png?dl=0" style="width: 350px;margin:auto;">
       </a>
     </div>
-    <p>&nbsp;</p>
   </div>
 </template>
