@@ -814,16 +814,31 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 430px) {
+  div.slick-slider.slick-initialized {
+    min-height: 45vh !important;
+  }
+
+  .slick-slide > div > div > img {
+    width: 100% !important;
+  }
+
+  .slide-slide {
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 400px) {
   ::-webkit-scrollbar:vertical {
     width: 0;
   }
+
   #familySlideshow, #youthSlideshow {
     padding: 0 15px;
   }
 
   #familySlideshow img, #youthSlideshow img {
-    width: 100%;
+    width: 100vw !important;
     margin: auto;
   }
 
