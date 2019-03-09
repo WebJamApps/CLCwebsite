@@ -261,6 +261,10 @@ audio::-webkit-media-controls-panel {
   margin-left: 10px;
 }
 
+.slick-slider {
+  cursor: pointer !important;
+}
+
 /* These are Aurelia animate page transitions */
 .au-enter-active {
   -webkit-animation: fadeInRight 1s;
@@ -829,7 +833,7 @@ a:hover {
   }
 
   #youthSlideshow img {
-    width: 300px !important;
+    width: 100% !important;
     height: 260px !important;
     margin: auto;
   }
@@ -837,6 +841,11 @@ a:hover {
   #youthSlideshow {
     max-height: 3in !important;
     cursor: pointer;
+    padding: 0 15px;
+  }
+
+  #familySlideshow {
+    padding: 0 15px;
   }
 }
 
