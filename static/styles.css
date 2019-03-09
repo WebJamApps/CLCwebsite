@@ -265,6 +265,11 @@ audio::-webkit-media-controls-panel {
   cursor: pointer !important;
 }
 
+div.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
 /* These are Aurelia animate page transitions */
 .au-enter-active {
   -webkit-animation: fadeInRight 1s;
