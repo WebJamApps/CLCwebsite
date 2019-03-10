@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=11.9.0"
+    "node": ">=11.10.0"
   },
   "files": [
     "webpack.config.js",
@@ -141,7 +141,7 @@
     "karma-coverage-istanbul-reporter": "latest",
     "karma-jasmine": "latest",
     "karma-mocha-reporter": "latest",
-    "karma-webpack": "^4.0.0-rc.3",
+    "karma-webpack": "^4.0.0-rc.6",
     "protractor": "^5.4.1",
     "sinon": "latest",
     "stylelint": "latest",
