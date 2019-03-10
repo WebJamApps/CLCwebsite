@@ -7,7 +7,7 @@ import {
 
 const utils = require('./commons/utils');
 @inject(App)
-export class Beliefs {
+export class News {
   constructor(app) {
     this.books = [];
     this.app = app;
@@ -24,13 +24,8 @@ export class Beliefs {
     return this.fixBooks(this.books);
   }
   fixBooks(books) {
-    // const booksArr = [];
     books = this.utils.filterNews(books);
     for (let i = 0; i < books.length; i += 1) {
-      // if ((books[i].type === 'Forum' || books[i].type === 'Newsletter' || books[i].type === 'Weekly'
-      // || books[i].type === 'Monthly') && books[i].access === 'CLC') {
-      //   booksArr.push(books[i]);
-      // }
       if (books[i].created_at !== null && books[i].created_at !== undefined) {
         books[i].created_at = books[i].created_at.split('T')[0];
       }
@@ -43,5 +38,9 @@ export class Beliefs {
       if (booksArr[j].type === 'Newsletter') booksArr[j].type = 'Weekly';
     }
     this.books = booksArr;
+  }
+  attached() {
+    const top = document.getElementById('top');
+    top.scrollIntoView();
   }
 }

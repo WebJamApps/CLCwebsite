@@ -1,104 +1,62 @@
-exports.checkUser = async function checkUser(app) {
-  let uid;
-  if (app.auth.isAuthenticated()) {
-    app.authenticated = true; // Logout element is reliant upon a local var;
-    try {
-      uid = app.auth.getTokenPayload().sub;
-    } catch (e) {
-      app.logout();
-      return Promise.resolve('bad token');
-    }
-    app.user = await app.appState.getUser(uid);
-    if (app.user !== undefined) app.role = app.user.userType;
-  }
-  return Promise.resolve(true);
-};
+// exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) {
+//   const headerText = document.getElementsByClassName('header-text')[0];
+//   const subT = document.getElementsByClassName('subTitle')[0];
+//   const elcaLogo = document.getElementById('elcaLogo');
+//   if (isWide && headerText) {
+//     headerText.style.fontSize = '34px';
+//     subT.style.maxWidth = '100%';
+//     if (elcaLogo !== null) {
+//       elcaLogo.style.width = '340px';
+//       elcaLogo.style.paddingTop = '30px';
+//     }
+//   }
+//   if (isWide && drawer) {
+//     app.contentWidth = app.contentWidth === '0px' ? '220px' : app.contentWidth;
+//     drawer.style.display = 'block';
+//     document.getElementsByClassName('swipe-area')[0].style.display = 'none';
+//     drawerParent.css('display', 'block');
+//     document.getElementsByClassName('mobile-menu-toggle')[0].style.display = 'none';
+//     document.getElementsByClassName('nav-list')[0].style.top = '91px';
+//   } else if (headerText) {
+//     headerText.style.fontSize = '24px';
+//     subT.style.maxWidth = '80%';
+//     document.getElementsByClassName('nav-list')[0].style.top = '0px';
+//     if (elcaLogo !== null) {
+//       elcaLogo.style.width = '290px';
+//       elcaLogo.style.paddingTop = '30px';
+//       elcaLogo.style.marginLeft = '-2px';
+//     }
+//     app.contentWidth = '0px';
+//   } else {
+//     app.contentWidth = '0px';
+//   }
+//   const mainP = document.getElementsByClassName('main-panel')[0];
+//   if (mainP !== null && mainP !== undefined) { mainP.style.marginRight = app.contentWidth; }
+//   return isWide;
+// };
 
-exports.checkIfLoggedIn = function checkIfLoggedIn(app) {
-  const token = localStorage.getItem('aurelia_id_token');
-  if (token !== null && token !== undefined) {
-    try {
-      app.auth.getTokenPayload();
-      app.auth.setToken(token);
-      app.authenticated = true;
-      app.router.navigate('dashboard');
-      return true;
-    } catch (e) {
-      app.logout();
-      return false;
-    }
-  }
-  return false;
-};
+// exports.hiddenAlready = false;
 
-exports.returnIsWide = function returnIsWide(app, isWide, drawer, drawerParent) {
-  const headerText = document.getElementsByClassName('header-text')[0];
-  const subT = document.getElementsByClassName('subTitle')[0];
-  const elcaLogo = document.getElementById('elcaLogo');
-  if (isWide && headerText) {
-    headerText.style.fontSize = '34px';
-    subT.style.maxWidth = '100%';
-    if (elcaLogo !== null) {
-      elcaLogo.style.width = '340px';
-      elcaLogo.style.paddingTop = '30px';
-    }
-  }
-  if (isWide && drawer) {
-    app.contentWidth = app.contentWidth === '0px' ? '220px' : app.contentWidth;
-    drawer.style.display = 'block';
-    document.getElementsByClassName('swipe-area')[0].style.display = 'none';
-    drawerParent.css('display', 'block');
-    document.getElementsByClassName('mobile-menu-toggle')[0].style.display = 'none';
-    document.getElementsByClassName('nav-list')[0].style.top = '91px';
-  } else if (headerText) {
-    headerText.style.fontSize = '24px';
-    subT.style.maxWidth = '80%';
-    document.getElementsByClassName('nav-list')[0].style.top = '0px';
-    if (elcaLogo !== null) {
-      elcaLogo.style.width = '290px';
-      elcaLogo.style.paddingTop = '30px';
-      elcaLogo.style.marginLeft = '-2px';
-    }
-    app.contentWidth = '0px';
-  } else {
-    app.contentWidth = '0px';
-  }
-  const mainP = document.getElementsByClassName('main-panel')[0];
-  if (mainP !== null && mainP !== undefined) { mainP.style.marginRight = app.contentWidth; }
-  return isWide;
-};
-
-exports.handleScreenSize = function handleScreenSize(app, isWide, drawerParent) {
-  const drawer = document.getElementsByClassName('drawer')[0];
-  const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
-  const swipeArea = document.getElementsByClassName('swipe-area')[0];
-  if (!app.menuToggled && !isWide) {
-    /* istanbul ignore else */
-    if (drawer !== null && drawer !== undefined) {
-      drawer.style.display = 'none';
-      drawer.init = 'none';
-      drawerParent.css('display', 'none');
-      mobileMenuToggle.style.display = 'block';
-      swipeArea.style.display = 'block';
-    }
-  }
-  return this.returnIsWide(app, isWide, drawer, drawerParent);
-};
-
-exports.clickFunc = function clickFunc(event) {
-  const drawer = document.getElementsByClassName('drawer')[0];
-  const toggleIcon = document.getElementsByClassName('mobile-menu-toggle')[0];
-  /* istanbul ignore else */
-  if (event.target.className !== 'menu-item') {
-    // document.getElementsByClassName('swipe-area')[0].style.display = 'none';
-    drawer.style.display = 'none';
-    $(drawer).parent().css('display', 'none');
-    toggleIcon.style.display = 'block';
-    document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
-    drawer.init = 'none';
-  }
-};
-
-exports.menuClick = function menuClick(event) {
-  document.querySelector('body > div > div.main-panel > div > div.content-block').scrollTo(0, 0);
-};
+// exports.handleScreenSize = function handleScreenSize(app, isWide, drawerParent) {
+//   const drawer = document.getElementsByClassName('drawer')[0];
+//   const drawerContainer = document.getElementsByClassName('drawer-container')[0];
+//   const mobileMenuToggle = document.getElementsByClassName('mobile-menu-toggle')[0];
+//   const swipeArea = document.getElementsByClassName('swipe-area')[0];
+//   if (!app.menuToggled && !isWide) {
+//     /* istanbul ignore else */
+//     if (drawer !== null && drawer !== undefined) {
+//       drawer.style.display = 'none';
+//       drawerParent.css('display', 'none');
+//       mobileMenuToggle.style.display = 'block';
+//       swipeArea.style.display = 'block';
+//     }
+//     this.hiddenAlready = true;
+//   } else if (app.menuToggled && !isWide && !this.hiddenAlready) {
+//     drawerContainer.style.display = 'none';
+//     mobileMenuToggle.style.display = 'block';
+//     this.hiddenAlready = true;
+//   } else if (isWide) {
+//     this.hiddenAlready = false;
+//   }
+//   return this.returnIsWide(app, isWide, drawer, drawerParent);
+// };

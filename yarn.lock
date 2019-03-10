@@ -910,7 +910,11 @@
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
+=======
+  resolved "https://registry.valcom.io/@cnakazawa%2fwatch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-r5160ogAvGyHsal38Kux7YYtodEKOj89RGb28ht1jh3SJb08VwRwAKKJL0bGb04Zd/3r9FL3BFIc3bBidYffCA==
   dependencies:
     exec-sh "^0.3.2"
@@ -918,7 +922,11 @@
 
 "@jest/console@^24.3.0":
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.3.0.tgz#7bd920d250988ba0bf1352c4493a48e1cb97671e"
+=======
+  resolved "https://registry.valcom.io/@jest%2fconsole/-/console-24.3.0.tgz#7bd920d250988ba0bf1352c4493a48e1cb97671e"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-NaCty/OOei6rSDcbPdMiCbYCI0KGFGPgGO6B09lwWt5QTxnkuhKYET9El5u5z1GAcSxkQmSMtM63e24YabCWqA==
   dependencies:
     "@jest/source-map" "^24.3.0"
@@ -928,7 +936,11 @@
 
 "@jest/core@^24.3.1":
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/core/-/core-24.3.1.tgz#9811596d9fcc6dbb3d4062c67e4c4867bc061585"
+=======
+  resolved "https://registry.valcom.io/@jest%2fcore/-/core-24.3.1.tgz#9811596d9fcc6dbb3d4062c67e4c4867bc061585"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-orucOIBKfXgm1IJirtPT0ToprqDVGYKUNJKNc9a6v1Lww6qLPq+xj5OfxyhpJb2rWOgzEkATW1bfZzg3oqV70w==
   dependencies:
     "@jest/console" "^24.3.0"
@@ -961,7 +973,11 @@
 
 "@jest/environment@^24.3.1":
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-24.3.1.tgz#1fbda3ec8fb8ffbaee665d314da91d662227e11e"
+=======
+  resolved "https://registry.valcom.io/@jest%2fenvironment/-/environment-24.3.1.tgz#1fbda3ec8fb8ffbaee665d314da91d662227e11e"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-M8bqEkQqPwZVhMMFMqqCnzqIZtuM5vDMfFQ9ZvnEfRT+2T1zTA4UAOH/V4HagEi6S3BCd/mdxFdYmPgXf7GKCA==
   dependencies:
     "@jest/fake-timers" "^24.3.0"
@@ -972,7 +988,11 @@
 
 "@jest/fake-timers@^24.3.0":
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-24.3.0.tgz#0a7f8b877b78780c3fa5c3f8683cc0aaf9488331"
+=======
+  resolved "https://registry.valcom.io/@jest%2ffake-timers/-/fake-timers-24.3.0.tgz#0a7f8b877b78780c3fa5c3f8683cc0aaf9488331"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-rHwVI17dGMHxHzfAhnZ04+wFznjFfZ246QugeBnbiYr7/bDosPD2P1qeNjWnJUUcfl0HpS6kkr+OB/mqSJxQFg==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -982,7 +1002,11 @@
 
 "@jest/reporters@^24.3.1":
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/reporters/-/reporters-24.3.1.tgz#68e4abc8d4233acd0dd87287f3bd270d81066248"
+=======
+  resolved "https://registry.valcom.io/@jest%2freporters/-/reporters-24.3.1.tgz#68e4abc8d4233acd0dd87287f3bd270d81066248"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-jEIDJcvk20ReUW1Iqb+prlAcFV+kfFhQ/01poCq8X9As7/l/2y1GqVwJ3+6SaPTZuCXh0d0LVDy86zDAa8zlVA==
   dependencies:
     "@jest/environment" "^24.3.1"
@@ -1008,7 +1032,11 @@
 
 "@jest/source-map@^24.3.0":
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/source-map/-/source-map-24.3.0.tgz#563be3aa4d224caf65ff77edc95cd1ca4da67f28"
+=======
+  resolved "https://registry.valcom.io/@jest%2fsource-map/-/source-map-24.3.0.tgz#563be3aa4d224caf65ff77edc95cd1ca4da67f28"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-zALZt1t2ou8le/crCeeiRYzvdnTzaIlpOWaet45lNSqNJUnXbppUUFR4ZUAlzgDmKee4Q5P/tKXypI1RiHwgag==
   dependencies:
     callsites "^3.0.0"
@@ -1017,7 +1045,11 @@
 
 "@jest/test-result@^24.3.0":
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-24.3.0.tgz#4c0b1c9716212111920f7cf8c4329c69bc81924a"
+=======
+  resolved "https://registry.valcom.io/@jest%2ftest-result/-/test-result-24.3.0.tgz#4c0b1c9716212111920f7cf8c4329c69bc81924a"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-j7UZ49T8C4CVipEY99nLttnczVTtLyVzFfN20OiBVn7awOs0U3endXSTq7ouPrLR5y4YjI5GDcbcvDUjgeamzg==
   dependencies:
     "@jest/console" "^24.3.0"
@@ -1026,7 +1058,11 @@
 
 "@jest/transform@^24.3.1":
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-24.3.1.tgz#ce9e1329eb5e640f493bcd5c8eb9970770959bfc"
+=======
+  resolved "https://registry.valcom.io/@jest%2ftransform/-/transform-24.3.1.tgz#ce9e1329eb5e640f493bcd5c8eb9970770959bfc"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-PpjylI5goT4Si69+qUjEeHuKjex0LjjrqJzrMYzlOZn/+SCumGKuGC0UQFeEPThyGsFvWH1Q4gj0R66eOHnIpw==
   dependencies:
     "@babel/core" "^7.1.0"
@@ -1047,7 +1083,11 @@
 
 "@jest/types@^24.3.0":
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@jest/types/-/types-24.3.0.tgz#3f6e117e47248a9a6b5f1357ec645bd364f7ad23"
+=======
+  resolved "https://registry.valcom.io/@jest%2ftypes/-/types-24.3.0.tgz#3f6e117e47248a9a6b5f1357ec645bd364f7ad23"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-VoO1F5tU2n/93QN/zaZ7Q8SeV/Rj+9JJOgbvKbBwy4lenvmdj1iDaQEPXGTKrO6OSvDeb2drTFipZJYxgo6kIQ==
   dependencies:
     "@types/istanbul-lib-coverage" "^1.1.0"
@@ -1101,14 +1141,22 @@
 
 "@sinonjs/commons@^1", "@sinonjs/commons@^1.0.2", "@sinonjs/commons@^1.3.1":
   version "1.4.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.4.0.tgz#7b3ec2d96af481d7a0321252e7b1c94724ec5a78"
+=======
+  resolved "https://registry.valcom.io/@sinonjs%2fcommons/-/commons-1.4.0.tgz#7b3ec2d96af481d7a0321252e7b1c94724ec5a78"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-9jHK3YF/8HtJ9wCAbG+j8cD0i0+ATS9A7gXFqS36TblLPNy6rEEc+SB0imo91eCboGaBYGV/MT1/br/J+EE7Tw==
   dependencies:
     type-detect "4.0.8"
 
 "@sinonjs/formatio@^3.1.0", "@sinonjs/formatio@^3.2.1":
   version "3.2.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@sinonjs/formatio/-/formatio-3.2.1.tgz#52310f2f9bcbc67bdac18c94ad4901b95fde267e"
+=======
+  resolved "https://registry.valcom.io/@sinonjs%2fformatio/-/formatio-3.2.1.tgz#52310f2f9bcbc67bdac18c94ad4901b95fde267e"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-tsHvOB24rvyvV2+zKMmPkZ7dXX6LSLKZ7aOtXY6Edklp0uRcgGpOsQTTGTcWViFyx4uhWc6GV8QdnALbIbIdeQ==
   dependencies:
     "@sinonjs/commons" "^1"
@@ -1116,7 +1164,11 @@
 
 "@sinonjs/samsam@^3.1.0", "@sinonjs/samsam@^3.2.0":
   version "3.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-3.3.0.tgz#9557ea89cd39dbc94ffbd093c8085281cac87416"
+=======
+  resolved "https://registry.valcom.io/@sinonjs%2fsamsam/-/samsam-3.3.0.tgz#9557ea89cd39dbc94ffbd093c8085281cac87416"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-beHeJM/RRAaLLsMJhsCvHK31rIqZuobfPLa/80yGH5hnD8PV1hyh9xJBJNFfNmO7yWqm+zomijHsXpI6iTQJfQ==
   dependencies:
     "@sinonjs/commons" "^1.0.2"
@@ -1145,7 +1197,11 @@
 
 "@types/babel__core@^7.1.0":
   version "7.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.0.tgz#710f2487dda4dcfd010ca6abb2b4dc7394365c51"
+=======
+  resolved "https://registry.valcom.io/@types%2fbabel__core/-/babel__core-7.1.0.tgz#710f2487dda4dcfd010ca6abb2b4dc7394365c51"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-wJTeJRt7BToFx3USrCDs2BhEi4ijBInTQjOIukj6a/5tEkwpFMVZ+1ppgmE+Q/FQyc5P/VWUbx7I9NELrKruHA==
   dependencies:
     "@babel/parser" "^7.1.0"
@@ -1156,14 +1212,22 @@
 
 "@types/babel__generator@*":
   version "7.0.2"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/babel__generator/-/babel__generator-7.0.2.tgz#d2112a6b21fad600d7674274293c85dce0cb47fc"
+=======
+  resolved "https://registry.valcom.io/@types%2fbabel__generator/-/babel__generator-7.0.2.tgz#d2112a6b21fad600d7674274293c85dce0cb47fc"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-NHcOfab3Zw4q5sEE2COkpfXjoE7o+PmqD9DQW4koUT3roNxwziUdXGnRndMat/LJNUtePwn1TlP4do3uoe3KZQ==
   dependencies:
     "@babel/types" "^7.0.0"
 
 "@types/babel__template@*":
   version "7.0.2"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.0.2.tgz#4ff63d6b52eddac1de7b975a5223ed32ecea9307"
+=======
+  resolved "https://registry.valcom.io/@types%2fbabel__template/-/babel__template-7.0.2.tgz#4ff63d6b52eddac1de7b975a5223ed32ecea9307"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-/K6zCpeW7Imzgab2bLkLEbz0+1JlFSrUMdw7KoIIu+IUdu51GWaBZpd3y1VXGVXzynvGa4DaIaxNZHiON3GXUg==
   dependencies:
     "@babel/parser" "^7.1.0"
@@ -1171,7 +1235,11 @@
 
 "@types/babel__traverse@*", "@types/babel__traverse@^7.0.6":
   version "7.0.6"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/babel__traverse/-/babel__traverse-7.0.6.tgz#328dd1a8fc4cfe3c8458be9477b219ea158fd7b2"
+=======
+  resolved "https://registry.valcom.io/@types%2fbabel__traverse/-/babel__traverse-7.0.6.tgz#328dd1a8fc4cfe3c8458be9477b219ea158fd7b2"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-XYVgHF2sQ0YblLRMLNPB3CkFMewzFmlDsH/TneZFHUXDlABQgh88uOxuez7ZcXxayLFrqLwtDH1t+FmlFwNZxw==
   dependencies:
     "@babel/types" "^7.3.0"
@@ -1183,12 +1251,20 @@
 
 "@types/events@*":
   version "3.0.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
+=======
+  resolved "https://registry.valcom.io/@types%2fevents/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
 "@types/glob@^7.1.1":
   version "7.1.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
+=======
+  resolved "https://registry.valcom.io/@types%2fglob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
   dependencies:
     "@types/events" "*"
@@ -1197,7 +1273,11 @@
 
 "@types/istanbul-lib-coverage@^1.1.0":
   version "1.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-1.1.0.tgz#2cc2ca41051498382b43157c8227fea60363f94a"
+=======
+  resolved "https://registry.valcom.io/@types%2fistanbul-lib-coverage/-/istanbul-lib-coverage-1.1.0.tgz#2cc2ca41051498382b43157c8227fea60363f94a"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-ohkhb9LehJy+PA40rDtGAji61NCgdtKLAlFoYp4cnuuQEswwdK3vz9SOIkkyc3wrk8dzjphQApNs56yyXLStaQ==
 
 "@types/jss@^9.5.3":
@@ -1210,6 +1290,7 @@
 
 "@types/minimatch@*":
   version "3.0.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
@@ -1221,6 +1302,19 @@
 "@types/node@^8.0.7":
   version "8.10.43"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.43.tgz#8d3281a33c92a56038b05d9460a65bc1dcd5735b"
+=======
+  resolved "https://registry.valcom.io/@types%2fminimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+  integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+
+"@types/node@*":
+  version "11.10.5"
+  resolved "https://registry.valcom.io/@types%2fnode/-/node-11.10.5.tgz#fbaca34086bdc118011e1f05c47688d432f2d571"
+  integrity sha512-DuIRlQbX4K+d5I+GMnv+UfnGh+ist0RdlvOp+JZ7ePJ6KQONCFQv/gKYSU1ZzbVdFSUCKZOltjmpFAGGv5MdYA==
+
+"@types/node@^8.0.7":
+  version "8.10.43"
+  resolved "https://registry.valcom.io/@types%2fnode/-/node-8.10.43.tgz#8d3281a33c92a56038b05d9460a65bc1dcd5735b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-5m5W13HR2k3cu88mpzlnPBBv5+GyMHtj4F0P83RG4mqoC0AYVYHVMHfF3SgwKNtqEZiZQASMxU92QsLEekKcnw==
 
 "@types/prop-types@*":
@@ -1242,7 +1336,11 @@
 
 "@types/react@*":
   version "16.8.7"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.7.tgz#7b1c0223dd5494f9b4501ad2a69aa6acb350a29b"
+=======
+  resolved "https://registry.valcom.io/@types%2freact/-/react-16.8.7.tgz#7b1c0223dd5494f9b4501ad2a69aa6acb350a29b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-0xbkIyrDNKUn4IJVf8JaCn+ucao/cq6ZB8O6kSzhrJub1cVSqgTArtG0qCfdERWKMEIvUbrwLXeQMqWEsyr9dA==
   dependencies:
     "@types/prop-types" "*"
@@ -1255,7 +1353,11 @@
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
+=======
+  resolved "https://registry.valcom.io/@types%2fstack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
 "@types/unist@*", "@types/unist@^2.0.0":
@@ -1282,7 +1384,11 @@
 
 "@types/yargs@^12.0.2", "@types/yargs@^12.0.9":
   version "12.0.9"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
+=======
+  resolved "https://registry.valcom.io/@types%2fyargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
 "@webassemblyjs/ast@1.8.5":
@@ -1546,7 +1652,11 @@ ajv@^5.0.0:
 
 ajv@^6.1.0, ajv@^6.5.5, ajv@^6.9.1:
   version "6.10.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"
+=======
+  resolved "https://registry.valcom.io/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-nffhOpkymDECQyR0mnsUtoCE8RlX38G0rYP+wgLWFyZuUyuuojSSvi/+euOiQBIn63whYwYVIIH1TvE3tu4OEg==
   dependencies:
     fast-deep-equal "^2.0.1"
@@ -1580,7 +1690,11 @@ ansi-colors@^1.0.1:
 
 ansi-colors@^3.0.0:
   version "3.2.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
+=======
+  resolved "https://registry.valcom.io/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==
 
 ansi-escapes@^3.0.0, ansi-escapes@^3.1.0, ansi-escapes@^3.2.0:
@@ -1612,7 +1726,11 @@ ansi-regex@^3.0.0:
 
 ansi-regex@^4.0.0, ansi-regex@^4.1.0:
   version "4.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
+=======
+  resolved "https://registry.valcom.io/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==
 
 ansi-styles@^2.2.1:
@@ -2351,7 +2469,11 @@ autoprefixer@^8.1.0:
 
 autoprefixer@^9.0.0:
   version "9.4.10"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.10.tgz#e1be61fc728bacac8f4252ed242711ec0dcc6a7b"
+=======
+  resolved "https://registry.valcom.io/autoprefixer/-/autoprefixer-9.4.10.tgz#e1be61fc728bacac8f4252ed242711ec0dcc6a7b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-XR8XZ09tUrrSzgSlys4+hy5r2/z4Jp7Ag3pHm31U4g/CTccYPOVe19AkaJ4ey/vRd1sfj+5TtuD6I0PXtutjvQ==
   dependencies:
     browserslist "^4.4.2"
@@ -2418,7 +2540,11 @@ babel-generator@^6.18.0:
 
 babel-jest@^24.3.1, babel-jest@latest:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-24.3.1.tgz#168468a37e90426520c5293da4f55e1a512063b0"
+=======
+  resolved "https://registry.valcom.io/babel-jest/-/babel-jest-24.3.1.tgz#168468a37e90426520c5293da4f55e1a512063b0"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-6KaXyUevY0KAxD5Ba+EBhyfwvc+R2f7JV7BpBZ5T8yJGgj0M1hYDfRhDq35oD5MzprMf/ggT81nEuLtMyxfDIg==
   dependencies:
     "@jest/transform" "^24.3.1"
@@ -2457,14 +2583,22 @@ babel-plugin-istanbul@^5.1.0, babel-plugin-istanbul@latest:
 
 babel-plugin-jest-hoist@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-24.3.0.tgz#f2e82952946f6e40bb0a75d266a3790d854c8b5b"
+=======
+  resolved "https://registry.valcom.io/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-24.3.0.tgz#f2e82952946f6e40bb0a75d266a3790d854c8b5b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-nWh4N1mVH55Tzhx2isvUN5ebM5CDUvIpXPZYMRazQughie/EqGnbR+czzoQlhUmJG9pPJmYDRhvocotb2THl1w==
   dependencies:
     "@types/babel__traverse" "^7.0.6"
 
 babel-preset-jest@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-24.3.0.tgz#db88497e18869f15b24d9c0e547d8e0ab950796d"
+=======
+  resolved "https://registry.valcom.io/babel-preset-jest/-/babel-preset-jest-24.3.0.tgz#db88497e18869f15b24d9c0e547d8e0ab950796d"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-VGTV2QYBa/Kn3WCOKdfS31j9qomaXSgJqi65B6o05/1GsJyj9LVhSljM9ro4S+IBGj/ENhNBuH9bpqzztKAQSw==
   dependencies:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
@@ -3074,7 +3208,11 @@ camelcase@^4.0.0, camelcase@^4.1.0:
 
 camelcase@^5.0.0:
   version "5.2.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.2.0.tgz#e7522abda5ed94cc0489e1b8466610e88404cf45"
+=======
+  resolved "https://registry.valcom.io/camelcase/-/camelcase-5.2.0.tgz#e7522abda5ed94cc0489e1b8466610e88404cf45"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-IXFsBS2pC+X0j0N/GE7Dm7j3bsEBp+oTpb7F50dwEVX7rf3IgwO9XatnegTsDtniKCUtEJH4fSU6Asw7uoVLfQ==
 
 caniuse-api@^1.5.2:
@@ -3088,6 +3226,7 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
+<<<<<<< HEAD
   version "1.0.30000943"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000943.tgz#63f42807eb2934dfa63d7ae58a213c8017b55fdd"
   integrity sha512-QbrkeLnFKbNWm2YuDMtZwa8otcNW0dhNHbBkqC7E9q1E5nR/kSa7er9shD3GCvcQh/6QaTFxMWVpYgz+OLjuFQ==
@@ -3096,6 +3235,16 @@ caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864, caniuse-lite@^1.0.300009
   version "1.0.30000943"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000943.tgz#00b25bd5808edc2ed1cfb53533a6a6ff6ca014ee"
   integrity sha512-nJMjU4UaesbOHTcmz6VS+qaog++Fdepg4KAya5DL/AZrL/aaAZDGOOQ0AECtsJa09r4cJBdHZMive5mw8lnQ5A==
+=======
+  version "1.0.30000942"
+  resolved "https://registry.valcom.io/caniuse-db/-/caniuse-db-1.0.30000942.tgz#e29e4c6afa3558edafe7c190c7f8bdd93fb7c486"
+  integrity sha512-HB+j2/Gywe+0JPtEMw8ioTi4ykIOco9nfSGspMGIBocqi4aMYZYALP992RmhVcUyB0oS5h8nrKGk9fCF9L1VXA==
+
+caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864, caniuse-lite@^1.0.30000939, caniuse-lite@^1.0.30000940:
+  version "1.0.30000942"
+  resolved "https://registry.valcom.io/caniuse-lite/-/caniuse-lite-1.0.30000942.tgz#454139b28274bce70bfe1d50c30970df7430c6e4"
+  integrity sha512-wLf+IhZUy2rfz48tc40OH7jHjXjnvDFEYqBHluINs/6MgzoNLPf25zhE4NOVzqxLKndf+hau81sAW0RcGHIaBQ==
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
 
 capture-exit@^1.2.0:
   version "1.2.0"
@@ -3982,7 +4131,11 @@ cssstyle@^1.0.0, cssstyle@^1.1.1:
 
 csstype@^2.0.0, csstype@^2.2.0, csstype@^2.5.2:
   version "2.6.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.3.tgz#b701e5968245bf9b08d54ac83d00b624e622a9fa"
+=======
+  resolved "https://registry.valcom.io/csstype/-/csstype-2.6.3.tgz#b701e5968245bf9b08d54ac83d00b624e622a9fa"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-rINUZXOkcBmoHWEyu7JdHu5JMzkGRoMX4ov9830WNgxf5UYxcBUO0QTKAqeJ5EZfSdlrcJYkC8WwfVW7JYi4yg==
 
 csvjson@latest:
@@ -4162,7 +4315,11 @@ default-compare@^1.0.0:
 
 default-gateway@^4.0.1:
   version "4.2.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/default-gateway/-/default-gateway-4.2.0.tgz#167104c7500c2115f6dd69b0a536bb8ed720552b"
+=======
+  resolved "https://registry.valcom.io/default-gateway/-/default-gateway-4.2.0.tgz#167104c7500c2115f6dd69b0a536bb8ed720552b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-h6sMrVB1VMWVrW13mSc6ia/DwYYw5MN6+exNu1OaJeFac5aSAvwM7lZ0NVfTABuSkQelr4h5oebg3KB1XPdjgA==
   dependencies:
     execa "^1.0.0"
@@ -4310,7 +4467,11 @@ di@^0.0.1:
 
 diff-sequences@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.3.0.tgz#0f20e8a1df1abddaf4d9c226680952e64118b975"
+=======
+  resolved "https://registry.valcom.io/diff-sequences/-/diff-sequences-24.3.0.tgz#0f20e8a1df1abddaf4d9c226680952e64118b975"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-xLqpez+Zj9GKSnPWS0WZw1igGocZ+uua8+y+5dDNTT934N3QuY1sp2LkHzwiaYQGz60hMq0pjAshdeXm5VUOEw==
 
 diff@^3.2.0, diff@^3.5.0:
@@ -4982,7 +5143,11 @@ eslint-visitor-keys@^1.0.0:
 
 eslint@latest:
   version "5.15.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.1.tgz#8266b089fd5391e0009a047050795b1d73664524"
+=======
+  resolved "https://registry.valcom.io/eslint/-/eslint-5.15.1.tgz#8266b089fd5391e0009a047050795b1d73664524"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-NTcm6vQ+PTgN3UBsALw5BMhgO6i5EpIjQF/Xb5tIh3sk9QhrFafujUOczGz4J24JBlzWclSB9Vmx8d+9Z6bFCg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
@@ -5130,7 +5295,11 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
 
 exec-sh@^0.3.2:
   version "0.3.2"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.2.tgz#6738de2eb7c8e671d0366aea0b0db8c6f7d7391b"
+=======
+  resolved "https://registry.valcom.io/exec-sh/-/exec-sh-0.3.2.tgz#6738de2eb7c8e671d0366aea0b0db8c6f7d7391b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-9sLAvzhI5nc8TpuQUh4ahMdCrWT00wPWz7j47/emR5+2qEfoZP5zzUXvx+vdx+H6ohhnsYC31iX04QLYJK8zTg==
 
 execa@^0.10.0:
@@ -5220,7 +5389,11 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
 
 expect@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/expect/-/expect-24.3.1.tgz#7c42507da231a91a8099d065bc8dc9322dc85fc0"
+=======
+  resolved "https://registry.valcom.io/expect/-/expect-24.3.1.tgz#7c42507da231a91a8099d065bc8dc9322dc85fc0"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-xnmobSlaqhg4FKqjb5REk4AobQzFMJoctDdREKfSGqrtzRfCWYbfqt3WmikAvQz/J8mCNQhORgYdEjPMJbMQPQ==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -6104,7 +6277,11 @@ globby@^7.1.1:
 
 globby@^9.0.0:
   version "9.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/globby/-/globby-9.1.0.tgz#e90f4d5134109e6d855abdd31bdb1b085428592e"
+=======
+  resolved "https://registry.valcom.io/globby/-/globby-9.1.0.tgz#e90f4d5134109e6d855abdd31bdb1b085428592e"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-VtYjhHr7ncls724Of5W6Kaahz0ag7dB4G62/2HsN+xEKG6SrPzM1AJMerGxQTwJGnN9reeyxdvXbuZYpfssCvg==
   dependencies:
     "@types/glob" "^7.1.1"
@@ -7539,7 +7716,11 @@ jasminewd2@^2.1.0:
 
 jest-changed-files@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-24.3.0.tgz#7050ae29aaf1d59437c80f21d5b3cd354e88a499"
+=======
+  resolved "https://registry.valcom.io/jest-changed-files/-/jest-changed-files-24.3.0.tgz#7050ae29aaf1d59437c80f21d5b3cd354e88a499"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-fTq0YAUR6644fgsqLC7Zi2gXA/bAplMRvfXQdutmkwgrCKK6upkj+sgXqsUfUZRm15CVr3YSojr/GRNn71IMvg==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7548,7 +7729,11 @@ jest-changed-files@^24.3.0:
 
 jest-cli@^24.3.1, jest-cli@latest:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-24.3.1.tgz#52e4ae5f11044b41e06ca39fc7a7302fbbcb1661"
+=======
+  resolved "https://registry.valcom.io/jest-cli/-/jest-cli-24.3.1.tgz#52e4ae5f11044b41e06ca39fc7a7302fbbcb1661"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-HdwMgigvDQdlWX7gwM2QMkJJRqSk7tTYKq7kVplblK28RarqquJMWV/lOCN8CukuG9u3DZTeXpCDXR7kpGfB3w==
   dependencies:
     "@jest/core" "^24.3.1"
@@ -7567,7 +7752,11 @@ jest-cli@^24.3.1, jest-cli@latest:
 
 jest-config@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-config/-/jest-config-24.3.1.tgz#271aff2d3aeabf1ff92512024eeca3323cd31a07"
+=======
+  resolved "https://registry.valcom.io/jest-config/-/jest-config-24.3.1.tgz#271aff2d3aeabf1ff92512024eeca3323cd31a07"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-ujHQywsM//vKFvJwEC02KNZgKAGOzGz1bFPezmTQtuj8XdfsAVq8p6N/dw4yodXV11gSf6TJ075i4ehM+mKatA==
   dependencies:
     "@babel/core" "^7.1.0"
@@ -7599,7 +7788,11 @@ jest-diff@^20.0.3:
 
 jest-diff@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.3.1.tgz#87952e5ea1548567da91df398fa7bf7977d3f96a"
+=======
+  resolved "https://registry.valcom.io/jest-diff/-/jest-diff-24.3.1.tgz#87952e5ea1548567da91df398fa7bf7977d3f96a"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-YRVzDguyzShP3Pb9wP/ykBkV7Z+O4wltrMZ2P4LBtNxrHNpxwI2DECrpD9XevxWubRy5jcE8sSkxyX3bS7W+rA==
   dependencies:
     chalk "^2.0.1"
@@ -7609,14 +7802,22 @@ jest-diff@^24.3.1:
 
 jest-docblock@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-24.3.0.tgz#b9c32dac70f72e4464520d2ba4aec02ab14db5dd"
+=======
+  resolved "https://registry.valcom.io/jest-docblock/-/jest-docblock-24.3.0.tgz#b9c32dac70f72e4464520d2ba4aec02ab14db5dd"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-nlANmF9Yq1dufhFlKG9rasfQlrY7wINJbo3q01tu56Jv5eBU5jirylhF2O5ZBnLxzOVBGRDz/9NAwNyBtG4Nyg==
   dependencies:
     detect-newline "^2.1.0"
 
 jest-each@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-each/-/jest-each-24.3.1.tgz#ed8fe8b9f92a835a6625ca8c7ee06bc904440316"
+=======
+  resolved "https://registry.valcom.io/jest-each/-/jest-each-24.3.1.tgz#ed8fe8b9f92a835a6625ca8c7ee06bc904440316"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-GTi+nxDaWwSgOPLiiqb/p4LURy0mv3usoqsA2eoTYSmRsLgjgZ6VUyRpUBH5JY9EMBx33suNFXk0iyUm29WRpw==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7627,7 +7828,11 @@ jest-each@^24.3.1:
 
 jest-environment-jsdom@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-24.3.1.tgz#49826bcf12fb3e38895f1e2aaeb52bde603cc2e4"
+=======
+  resolved "https://registry.valcom.io/jest-environment-jsdom/-/jest-environment-jsdom-24.3.1.tgz#49826bcf12fb3e38895f1e2aaeb52bde603cc2e4"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-rz2OSYJiQerDqWDwjisqRwhVNpwkqFXdtyMzEuJ47Ip9NRpRQ+qy7/+zFujPUy/Z+zjWRO5seHLB/dOD4VpEVg==
   dependencies:
     "@jest/environment" "^24.3.1"
@@ -7639,7 +7844,11 @@ jest-environment-jsdom@^24.3.1:
 
 jest-environment-node@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-24.3.1.tgz#333d864c569b27658a96bb3b10e02e7172125415"
+=======
+  resolved "https://registry.valcom.io/jest-environment-node/-/jest-environment-node-24.3.1.tgz#333d864c569b27658a96bb3b10e02e7172125415"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-Xy+/yFem/yUs9OkzbcawQT237vwDjBhAVLjac1KYAMYVjGb0Vb/Ovw4g61PunVdrEIpfcXNtRUltM4+9c7lARQ==
   dependencies:
     "@jest/environment" "^24.3.1"
@@ -7650,12 +7859,20 @@ jest-environment-node@^24.3.1:
 
 jest-get-type@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.3.0.tgz#582cfd1a4f91b5cdad1d43d2932f816d543c65da"
+=======
+  resolved "https://registry.valcom.io/jest-get-type/-/jest-get-type-24.3.0.tgz#582cfd1a4f91b5cdad1d43d2932f816d543c65da"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-HYF6pry72YUlVcvUx3sEpMRwXEWGEPlJ0bSPVnB3b3n++j4phUEoSPcS6GC0pPJ9rpyPSe4cb5muFo6D39cXow==
 
 jest-haste-map@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-24.3.1.tgz#b4a66dbe1e6bc45afb9cd19c083bff81cdd535a1"
+=======
+  resolved "https://registry.valcom.io/jest-haste-map/-/jest-haste-map-24.3.1.tgz#b4a66dbe1e6bc45afb9cd19c083bff81cdd535a1"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-OTMQle+astr1lWKi62Ccmk2YWn6OtUoU/8JpJdg8zdsnpFIry/k0S4sQ4nWocdM07PFdvqcthWc78CkCE6sXvA==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7670,7 +7887,11 @@ jest-haste-map@^24.3.1:
 
 jest-jasmine2@^24.3.1, jest-jasmine2@latest:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-jasmine2/-/jest-jasmine2-24.3.1.tgz#127d628d3ac0829bd3c0fccacb87193e543b420b"
+=======
+  resolved "https://registry.valcom.io/jest-jasmine2/-/jest-jasmine2-24.3.1.tgz#127d628d3ac0829bd3c0fccacb87193e543b420b"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-STo6ar1IyPlIPq9jPxDQhM7lC0dAX7KKN0LmCLMlgJeXwX+1XiVdtZDv1a4zyg6qhNdpo1arOBGY0BcovUK7ug==
   dependencies:
     "@babel/traverse" "^7.1.0"
@@ -7692,7 +7913,11 @@ jest-jasmine2@^24.3.1, jest-jasmine2@latest:
 
 jest-leak-detector@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-24.3.1.tgz#ed89d05ca07e91b2b51dac1f676ab354663aa8da"
+=======
+  resolved "https://registry.valcom.io/jest-leak-detector/-/jest-leak-detector-24.3.1.tgz#ed89d05ca07e91b2b51dac1f676ab354663aa8da"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-GncRwEtAw/SohdSyY4bk2RE06Ac1dZrtQGZQ2j35hSuN4gAAAKSYMszJS2WDixsAEaFN+GHBHG+d8pjVGklKyw==
   dependencies:
     pretty-format "^24.3.1"
@@ -7707,7 +7932,11 @@ jest-matcher-utils@^20.0.3:
 
 jest-matcher-utils@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-24.3.1.tgz#025e1cd9c54a5fde68e74b12428775d06d123aa8"
+=======
+  resolved "https://registry.valcom.io/jest-matcher-utils/-/jest-matcher-utils-24.3.1.tgz#025e1cd9c54a5fde68e74b12428775d06d123aa8"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-P5VIsUTJeI0FYvWVMwEHjxK1L83vEkDiKMV0XFPIrT2jzWaWPB2+dPCHkP2ID9z4eUKElaHqynZnJiOdNVHfXQ==
   dependencies:
     chalk "^2.0.1"
@@ -7736,7 +7965,11 @@ jest-message-util@^20.0.3:
 
 jest-message-util@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-24.3.0.tgz#e8f64b63ebc75b1a9c67ee35553752596e70d4a9"
+=======
+  resolved "https://registry.valcom.io/jest-message-util/-/jest-message-util-24.3.0.tgz#e8f64b63ebc75b1a9c67ee35553752596e70d4a9"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-lXM0YgKYGqN5/eH1NGw4Ix+Pk2I9Y77beyRas7xM24n+XTTK3TbT0VkT3L/qiyS7WkW0YwyxoXnnAaGw4hsEDA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
@@ -7750,7 +7983,11 @@ jest-message-util@^24.3.0:
 
 jest-mock@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-24.3.0.tgz#95a86b6ad474e3e33227e6dd7c4ff6b07e18d3cb"
+=======
+  resolved "https://registry.valcom.io/jest-mock/-/jest-mock-24.3.0.tgz#95a86b6ad474e3e33227e6dd7c4ff6b07e18d3cb"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-AhAo0qjbVWWGvcbW5nChFjR0ObQImvGtU6DodprNziDOt+pP0CBdht/sYcNIOXeim8083QUi9bC8QdKB8PTK4Q==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7762,12 +7999,20 @@ jest-regex-util@^20.0.3:
 
 jest-regex-util@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-24.3.0.tgz#d5a65f60be1ae3e310d5214a0307581995227b36"
+=======
+  resolved "https://registry.valcom.io/jest-regex-util/-/jest-regex-util-24.3.0.tgz#d5a65f60be1ae3e310d5214a0307581995227b36"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-tXQR1NEOyGlfylyEjg1ImtScwMq8Oh3iJbGTjN7p0J23EuVX1MA8rwU69K4sLbCmwzgCUbVkm0FkSF9TdzOhtg==
 
 jest-resolve-dependencies@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-24.3.1.tgz#a22839d611ba529a74594ee274ce2b77d046bea9"
+=======
+  resolved "https://registry.valcom.io/jest-resolve-dependencies/-/jest-resolve-dependencies-24.3.1.tgz#a22839d611ba529a74594ee274ce2b77d046bea9"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-9JUejNImGnJjbNR/ttnod+zQIWANpsrYMPt18s2tYGK6rP191qFsyEQ2BhAQMdYDRkTmi8At+Co9tL+jTPqdpw==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7776,7 +8021,11 @@ jest-resolve-dependencies@^24.3.1:
 
 jest-resolve@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-24.3.1.tgz#103dbd438b59618ea428ec4acbd65c56495ba397"
+=======
+  resolved "https://registry.valcom.io/jest-resolve/-/jest-resolve-24.3.1.tgz#103dbd438b59618ea428ec4acbd65c56495ba397"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-N+Q3AcVuKxpn/kjQMxUVLwBk32ZE1diP4MPcHyjVwcKpCUuKrktfRR3Mqe/T2HoD25wyccstaqcPUKIudl41bg==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7786,7 +8035,11 @@ jest-resolve@^24.3.1:
 
 jest-runner@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-24.3.1.tgz#5488566fa60cdb4b00a89c734ad6b54b9561415d"
+=======
+  resolved "https://registry.valcom.io/jest-runner/-/jest-runner-24.3.1.tgz#5488566fa60cdb4b00a89c734ad6b54b9561415d"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-Etc9hQ5ruwg+q7DChm+E8qzHHdNTLeUdlo+whPQRSpNSgl0AEgc2r2mT4lxODREqmnHg9A8JHA44pIG4GE0Gzg==
   dependencies:
     "@jest/console" "^24.3.0"
@@ -7811,7 +8064,11 @@ jest-runner@^24.3.1:
 
 jest-runtime@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-runtime/-/jest-runtime-24.3.1.tgz#2798230b4fbed594b375a13e395278694d4751e2"
+=======
+  resolved "https://registry.valcom.io/jest-runtime/-/jest-runtime-24.3.1.tgz#2798230b4fbed594b375a13e395278694d4751e2"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-Qz/tJWbZ2naFJ2Kvy1p+RhhRgsPYh4e6wddVRy6aHBr32FTt3Ja33bfV7pkMFWXFbVuAsJMJVdengbvdhWzq4A==
   dependencies:
     "@jest/console" "^24.3.0"
@@ -7840,12 +8097,20 @@ jest-runtime@^24.3.1:
 
 jest-serializer@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-24.3.0.tgz#074e307300d1451617cf2630d11543ee4f74a1c8"
+=======
+  resolved "https://registry.valcom.io/jest-serializer/-/jest-serializer-24.3.0.tgz#074e307300d1451617cf2630d11543ee4f74a1c8"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-RiSpqo2OFbVLJN/PgAOwQIUeHDfss6NBUDTLhjiJM8Bb5rMrwRqHfkaqahIsOf9cXXB5UjcqDCzbQ7AIoMqWkg==
 
 jest-snapshot@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-24.3.1.tgz#0f22a86c1b8c87e823f5ad095e82c19d9ed93d72"
+=======
+  resolved "https://registry.valcom.io/jest-snapshot/-/jest-snapshot-24.3.1.tgz#0f22a86c1b8c87e823f5ad095e82c19d9ed93d72"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-7wbNJWh0sBjmoaexTOWqS7nleTQME7o2W9XKU6CHCxG49Thjct4aVPC/QPNF5NHnvf4M/VDmudIDbwz6noJTRA==
   dependencies:
     "@babel/types" "^7.0.0"
@@ -7863,7 +8128,11 @@ jest-snapshot@^24.3.1:
 
 jest-util@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-24.3.0.tgz#a549ae9910fedbd4c5912b204bb1bcc122ea0057"
+=======
+  resolved "https://registry.valcom.io/jest-util/-/jest-util-24.3.0.tgz#a549ae9910fedbd4c5912b204bb1bcc122ea0057"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-eKIAC+MTKWZthUUVOwZ3Tc5a0cKMnxalQHr6qZ4kPzKn6k09sKvsmjCygqZ1SxVVfUKoa8Sfn6XDv9uTJ1iXTg==
   dependencies:
     "@jest/console" "^24.3.0"
@@ -7882,7 +8151,11 @@ jest-util@^24.3.0:
 
 jest-validate@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-24.3.1.tgz#9359eea5a767a3d20b4fa7a5764fd78330ba8312"
+=======
+  resolved "https://registry.valcom.io/jest-validate/-/jest-validate-24.3.1.tgz#9359eea5a767a3d20b4fa7a5764fd78330ba8312"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-ww3+IPNCOEMi1oKlrHdSnBXetXtdrrdSh0bqLNTVkWglduhORf94RJWd1ko9oEPU2TcEQS5QIPacYziQIUzc4A==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -7894,7 +8167,11 @@ jest-validate@^24.3.1:
 
 jest-watcher@^24.3.0:
   version "24.3.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-24.3.0.tgz#ee51c6afbe4b35a12fcf1107556db6756d7b9290"
+=======
+  resolved "https://registry.valcom.io/jest-watcher/-/jest-watcher-24.3.0.tgz#ee51c6afbe4b35a12fcf1107556db6756d7b9290"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-EpJS/aUG8D3DMuy9XNA4fnkKWy3DQdoWhY92ZUdlETIeEn1xya4Np/96MBSh4II5YvxwKe6JKwbu3Bnzfwa7vA==
   dependencies:
     "@jest/test-result" "^24.3.0"
@@ -7908,7 +8185,11 @@ jest-watcher@^24.3.0:
 
 jest-worker@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.3.1.tgz#c1759dd2b1d5541b09a2e5e1bc3288de6c9d8632"
+=======
+  resolved "https://registry.valcom.io/jest-worker/-/jest-worker-24.3.1.tgz#c1759dd2b1d5541b09a2e5e1bc3288de6c9d8632"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-ZCoAe/iGLzTJvWHrO8fyx3bmEQhpL16SILJmWHKe8joHhyF3z00psF1sCRT54DoHw5GJG0ZpUtGy+ylvwA4haA==
   dependencies:
     "@types/node" "*"
@@ -7917,7 +8198,11 @@ jest-worker@^24.3.1:
 
 jest@latest:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jest/-/jest-24.3.1.tgz#81959de0d57b2df923510f4fafe266712d37dcca"
+=======
+  resolved "https://registry.valcom.io/jest/-/jest-24.3.1.tgz#81959de0d57b2df923510f4fafe266712d37dcca"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-SqZguEbYNcZ3r0KUUBN+IkKfyPS1VBbIUiK4Wrc0AiGUR52gJa0fmlWSOCL3x25908QrfoQwkVDu5jCsfXb2ig==
   dependencies:
     import-local "^2.0.0"
@@ -10804,7 +11089,11 @@ pretty-format@^20.0.3:
 
 pretty-format@^24.3.1:
   version "24.3.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-24.3.1.tgz#ae4a98e93d73d86913a8a7dd1a7c3c900f8fda59"
+=======
+  resolved "https://registry.valcom.io/pretty-format/-/pretty-format-24.3.1.tgz#ae4a98e93d73d86913a8a7dd1a7c3c900f8fda59"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-NZGH1NWS6o4i9pvRWLsxIK00JB9pqOUzVrO7yWT6vjI2thdxwvxefBJO6O5T24UAhI8P5dMceZ7x5wphgVI7Mg==
   dependencies:
     "@jest/types" "^24.3.0"
@@ -11124,7 +11413,11 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
 
 react-dom@^16.3.0:
   version "16.8.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.4.tgz#1061a8e01a2b3b0c8160037441c3bf00a0e3bc48"
+=======
+  resolved "https://registry.valcom.io/react-dom/-/react-dom-16.8.4.tgz#1061a8e01a2b3b0c8160037441c3bf00a0e3bc48"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-Ob2wK7XG2tUDt7ps7LtLzGYYB6DXMCLj0G5fO6WeEICtT4/HdpOi7W/xLzZnR6RCG1tYza60nMdqtxzA8FaPJQ==
   dependencies:
     loose-envify "^1.1.0"
@@ -11143,7 +11436,11 @@ react-event-listener@^0.6.2:
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
+=======
+  resolved "https://registry.valcom.io/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
 
 react-jss@^8.1.0:
@@ -11198,7 +11495,11 @@ react-slick@latest:
 
 react-test-renderer@^16.0.0-0:
   version "16.8.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.4.tgz#abee4c2c3bf967a8892a7b37f77370c5570d5329"
+=======
+  resolved "https://registry.valcom.io/react-test-renderer/-/react-test-renderer-16.8.4.tgz#abee4c2c3bf967a8892a7b37f77370c5570d5329"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-jQ9Tf/ilIGSr55Cz23AZ/7H3ABEdo9oy2zF9nDHZyhLHDSLKuoILxw2ifpBfuuwQvj4LCoqdru9iZf7gwFH28A==
   dependencies:
     object-assign "^4.1.1"
@@ -11218,7 +11519,11 @@ react-transition-group@^2.2.1:
 
 react@^16.3.0:
   version "16.8.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
+=======
+  resolved "https://registry.valcom.io/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-0GQ6gFXfUH7aZcjGVymlPOASTuSjlQL4ZtVC5YKH+3JL6bBLCVO21DknzmaPlI90LN253ojj02nsapy+j7wIjg==
   dependencies:
     loose-envify "^1.1.0"
@@ -11428,7 +11733,11 @@ redux@^3.7.2:
 
 regenerate-unicode-properties@^8.0.1:
   version "8.0.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.0.1.tgz#58a4a74e736380a7ab3c5f7e03f303a941b31289"
+=======
+  resolved "https://registry.valcom.io/regenerate-unicode-properties/-/regenerate-unicode-properties-8.0.1.tgz#58a4a74e736380a7ab3c5f7e03f303a941b31289"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-HTjMafphaH5d5QDHuwW8Me6Hbc/GhXg8luNqTkPVwZ/oCZhnoifjWhGYsu2BzepMELTlbnoVcXvV0f+2uDDvoQ==
   dependencies:
     regenerate "^1.4.0"
@@ -11491,7 +11800,11 @@ regexpu-core@^1.0.0:
 
 regexpu-core@^4.1.3, regexpu-core@^4.2.0:
   version "4.5.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.5.3.tgz#72f572e03bb8b9f4f4d895a0ccc57e707f4af2e4"
+=======
+  resolved "https://registry.valcom.io/regexpu-core/-/regexpu-core-4.5.3.tgz#72f572e03bb8b9f4f4d895a0ccc57e707f4af2e4"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-LON8666bTAlViVEPXMv65ZqiaR3rMNLz36PIaQ7D+er5snu93k0peR7FSvO0QteYbZ3GOkvfHKbGr/B1xDu9FA==
   dependencies:
     regenerate "^1.4.0"
@@ -11888,7 +12201,11 @@ safe-regex@^1.1.0:
 
 sane@^4.0.3:
   version "4.0.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/sane/-/sane-4.0.3.tgz#e878c3f19e25cc57fbb734602f48f8a97818b181"
+=======
+  resolved "https://registry.valcom.io/sane/-/sane-4.0.3.tgz#e878c3f19e25cc57fbb734602f48f8a97818b181"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-hSLkC+cPHiBQs7LSyXkotC3UUtyn8C4FMn50TNaacRyvBlI+3ebcxMpqckmTdtXVtel87YS7GXN3UIOj7NiGVQ==
   dependencies:
     "@cnakazawa/watch" "^1.0.3"
@@ -11922,7 +12239,11 @@ saxes@^3.1.5:
 
 scheduler@^0.13.4:
   version "0.13.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.4.tgz#8fef05e7a3580c76c0364d2df5e550e4c9140298"
+=======
+  resolved "https://registry.valcom.io/scheduler/-/scheduler-0.13.4.tgz#8fef05e7a3580c76c0364d2df5e550e4c9140298"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-cvSOlRPxOHs5dAhP9yiS/6IDmVAVxmk33f0CtTJRkmUWcb1Us+t7b1wqdzoC0REw2muC9V5f1L/w5R5uKGaepA==
   dependencies:
     loose-envify "^1.1.0"
@@ -12132,7 +12453,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
 
 sinon@latest:
   version "7.2.7"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.2.7.tgz#ee90f83ce87d9a6bac42cf32a3103d8c8b1bfb68"
+=======
+  resolved "https://registry.valcom.io/sinon/-/sinon-7.2.7.tgz#ee90f83ce87d9a6bac42cf32a3103d8c8b1bfb68"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-rlrre9F80pIQr3M36gOdoCEWzFAMDgHYD8+tocqOw+Zw9OZ8F84a80Ds69eZfcjnzDqqG88ulFld0oin/6rG/g==
   dependencies:
     "@sinonjs/commons" "^1.3.1"
@@ -12237,7 +12562,11 @@ snyk-go-plugin@1.6.1:
 
 snyk-gradle-plugin@2.1.4:
   version "2.1.4"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.1.4.tgz#4ca478b87f591bd1c37b5d127c9eff4c042f429c"
+=======
+  resolved "https://registry.valcom.io/snyk-gradle-plugin/-/snyk-gradle-plugin-2.1.4.tgz#4ca478b87f591bd1c37b5d127c9eff4c042f429c"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-EOG4OEt9KAkMgaiG3IWi1ENkfIehMhQTd/KU+uoNbEJJ9KYk3POcB+7CsRq6kJa2Th/9aMGp+ojm6HOrOkJM4w==
   dependencies:
     clone-deep "^0.3.0"
@@ -12368,7 +12697,11 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
 
 snyk@^1.124.1:
   version "1.136.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.136.1.tgz#bc5c14f00f9e16fa71bab8502eea426a6fede51d"
+=======
+  resolved "https://registry.valcom.io/snyk/-/snyk-1.136.1.tgz#bc5c14f00f9e16fa71bab8502eea426a6fede51d"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-BhUH2xUvhFR0rzHX2Zf6Eh3JiUgSt8YmLSTUSHKLkUDqyKHyXvig4cItgj/VN0v0K5XLNzzOn2+RjI/zCiAaIQ==
   dependencies:
     "@snyk/dep-graph" "1.4.0"
@@ -12813,7 +13146,11 @@ string-width@^1.0.1, string-width@^1.0.2:
 
 string-width@^3.0.0:
   version "3.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-3.1.0.tgz#22767be21b62af1081574306f69ac51b62203961"
+=======
+  resolved "https://registry.valcom.io/string-width/-/string-width-3.1.0.tgz#22767be21b62af1081574306f69ac51b62203961"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w==
   dependencies:
     emoji-regex "^7.0.1"
@@ -12874,7 +13211,11 @@ strip-ansi@^4.0.0:
 
 strip-ansi@^5.0.0, strip-ansi@^5.1.0:
   version "5.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-5.1.0.tgz#55aaa54e33b4c0649a7338a43437b1887d153ec4"
+=======
+  resolved "https://registry.valcom.io/strip-ansi/-/strip-ansi-5.1.0.tgz#55aaa54e33b4c0649a7338a43437b1887d153ec4"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-TjxrkPONqO2Z8QDCpeE2j6n0M6EwxzyDgzEeGp+FbdvaJAt//ClYi6W5my+3ROlC/hZX2KACUwDfK49Ka5eDvg==
   dependencies:
     ansi-regex "^4.1.0"
@@ -13510,12 +13851,20 @@ unicode-match-property-ecmascript@^1.0.4:
 
 unicode-match-property-value-ecmascript@^1.1.0:
   version "1.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-1.1.0.tgz#5b4b426e08d13a80365e0d657ac7a6c1ec46a277"
+=======
+  resolved "https://registry.valcom.io/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-1.1.0.tgz#5b4b426e08d13a80365e0d657ac7a6c1ec46a277"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-hDTHvaBk3RmFzvSl0UVrUmC3PuW9wKVnpoUDYH0JDkSIovzw+J5viQmeYHxVSBptubnr7PbH2e0fnpDRQnQl5g==
 
 unicode-property-aliases-ecmascript@^1.0.4:
   version "1.0.5"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
+=======
+  resolved "https://registry.valcom.io/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-L5RAqCfXqAwR3RriF8pM0lU0w4Ryf/GgzONwi6KnL1taJQa7x1TCxdJnILX59WIGOwR57IVxn7Nej0fz1Ny6fw==
 
 unified@^7.0.0:
@@ -13644,7 +13993,11 @@ unzip-response@^2.0.1:
 
 upath@^1.1.0:
   version "1.1.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.1.tgz#497f7c1090b0818f310bbfb06783586a68d28014"
+=======
+  resolved "https://registry.valcom.io/upath/-/upath-1.1.1.tgz#497f7c1090b0818f310bbfb06783586a68d28014"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-D0yetkpIOKiZQquxjM2Syvy48Y1DbZ0SWxgsZiwd9GCWRpc75vN8ytzem14WDSg+oiX6+Qt31FpiS/ExODCrLg==
 
 update-notifier@^2.5.0:
@@ -14035,7 +14388,11 @@ webpack-cli@latest:
 
 webpack-dev-middleware@^3.2.0, webpack-dev-middleware@^3.5.1:
   version "3.6.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-3.6.1.tgz#91f2531218a633a99189f7de36045a331a4b9cd4"
+=======
+  resolved "https://registry.valcom.io/webpack-dev-middleware/-/webpack-dev-middleware-3.6.1.tgz#91f2531218a633a99189f7de36045a331a4b9cd4"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-XQmemun8QJexMEvNFbD2BIg4eSKrmSIMrTfnl2nql2Sc6OGAYFyb8rwuYrCjl/IiEYYuyTEiimMscu7EXji/Dw==
   dependencies:
     memory-fs "^0.4.1"
@@ -14221,6 +14578,12 @@ windows-release@^3.1.0:
   dependencies:
     execa "^0.10.0"
 
+"wj-common-front@github:WebJamApps/wj-common-front#JSB":
+  version "0.0.3"
+  resolved "https://codeload.github.com/WebJamApps/wj-common-front/tar.gz/971dd5ef4fdc926d04e5003e518db9f2f4007a2a"
+  dependencies:
+    dotenv latest
+
 wordwrap@^1.0.0, wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
@@ -14285,7 +14648,11 @@ ws@^5.2.0:
 
 ws@^6.0.0, ws@^6.1.2:
   version "6.2.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.0.tgz#13806d9913b2a5f3cbb9ba47b563c002cbc7c526"
+=======
+  resolved "https://registry.valcom.io/ws/-/ws-6.2.0.tgz#13806d9913b2a5f3cbb9ba47b563c002cbc7c526"
+>>>>>>> 018fe6050e7dd709a952161026ac93a75cda96da
   integrity sha512-deZYUNlt2O4buFCa3t5bKLf8A7FPP/TVjwOeVNpw818Ma5nk4MLXls2eoEGS39o8119QIYxTrTDoPQ5B/gTD6w==
   dependencies:
     async-limiter "~1.0.0"

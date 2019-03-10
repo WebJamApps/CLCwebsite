@@ -8,10 +8,10 @@ checks:
       threshold:          30
   similar-code:
     config:
-      threshold:          90
+      threshold:          120
   identical-code:
     config:
-      threshold:          60
+      threshold:          30
   method-complexity:
     config:
       threshold:          10
@@ -27,7 +27,7 @@ plugins:
     config:
       languages:
         javascript:
-          mass_threshold: 60
+          mass_threshold: 30
   stylelint:
     enabled:              true
   htmlhint:
