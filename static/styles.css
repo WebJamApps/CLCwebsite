@@ -209,6 +209,7 @@ audio::-webkit-media-controls-panel {
   /* width: 100%; */
   margin: auto;
   max-height: 5in;
+  cursor: pointer;
   /* max-height: 5in; */
 }
 
@@ -258,6 +259,15 @@ audio::-webkit-media-controls-panel {
   margin-bottom: 1em;
   font-style: italic;
   margin-left: 10px;
+}
+
+.slick-slider {
+  cursor: pointer !important;
+}
+
+div.slick-track {
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* These are Aurelia animate page transitions */
@@ -826,6 +836,22 @@ a:hover {
   .slide-slide {
     margin: auto;
   }
+
+  #youthSlideshow img {
+    width: 100% !important;
+    height: 260px !important;
+    margin: auto;
+  }
+
+  #youthSlideshow {
+    max-height: 3in !important;
+    cursor: pointer;
+    padding: 0 15px;
+  }
+
+  #familySlideshow {
+    padding: 0 15px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -833,18 +859,17 @@ a:hover {
     width: 0;
   }
 
-  #familySlideshow, #youthSlideshow {
-    padding: 0 15px;
-  }
+  /*#familySlideshow, #youthSlideshow {*/
+    /*padding: 0 15px;*/
+    /*max-height: 3in;*/
+    /*cursor: pointer !important;*/
+  /*}*/
 
-  #familySlideshow img, #youthSlideshow img {
-    width: 100vw !important;
-    margin: auto;
-  }
+  /*#familySlideshow img, */
 
-  #familySlideshow img {
-    height: 50vh;
-  }
+  /*#familySlideshow img {*/
+    /*height: 330px !important;*/
+  /*}*/
 }
 
 .swipe-area {
