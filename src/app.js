@@ -10,7 +10,7 @@ import { AppState } from './classes/AppState';
 
 const appUtils = require('wj-common-front').appUtils;
 const utils = require('./commons/utils');
-const CLCappUtils = require('./commons/appUtils');
+// const CLCappUtils = require('./commons/appUtils');
 @inject(AuthService, HttpClient)
 export class App {
   constructor(auth, httpClient) {
@@ -22,7 +22,7 @@ export class App {
     this.style = 'wj';
     this.appUtils = appUtils;
     this.commonUtils = utils;
-    this.clcAppUtils = CLCappUtils;
+    // this.clcAppUtils = CLCappUtils;
   }
 
   authenticated = false;
@@ -305,8 +305,8 @@ export class App {
   }
 
   get widescreen() {
-    return this.clcAppUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
-      $(document.getElementsByClassName('drawer')).parent());
+    return this.appUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
+      $(document.getElementsByClassName('drawer')).parent(), 'returnIsWideCLC');
   }
 
   attached() {
