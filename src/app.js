@@ -10,7 +10,6 @@ import { AppState } from './classes/AppState';
 
 const appUtils = require('wj-common-front').appUtils;
 const utils = require('./commons/utils');
-// const CLCappUtils = require('./commons/appUtils');
 @inject(AuthService, HttpClient)
 export class App {
   constructor(auth, httpClient) {
@@ -22,7 +21,6 @@ export class App {
     this.style = 'wj';
     this.appUtils = appUtils;
     this.commonUtils = utils;
-    // this.clcAppUtils = CLCappUtils;
   }
 
   authenticated = false;
@@ -47,9 +45,7 @@ export class App {
 
   async authenticate(name) {
     let ret;
-    try {
-      ret = await this.auth.authenticate(name, false, { isOhafUser: this.appState.isOhafLogin });
-    } catch (e) { return Promise.reject(e); }
+    try { ret = await this.auth.authenticate(name, false, { isOhafUser: this.appState.isOhafLogin }); } catch (e) { return Promise.reject(e); }
     this.auth.setToken(ret.token);
     return Promise.resolve(ret.token);
   }
@@ -57,13 +53,7 @@ export class App {
   configHttpClient() {
     this.httpClient.configure((httpConfig) => {
       httpConfig
-        .withDefaults({
-          mode: 'cors',
-          credentials: 'same-origin',
-          headers: {
-            Accept: 'application/json'
-          }
-        })
+        .withDefaults({ mode: 'cors', credentials: 'same-origin', headers: { Accept: 'application/json' } })
         .useStandardConfiguration()
         .withBaseUrl(process.env.BackendUrl)
         .withInterceptor(this.auth.tokenInterceptor); // Adds bearer token to every HTTP request.
@@ -161,9 +151,7 @@ export class App {
       run(routingContext, next) {
         if (!routingContext.config.settings.noScrollToTop) {
           const top = document.getElementsByClassName('material-header')[0];
-          if (top !== null && top !== undefined) {
-            top.scrollIntoView();
-          }
+          if (top !== null && top !== undefined) top.scrollIntoView();
         }
         return next();
       }
@@ -174,7 +162,6 @@ export class App {
   }
 
   toggleMobileMenu(toggle) {
-    console.log(toggle);// eslint-disable-line no-console
     document.getElementsByClassName('page-host')[0].style.overflow = 'auto';
     if (toggle !== 'close') {
       document.getElementsByClassName('page-host')[0].style.overflow = 'hidden';
@@ -199,19 +186,14 @@ export class App {
     }
   }
 
-  close() {
-    if (!this.widescreen) this.toggleMobileMenu('close');
-  }
+  close() { if (!this.widescreen) this.toggleMobileMenu('close'); }
 
-  async logout() {
+  logout() {
     this.appState.setUser({});
     this.authenticated = false;
     localStorage.clear();
-    if (this.role !== 'Charity' && this.role !== 'Volunteer') {
-      await this.auth.logout('/');
-    } else await this.auth.logout('/ohaf');
     this.role = '';
-    this.appState.isOhafLogin = false;
+    return this.auth.logout('/');
   }
 
   get currentRoute() {
@@ -226,19 +208,14 @@ export class App {
 
   setFooter() {
     const footer = document.getElementById('wjfooter');
-    if (footer !== null) {
-      footer.style.backgroundColor = '#244a8bff';
-    }
+    if (footer !== null) footer.style.backgroundColor = '#244a8bff';
   }
 
   get currentStyles() {
-    let result = {};
-    result = {
-      headerClass: 'home-header',
+    const result = { headerClass: 'home-header',
       headerImageClass: 'home-header-image',
       sidebarClass: 'home-sidebar',
-      menuToggleClass: 'home-menu-toggle'
-    };
+      menuToggleClass: 'home-menu-toggle' };
     this.setFooter();
     this.setOtherStyles();
     return result;
@@ -255,55 +232,6 @@ export class App {
     }
   }
 
-  buildPTag(object, objectSelector, objectSelectorOther, objectStoreResult) {
-    for (let l = 0; l < object.length; l += 1) {
-      let typeHtml = '';
-      for (let i = 0; i < object[l][objectSelector].length; i += 1) {
-        if (object[l][objectSelector][i] !== '') {
-          if (object[l][objectSelector][i] !== 'other') {
-            typeHtml = `${typeHtml}<p style="font-size:10pt; padding-top:4px; margin-bottom:4px">${object[l][objectSelector][i]}</p>`;
-          } else {
-            typeHtml = `${typeHtml}<p style="font-size:10pt; padding-top:4px; margin-bottom:4px">${object[l][objectSelectorOther]}</p>`;
-          }
-        }
-      }
-      if (typeHtml === '') {
-        typeHtml = '<p style="font-size:10pt">not specified</p>';
-      }
-      object[l][objectStoreResult] = typeHtml;
-    }
-  }
-
-  selectPickedChange(selectorObj, thisObj, mainSelectedList, selectorOtherVariable, otherVariable, selectorUseThis = false, userVariable) {
-    if (userVariable) {
-      selectorObj[userVariable] = thisObj[mainSelectedList];
-    }
-    let exists = false;
-    if (selectorUseThis === true) {
-      if (thisObj[mainSelectedList].includes('other')) {
-        exists = true;
-      }
-    } else if (selectorObj[mainSelectedList].includes('other')) {
-      exists = true;
-    }
-    if (exists === true) {
-      thisObj[otherVariable] = true;
-    } else {
-      thisObj[otherVariable] = false;
-      selectorObj[selectorOtherVariable] = '';
-    }
-  }
-
-  async updateById(route, id, dataObj) {
-    try {
-      const cb = await this.httpClient.fetch(route + id, {
-        method: 'put',
-        body: json(dataObj)
-      });
-      return cb.json();
-    } catch (e) { return e; }
-  }
-
   get widescreen() {
     return this.appUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
       $(document.getElementsByClassName('drawer')).parent(), 'returnIsWideCLC');
@@ -311,9 +239,7 @@ export class App {
 
   attached() {
     this.manager = new Hammer.Manager(document.getElementsByClassName('swipe-area')[0], {
-      recognizers: [
-        [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
-      ]
+      recognizers: [[Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]]
     });
     this.manager.on('swipe', this.close.bind(this));
     if (document.location.search.includes('oneplayer=true')) {
@@ -333,8 +259,6 @@ export class App {
       footer.parentNode.removeChild(footer);
       header.parentNode.removeChild(header);
     }
-    // document.querySelectorAll('body > div > div.au-target.home-sidebar.drawer-container > div > div.nav-list > div.menu-item > a')
-    //   .forEach((el) => { el.addEventListener('click', appUtils.menuClick); });
   }
 
   detached() {
