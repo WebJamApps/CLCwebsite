@@ -101,7 +101,7 @@
     "webpack": "latest",
     "webpack-bundle-analyzer": "latest",
     "webpack-cli": "latest",
-    "wj-common-front": "github:WebJamApps/wj-common-front#JSB"
+    "wj-common-front": "latest"
   },
   "peerDependencies": {},
   "devDependencies": {
