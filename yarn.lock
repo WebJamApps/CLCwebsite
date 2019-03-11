@@ -14223,7 +14223,7 @@ windows-release@^3.1.0:
 
 "wj-common-front@github:WebJamApps/wj-common-front#JSB":
   version "0.0.3"
-  resolved "https://codeload.github.com/WebJamApps/wj-common-front/tar.gz/971dd5ef4fdc926d04e5003e518db9f2f4007a2a"
+  resolved "https://codeload.github.com/WebJamApps/wj-common-front/tar.gz/71f8af6b34615f79296fea37843e5a18c562c9de"
   dependencies:
     dotenv latest
 

@@ -305,8 +305,8 @@ export class App {
   }
 
   get widescreen() {
-    return this.appUtils.handleScreenSizeCLC(this, document.documentElement.clientWidth > 900,
-      $(document.getElementsByClassName('drawer')).parent());
+    return this.appUtils.handleScreenSize(this, document.documentElement.clientWidth > 900,
+      $(document.getElementsByClassName('drawer')).parent(), 'returnIsWideCLC');
   }
 
   attached() {
