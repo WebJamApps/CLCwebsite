@@ -52,8 +52,7 @@ export class App {
 
   configHttpClient() {
     this.httpClient.configure((httpConfig) => {
-      httpConfig
-        .withDefaults({ mode: 'cors', credentials: 'same-origin', headers: { Accept: 'application/json' } })
+      httpConfig.withDefaults({ mode: 'cors', credentials: 'same-origin', headers: { Accept: 'application/json' } })
         .useStandardConfiguration()
         .withBaseUrl(process.env.BackendUrl)
         .withInterceptor(this.auth.tokenInterceptor); // Adds bearer token to every HTTP request.
