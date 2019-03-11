@@ -839,12 +839,10 @@ a:hover {
 
   #youthSlideshow img {
     width: 100% !important;
-    height: 260px !important;
-    margin: auto;
   }
 
   #youthSlideshow {
-    max-height: 3in !important;
+    max-height: 5in !important;
     cursor: pointer;
     padding: 0 15px;
   }
@@ -858,18 +856,6 @@ a:hover {
   ::-webkit-scrollbar:vertical {
     width: 0;
   }
-
-  /*#familySlideshow, #youthSlideshow {*/
-    /*padding: 0 15px;*/
-    /*max-height: 3in;*/
-    /*cursor: pointer !important;*/
-  /*}*/
-
-  /*#familySlideshow img, */
-
-  /*#familySlideshow img {*/
-    /*height: 330px !important;*/
-  /*}*/
 }
 
 .swipe-area {
