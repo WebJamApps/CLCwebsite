@@ -47,13 +47,6 @@ describe('the App module', () => {
       }
     })());
   });
-  it('updates by id', async () => {
-    let result;
-    try {
-      result = await app1.updateById('/volopp/', '123', {});
-      expect(result).not.toBe(undefined);
-    } catch (e) { throw e; }
-  });
   it('should sent an OHAF user to /OHAF on logout', (done) => {
     app1.role = 'Charity';
     app1.logout();

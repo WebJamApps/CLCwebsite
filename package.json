@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=11.9.0"
+    "node": ">=11.10.0"
   },
   "files": [
     "webpack.config.js",
@@ -100,7 +100,8 @@
     "wait-on": "latest",
     "webpack": "latest",
     "webpack-bundle-analyzer": "latest",
-    "webpack-cli": "latest"
+    "webpack-cli": "latest",
+    "wj-common-front": "latest"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -141,7 +142,7 @@
     "karma-coverage-istanbul-reporter": "latest",
     "karma-jasmine": "latest",
     "karma-mocha-reporter": "latest",
-    "karma-webpack": "^4.0.0-rc.3",
+    "karma-webpack": "^4.0.0-rc.6",
     "protractor": "^5.4.1",
     "sinon": "latest",
     "stylelint": "latest",
@@ -164,7 +165,7 @@
     "test:karma": "cross-env NODE_ENV=test nps test.karma",
     "test:debug": "cross-env NODE_ENV=test nps test.karma.debug",
     "installglobals": "npm i -g npm@latest && npm i -g yarn@latest",
-    "cleaninstall": "rm -rf yarn.lock && rm -rf node_modules && yarn cache clean && yarn install",
+    "cleaninstall": "rm -rf package-lock.json && rm -rf yarn.lock && rm -rf node_modules && yarn cache clean && yarn install",
     "snyk-protect": "snyk protect",
     "eslint:fix": "./node_modules/eslint/bin/eslint.js --fix .",
     "fix:aurelia-val": "rm -rf ./node_modules/aurelia-validation/node_modules",
