@@ -1,17 +1,24 @@
 <template>
   <div class="page-content">
     <a id="top"></a>
+    <div style="margin:auto;text-align:center;padding:0;margin-left:-8px">
+      <iframe if.bind="widescreenHomepage" style="width: 800px; height: 540px; border: 1px solid #d3d3d3" src="https://visitor.r20.constantcontact.com/d.jsp?llr=9mgiltbab&p=oi&m=1101234706842&sit=ah8uvihbb&f=f26b8fbd-329c-49ba-b2c2-68eee26dbef1">
+        <p>Your browser does not support iframe.</p>
+      </iframe>
+      <iframe if.bind="!widescreenHomepage" style="width:350px; height: 610px; border: 1px solid #d3d3d3" src="https://visitor.r20.constantcontact.com/d.jsp?llr=9mgiltbab&p=oi&m=1101234706842&sit=ah8uvihbb&f=f26b8fbd-329c-49ba-b2c2-68eee26dbef1">
+      </iframe>
+    </div>
     <div if.bind="books.length < 1">
       <p>There are currently no pdfs links to display</p>
     </div>
     <div if.bind="books.length > 0">
-      <h4 style="padding-top:22px;margin-bottom:20px;font-weight:100;text-align:center">Weekly Updates & Monthly Forums </h4>
+      <h3 style="padding-top:22px;margin-bottom:8px;font-weight:100;text-align:center">Monthly Forums</h3>
       <div class="search-table-outer" style="position:relative;overflow-x:auto;">
         <table aurelia-table="data.bind: books; display-data.bind: $displayData; filters.bind: filters" class="bookshelf">
           <thead>
             <tr>
               <th style="padding:8px" aut-sort="key: title">Title</th>
-              <th style="padding:8px" aut-sort="key: type">Type</th>
+              <!-- <th style="padding:8px" aut-sort="key: type">Type</th> -->
               <th style="padding:8px;min-width:100px" aut-sort="key: created_at; default: desc">Date</th>
             </tr>
           </thead>
@@ -23,7 +30,7 @@
                 <a style="font-size:11pt" if.bind="!book.url && reader" href="/dashboard/reader" innerhtml.bind="book.title | sanitizeHTML"></a>
                 <p if.bind="!book.url && !reader" innerhtml.bind="book.title | sanitizeHTML"></p>
               </td>
-              <td style="padding:8px" innerhtml.bind="book.type | sanitizeHTML"></td>
+              <!-- <td style="padding:8px" innerhtml.bind="book.type | sanitizeHTML"></td> -->
               <td style="padding:8px">${book.created_at}</td>
             </tr>
           </tbody>
