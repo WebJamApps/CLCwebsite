@@ -3,16 +3,16 @@
     <a id="top"></a>
     <h3 style="margin-top:20px;padding:10px;text-align:center">${app.dashboardTitle} Dashboard</h3>
     <div class="material-content elevation3" style="max-width:5in; margin:auto">
-      <h4 class="material-header-h4">Add Weekly Update or Monthly Forum</h4>
+      <h4 class="material-header-h4" style="padding-bottom:0;margin-bottom:0">Add Monthly Forum</h4>
       <form>
-        <label>Type</label>
+        <label style="padding-top:0">Type</label>
         <select id="mediaType" class="form-control" value.bind="newBook.type & validate" style="margin-top:0;width: 2.35in">
-          <option value=""></option>
+          <!-- <option value=""></option> -->
           <option repeat.for="type of types" model.bind="type">${type}</option>
         </select>
         <label>Dropbox URL to PDF</label>
         <input value.two-way="newBook.url & validate">
-        <div validation-errors.bind="errors" class="form-group" style="max-width: 3in;padding:10px">
+        <div validation-errors.bind="errors" class="form-group" style="max-width: 3in;padding:10px;margin-bottom:0">
           <ul if.bind="controller.errors" style="padding:0">
             <li repeat.for="error of controller.errors" style="color:red">
               ${error.message}
@@ -26,9 +26,9 @@
     </div>
     <p style="font-size:2pt">&nbsp;</p>
     <div class="material-content elevation3" style="max-width:5in; margin:auto">
-      <h4 class="material-header-h4">Delete Weekly Update or Monthly Forum</h4>
+      <h4 class="material-header-h4">Delete Monthly Forum</h4>
       <form>
-        <label>Select</label>
+        <label style="padding-top:0">Select</label>
         <select id="selectBookTitle" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
           <option value=""></option>
           <option repeat.for="book of existingBooks" value="${book._id}" model.bind="existingBooks">${book.title}</option>
