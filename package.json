@@ -99,7 +99,7 @@
     "url-loader": "latest",
     "wait-on": "latest",
     "webpack": "latest",
-    "webpack-bundle-analyzer": "latest",
+    "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "latest",
     "wj-common-front": "latest"
   },
