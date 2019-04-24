@@ -31,6 +31,7 @@ export class ClcAdmin {
     this.familyPageContent = { title: '', comments: '', type: 'familyPageContent' };
     this.youthPicsArr = [];
     this.familyPicsArr = [];
+    this.newYouthPic = { title: '', url: '', type: 'youthPics' };
   }
 
   types = ['Monthly'];
@@ -126,8 +127,22 @@ export class ClcAdmin {
     this.newBook.title = 'youthPics';
     return this.utils.createBook(this, 'youth', json);
   }
-  async createFamilyPic() {
-    await this.fixUrl();
+  async addYouthPic() {
+    this.errorMessage = '';
+    if (this.newYouthPic.title === '' || this.newYouthPic.url === '') {
+      this.errorMessage = 'Your picture must include a title and a url';
+      return Promise.resolve(false);
+    }
+    return this.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(this.newYouthPic)
+    })
+      .then(() => {
+        this.app.router.navigate('/youth?reload=true');
+      });
+  }
+  async createFamilyPic(type) {
+    if (type === 'dropbox') await this.fixUrl();
     this.newBook.type = 'familyPics';
     this.newBook.title = 'familyPics';
     return this.utils.createBook(this, 'family', json);
