@@ -32,6 +32,9 @@ export class ClcAdmin {
     this.youthPicsArr = [];
     this.familyPicsArr = [];
     this.newYouthPic = { title: '', url: '', type: 'youthPics' };
+    this.newFamilyPic = { title: '', url: '', type: 'familyPics' };
+    this.errorMessage = '';
+    this.familyPicError = '';
   }
 
   types = ['Monthly'];
@@ -141,11 +144,25 @@ export class ClcAdmin {
         this.app.router.navigate('/youth?reload=true');
       });
   }
-  async createFamilyPic(type) {
-    if (type === 'dropbox') await this.fixUrl();
+  async createFamilyPic() {
+    await this.fixUrl();
     this.newBook.type = 'familyPics';
     this.newBook.title = 'familyPics';
     return this.utils.createBook(this, 'family', json);
+  }
+  async addFamilyPic() {
+    this.errorMessage = '';
+    if (this.newFamilyPic.title === '' || this.newFamilyPic.url === '') {
+      this.familyPicError = 'Your picture must include a title and a url';
+      return Promise.resolve(false);
+    }
+    return this.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(this.newFamilyPic)
+    })
+      .then(() => {
+        this.app.router.navigate('/family?reload=true');
+      });
   }
   async changeHomePage() {
     this.app.httpClient.fetch('/book/one?type=homePageContent', {

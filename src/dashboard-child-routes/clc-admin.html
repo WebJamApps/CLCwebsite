@@ -83,6 +83,7 @@
           Add Pic
         </button>
       </form>
+      <p style="color:red;"><strong>${errorMessage}</strong></p>
       <p>&nbsp;</p>
       <hr>
       <h4 class="material-header-h4">Delete Youthpage Picture</h4>
@@ -113,22 +114,22 @@
       <form>
         <label>Dropbox URL to Picture</label>
         <input value.two-way="newBook.url & validate">
-        <button id="createFamilyPic" class="button-lib" style="width:70px" raised click.trigger="createFamilyPic('dropbox')">
+        <button id="createFamilyPic" class="button-lib" style="width:70px" raised click.trigger="createFamilyPic()">
           Add Pic
         </button>
       </form>
       <p>&nbsp;</p>
       <hr>
       <h4 class="material-header-h4">Add Familypage Pic from Image Address</h4>
-      <!-- <form>
+      <form>
         <label>Title</label>
-        <input value.two-way="newBook.title" style="min-width:0" required>
+        <input value.two-way="newFamilyPic.title" style="min-width:0" required>
         <label>Image Address</label>
-        <input value.two-way="newBook.url">
-        <button id="createFamilyPicOther" class="button-lib" style="width:70px" raised click.trigger="createFamilyPic('other')">
+        <input value.two-way="newFamilyPic.url">
+        <button id="addFamilyPic" class="button-lib" style="width:70px" raised click.trigger="addFamilyPic()">
           Add Pic
         </button>
-      </form> -->
+      </form>
       <p>&nbsp;</p>
       <hr>
       <h4 class="material-header-h4">Delete Familypage Picture</h4>
