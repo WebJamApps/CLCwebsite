@@ -31,6 +31,10 @@ export class ClcAdmin {
     this.familyPageContent = { title: '', comments: '', type: 'familyPageContent' };
     this.youthPicsArr = [];
     this.familyPicsArr = [];
+    this.newYouthPic = { title: '', url: '', type: 'youthPics' };
+    this.newFamilyPic = { title: '', url: '', type: 'familyPics' };
+    this.errorMessage = '';
+    this.familyPicError = '';
   }
 
   types = ['Monthly'];
@@ -54,8 +58,14 @@ export class ClcAdmin {
     this.youthPicsArr = [];
     this.familyPicsArr = [];
     for (let i = 0; i < books.length; i += 1) {
-      if (books[i].type === 'youthPics') this.youthPicsArr.push(books[i]);
-      if (books[i].type === 'familyPics') this.familyPicsArr.push(books[i]);
+      if (books[i].type === 'youthPics') {
+        if (books[i].title === 'youthPics') books[i].title = books[i].url;
+        this.youthPicsArr.push(books[i]);
+      }
+      if (books[i].type === 'familyPics') {
+        if (books[i].title === 'familyPics' || books[i].title === '') books[i].title = books[i].url;
+        this.familyPicsArr.push(books[i]);
+      }
     }
   }
   showDelete() {
@@ -123,14 +133,42 @@ export class ClcAdmin {
   async createYouthPic() {
     await this.fixUrl();
     this.newBook.type = 'youthPics';
-    this.newBook.title = 'youthPics';
+    this.newBook.title = this.newBook.url;
     return this.utils.createBook(this, 'youth', json);
+  }
+  async addYouthPic() {
+    this.errorMessage = '';
+    if (this.newYouthPic.title === '' || this.newYouthPic.url === '') {
+      this.errorMessage = 'Your picture must include a title and a url';
+      return Promise.resolve(false);
+    }
+    return this.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(this.newYouthPic)
+    })
+      .then(() => {
+        this.app.router.navigate('/youth?reload=true');
+      });
   }
   async createFamilyPic() {
     await this.fixUrl();
     this.newBook.type = 'familyPics';
-    this.newBook.title = 'familyPics';
+    this.newBook.title = this.newBook.url;
     return this.utils.createBook(this, 'family', json);
+  }
+  async addFamilyPic() {
+    this.errorMessage = '';
+    if (this.newFamilyPic.title === '' || this.newFamilyPic.url === '') {
+      this.familyPicError = 'Your picture must include a title and a url';
+      return Promise.resolve(false);
+    }
+    return this.app.httpClient.fetch('/book', {
+      method: 'post',
+      body: json(this.newFamilyPic)
+    })
+      .then(() => {
+        this.app.router.navigate('/family?reload=true');
+      });
   }
   async changeHomePage() {
     this.app.httpClient.fetch('/book/one?type=homePageContent', {
