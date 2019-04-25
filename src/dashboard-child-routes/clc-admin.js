@@ -58,8 +58,14 @@ export class ClcAdmin {
     this.youthPicsArr = [];
     this.familyPicsArr = [];
     for (let i = 0; i < books.length; i += 1) {
-      if (books[i].type === 'youthPics') this.youthPicsArr.push(books[i]);
-      if (books[i].type === 'familyPics') this.familyPicsArr.push(books[i]);
+      if (books[i].type === 'youthPics') {
+        if (books[i].title === 'youthPics') books[i].title = books[i].url;
+        this.youthPicsArr.push(books[i]);
+      }
+      if (books[i].type === 'familyPics') {
+        if (books[i].title === 'familyPics' || books[i].title === '') books[i].title = books[i].url;
+        this.familyPicsArr.push(books[i]);
+      }
     }
   }
   showDelete() {
@@ -127,7 +133,7 @@ export class ClcAdmin {
   async createYouthPic() {
     await this.fixUrl();
     this.newBook.type = 'youthPics';
-    this.newBook.title = 'youthPics';
+    this.newBook.title = this.newBook.url;
     return this.utils.createBook(this, 'youth', json);
   }
   async addYouthPic() {
@@ -147,7 +153,7 @@ export class ClcAdmin {
   async createFamilyPic() {
     await this.fixUrl();
     this.newBook.type = 'familyPics';
-    this.newBook.title = 'familyPics';
+    this.newBook.title = this.newBook.url;
     return this.utils.createBook(this, 'family', json);
   }
   async addFamilyPic() {

@@ -91,7 +91,7 @@
         <label>Select</label>
         <select id="selectYouthPic" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
           <option value=""></option>
-          <option repeat.for="pic of youthPicsArr" value="${pic._id}" model.bind="youthPicsArr">${pic.comments}</option>
+          <option repeat.for="pic of youthPicsArr" value="${pic._id}" model.bind="youthPicsArr">${pic.title}</option>
         </select>
         <button if.bind="showDeleteButton" id="deleteYouth" class="button-lib" raised click.trigger="deleteYouthPic()">
           Delete
@@ -130,6 +130,7 @@
           Add Pic
         </button>
       </form>
+      <p style="color:red;"><strong>${familyPicError}</strong></p>
       <p>&nbsp;</p>
       <hr>
       <h4 class="material-header-h4">Delete Familypage Picture</h4>
@@ -137,7 +138,7 @@
         <label>Select</label>
         <select id="selectFamilyPic" class="form-control" change.delegate="showDelete()" value.bind="titleSelected" style="margin-top:0;max-width: 2.5in;overflow-wrap:break-word;word-break:break-all;">
           <option value=""></option>
-          <option repeat.for="pic of familyPicsArr" value="${pic._id}" model.bind="familyPicsArr">${pic.comments}</option>
+          <option repeat.for="pic of familyPicsArr" value="${pic._id}" model.bind="familyPicsArr">${pic.title}</option>
         </select>
         <button if.bind="showDeleteButton" id="deleteFamily" class="button-lib" raised click.trigger="deleteFamilyPic()">
           Delete
