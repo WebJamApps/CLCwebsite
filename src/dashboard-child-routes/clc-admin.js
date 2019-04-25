@@ -60,12 +60,12 @@ export class ClcAdmin {
     for (let i = 0; i < books.length; i += 1) {
       if (books[i].type === 'youthPics') {
         if (books[i].url === '' || books[i].url === undefined) books[i].url = books[i].comments;
-        if (books[i].title === 'youthPics') books[i].title = books[i].url;
+        if (books[i].title === 'youthPics' || books[i].title === undefined) books[i].title = books[i].url;
         this.youthPicsArr.push(books[i]);
       }
       if (books[i].type === 'familyPics') {
         if (books[i].url === '' || books[i].url === undefined) books[i].url = books[i].comments;
-        if (books[i].title === 'familyPics' || books[i].title === '') books[i].title = books[i].url;
+        if (books[i].title === 'familyPics' || books[i].title === '' || books[i].title === undefined) books[i].title = books[i].url;
         this.familyPicsArr.push(books[i]);
       }
     }
