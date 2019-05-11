@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=11.14.0"
+    "node": ">=12.1.0"
   },
   "files": [
     "webpack.config.js",
@@ -35,9 +35,9 @@
     "@babel/plugin-syntax-flow": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-flow-strip-types": "^7.0.0",
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "latest",
     "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "latest",
     "@babel/register": "^7.0.0",
     "@material-ui/core": "1.5.1",
     "au-table": "latest",
@@ -74,7 +74,7 @@
     "hammerjs": "latest",
     "html-loader": "latest",
     "html-webpack-plugin": "latest",
-    "identity-obj-proxy": "^3.0.0",
+    "identity-obj-proxy": "latest",
     "jasmine-spec-reporter": "latest",
     "jquery": "latest",
     "mini-css-extract-plugin": "latest",
@@ -111,8 +111,8 @@
     "aurelia-protractor-plugin": "latest",
     "aurelia-testing": "latest",
     "aurelia-tools": "latest",
-    "babel-eslint": "7.2.3",
     "babel-jest": "latest",
+    "babel-eslint": "7.2.3",
     "babel-plugin-istanbul": "latest",
     "enzyme": "latest",
     "enzyme-adapter-react-16": "latest",

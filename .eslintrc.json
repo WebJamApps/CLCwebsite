@@ -42,5 +42,13 @@
       "let": "always",
       "const": "never"
     }]
+  },
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
