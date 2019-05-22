@@ -242,9 +242,10 @@ audio::-webkit-media-controls-panel {
 }
 
 .sideNavTopLogo {
-  width: 90px;
+  width: 86px;
   margin-right: 0;
-  margin-top: 1px
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .subTitle {
@@ -693,8 +694,8 @@ a:hover {
 }
 
 .nav-link {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 0;
   display: block !important;
   color: #23527c;
