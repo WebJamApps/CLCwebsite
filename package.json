@@ -1,6 +1,6 @@
 {
   "name": "ClCwebsite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Front End of collegelutheran.org",
   "main": "dist/index.html",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "author": "95theses",
   "engines": {
-    "node": ">=12.1.0"
+    "node": ">=12.2.0"
   },
   "files": [
     "webpack.config.js",
