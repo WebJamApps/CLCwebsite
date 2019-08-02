@@ -960,3 +960,10 @@ button.on {
 #playSection audio::-webkit-media-controls-play-button {
   display: none;
 }
+
+.slide-show {
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
+  background-color: rgb(192, 192, 192);
+}

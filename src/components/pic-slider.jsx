@@ -29,7 +29,7 @@ export class PicSlider {
       <Slider {...this.settings}>
         {this.data.map((data, key) => (
           <div key={key} style={data.style}>
-            <img alt="img" padding-top="56.25%" width="100%" src={data.src} />
+            <img className="slide-show" alt="img" src={data.src} />
           </div>
         ))}
       </Slider>
