@@ -1,9 +1,9 @@
-import { noView, inject, customElement, bindable } from 'aurelia-framework';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { noView, inject, customElement, bindable } from "aurelia-framework";
+import React from "react";
+import ReactDOM from "react-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 @noView()
 @inject(Element)
@@ -29,7 +29,7 @@ export class PicSlider {
       <Slider {...this.settings}>
         {this.data.map((data, key) => (
           <div key={key} style={data.style}>
-            <img className="slide-show" alt="img" src={data.src} />
+            <img alt="img" padding-top="56.25%" width="100%" src={data.src} />
           </div>
         ))}
       </Slider>
