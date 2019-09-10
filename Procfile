@@ -1,1 +1,1 @@
-web: yarn run server:prod
+web: node server.js
