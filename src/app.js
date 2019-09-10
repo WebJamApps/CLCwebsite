@@ -8,7 +8,7 @@ import * as Hammer from 'hammerjs';
 import { UserAccess } from './classes/UserAccess';
 import { AppState } from './classes/AppState';
 
-const appUtils = require('wj-common-front').appUtils;
+const { appUtils } = require('wj-common-front');
 const utils = require('./commons/utils');
 @inject(AuthService, HttpClient)
 export class App {
@@ -68,7 +68,7 @@ export class App {
         nav: false,
         title: '',
         auth: true,
-        settings: 'fa fa-tachometer'
+        settings: 'fa fa-tachometer',
       },
       {
         route: 'music',
@@ -76,7 +76,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./music'),
         nav: false,
         title: 'Music',
-        settings: 'fa fa-music'
+        settings: 'fa fa-music',
       },
       {
         route: 'calendar',
@@ -84,7 +84,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./calendar'),
         nav: false,
         title: 'Calendar',
-        settings: 'fa fa-music'
+        settings: 'fa fa-music',
       },
       {
         route: 'news',
@@ -92,7 +92,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./news'),
         nav: false,
         title: 'News & Forum',
-        settings: 'fa fa-newspaper-o'
+        settings: 'fa fa-newspaper-o',
       },
       {
         route: 'giving',
@@ -100,10 +100,10 @@ export class App {
         moduleId: PLATFORM.moduleName('./giving'),
         nav: false,
         title: 'Giving',
-        settings: 'fa fa-handshake-o'
+        settings: 'fa fa-handshake-o',
       },
       {
-        route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home'
+        route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('./home'), nav: false, title: '', settings: 'fa fa-home',
       },
       {
         route: 'beliefs',
@@ -111,7 +111,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./beliefs'),
         nav: false,
         title: 'Our Lutheran Beliefs',
-        settings: 'fa fa-sign-in'
+        settings: 'fa fa-sign-in',
       },
       {
         route: 'staff',
@@ -119,7 +119,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./staff'),
         nav: false,
         title: 'Church Staff',
-        settings: 'fa fa-users'
+        settings: 'fa fa-users',
       },
       {
         route: 'youth',
@@ -127,7 +127,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./youth'),
         nav: false,
         title: 'Youth Ministry',
-        settings: 'fa fa-users'
+        settings: 'fa fa-users',
       },
       {
         route: 'family',
@@ -135,7 +135,7 @@ export class App {
         moduleId: PLATFORM.moduleName('./family'),
         nav: false,
         title: 'Children & Families',
-        settings: 'fa fa-users'
+        settings: 'fa fa-users',
       },
     ]);
   }
@@ -153,7 +153,7 @@ export class App {
           if (top !== null && top !== undefined) top.scrollIntoView();
         }
         return next();
-      }
+      },
     });
     config = this.mapConfig(config);
     config.fallbackRoute('/');
@@ -238,7 +238,7 @@ export class App {
 
   attached() {
     this.manager = new Hammer.Manager(document.getElementsByClassName('swipe-area')[0], {
-      recognizers: [[Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]]
+      recognizers: [[Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]],
     });
     this.manager.on('swipe', this.close.bind(this));
     if (document.location.search.includes('oneplayer=true')) {

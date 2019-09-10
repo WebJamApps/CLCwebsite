@@ -25,8 +25,8 @@ const configForDevelopment = {
     google: {
       name: 'google',
       url: '/user/auth/google',
-      clientId: process.env.GoogleClientId
-    }
+      clientId: process.env.GoogleClientId,
+    },
     // ,
     // linkedin:{
     //     clientId:'778mif8zyqbei7'
@@ -43,7 +43,7 @@ const configForDevelopment = {
   // aureliauth's standard.
   tokenName: 'id_token',
   // Once logged in, we want to redirect the user to the welcome view.
-  loginRedirect: '/dashboard'
+  loginRedirect: '/dashboard',
 };
 
 const configForProduction = {
@@ -70,7 +70,7 @@ const configForProduction = {
   // aureliauth's standard.
   tokenName: 'id_token',
   // Once logged in, we want to redirect the user to the welcome view.
-  loginRedirect: '/dashboard'
+  loginRedirect: '/dashboard',
 };
 
 // eslint-disable-next-line import/no-mutable-exports

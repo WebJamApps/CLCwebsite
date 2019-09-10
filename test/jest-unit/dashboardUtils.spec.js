@@ -6,8 +6,8 @@ const dashboardStub = {
   app: { auth: { getTokenPayload() { return Promise.resolve({ sub: '123' }); } },
     appState: { getUser() { return { email: 'jb@jb.com', userType: 'Reader' }; }, setUser() {} },
     router: { navigate(route) { return route; } },
-    logout() { return Promise.resolve(true); }
-  }
+    logout() { return Promise.resolve(true); },
+  },
 };
 
 const dashboardStub2 = {
@@ -16,12 +16,12 @@ const dashboardStub2 = {
   app: { auth: { getTokenPayload() { return Promise.resolve({ sub: null }); } },
     appState: { getUser() { return { email: 'jb@jb.com', userType: 'Reader' }; }, setUser() {} },
     router: { navigate(route) { return route; } },
-    logout() { return Promise.resolve(true); }
-  }
+    logout() { return Promise.resolve(true); },
+  },
 };
 
 const lsStub = {
-  setItem() {}
+  setItem() {},
 };
 
 describe('the dashboard utils', () => {
