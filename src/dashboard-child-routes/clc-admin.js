@@ -1,5 +1,5 @@
 import {
-  ValidationControllerFactory, ValidationRules, Validator, validateTrigger
+  ValidationControllerFactory, ValidationRules, Validator, validateTrigger,
 } from 'aurelia-validation';
 import { inject } from 'aurelia-framework';
 import { json } from 'aurelia-fetch-client';
@@ -16,9 +16,9 @@ export class ClcAdmin {
       title: '',
       type: '',
       url: '',
-      access: 'CLC'
+      access: 'CLC',
     };
-    this.validator = new FormValidator(validator, results => this.updateCanSubmit(results)); // if the form is valid then set to true.
+    this.validator = new FormValidator(validator, (results) => this.updateCanSubmit(results)); // if the form is valid then set to true.
     this.controller = controllerFactory.createForCurrentScope(this.validator);
     this.controller.validateTrigger = validateTrigger.changeOrBlur;
     this.canSubmit = false; // the button on the form
@@ -146,7 +146,7 @@ export class ClcAdmin {
     }
     return this.app.httpClient.fetch('/book', {
       method: 'post',
-      body: json(this.newYouthPic)
+      body: json(this.newYouthPic),
     })
       .then(() => {
         this.app.router.navigate('/youth?reload=true');
@@ -166,7 +166,7 @@ export class ClcAdmin {
     }
     return this.app.httpClient.fetch('/book', {
       method: 'post',
-      body: json(this.newFamilyPic)
+      body: json(this.newFamilyPic),
     })
       .then(() => {
         this.app.router.navigate('/family?reload=true');
@@ -175,7 +175,7 @@ export class ClcAdmin {
   async changeHomePage() {
     this.app.httpClient.fetch('/book/one?type=homePageContent', {
       method: 'put',
-      body: json(this.homePageContent)
+      body: json(this.homePageContent),
     })
       .then(() => {
         this.app.router.navigate('/?reload=true');
@@ -184,7 +184,7 @@ export class ClcAdmin {
   async changeYouthPage() {
     this.app.httpClient.fetch('/book/one?type=youthPageContent', {
       method: 'put',
-      body: json(this.youthPageContent)
+      body: json(this.youthPageContent),
     })
       .then(() => {
         this.app.router.navigate('/youth?reload=true');
@@ -193,7 +193,7 @@ export class ClcAdmin {
   async changeFamilyPage() {
     this.app.httpClient.fetch('/book/one?type=familyPageContent', {
       method: 'put',
-      body: json(this.familyPageContent)
+      body: json(this.familyPageContent),
     })
       .then(() => {
         this.app.router.navigate('/family?reload=true');

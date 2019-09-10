@@ -12,7 +12,7 @@ function loadTestModules() {
     // recursive:
     true,
     // tests in ./unit folder regex:
-    /\.spec\.[tj]s$/im
+    /\.spec\.[tj]s$/im,
   );
 
   return [testContext];
@@ -34,7 +34,7 @@ function installJestExpect() {
   const expect = require('jest-matchers');
   global.expect = expect;
 
-  const jasmine = global.jasmine;
+  const { jasmine } = global;
   jasmine.anything = expect.anything;
   jasmine.any = expect.any;
   jasmine.objectContaining = expect.objectContaining;

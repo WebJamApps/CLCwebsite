@@ -22,7 +22,7 @@ export class AppState {
     }
     // console.log('appState getting new user');
     return this.httpClient.fetch(`/user/${uid}`)
-      .then(response => response.json())
+      .then((response) => response.json())
       .then((data) => {
         const user = data;
         this.setUser(user);
@@ -81,7 +81,7 @@ export class AppState {
     if (this.user.userStatus === 'disabled') {
       this.roles.push('disabled');
     } else {
-      this.roles = this.roles.filter(e => e !== 'disabled');
+      this.roles = this.roles.filter((e) => e !== 'disabled');
     }
     // console.log('user roles are ' + this.roles);
   }

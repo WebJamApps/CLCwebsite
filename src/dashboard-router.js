@@ -6,7 +6,7 @@ export class DashboardRouter {
   configureRouter(config, router) {
     config.map([ // There is no way to refactor this that I can tell
       {
-        route: '', name: 'dashboard', moduleId: PLATFORM.moduleName('./dashboard'), nav: false, title: 'Dashboard', auth: true
+        route: '', name: 'dashboard', moduleId: PLATFORM.moduleName('./dashboard'), nav: false, title: 'Dashboard', auth: true,
       },
       {
         route: 'clc-admin',
@@ -15,8 +15,8 @@ export class DashboardRouter {
         nav:
         false,
         title: 'CLC Admin Dashboard',
-        auth: true
-      }
+        auth: true,
+      },
       // ,
       // {
       //   route: 'user-account',

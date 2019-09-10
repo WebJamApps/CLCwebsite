@@ -1,17 +1,17 @@
 import {
-  StageComponent
+  StageComponent,
 } from 'aurelia-testing';
 import {
-  Dashboard
+  Dashboard,
 } from '../../src/dashboard';
 import {
-  App
+  App,
 } from '../../src/app';
 import {
   AuthStub,
   HttpMock,
   AppStateStub,
-  RouterStub
+  RouterStub,
 } from './commons';
 
 describe('the Dashboard Module', () => {
@@ -19,7 +19,7 @@ describe('the Dashboard Module', () => {
   beforeEach(() => {
     auth = new AuthStub();
     auth.setToken({
-      sub: '3456'
+      sub: '3456',
     });
     app = new App(auth, new HttpMock());
     app.router = new RouterStub();

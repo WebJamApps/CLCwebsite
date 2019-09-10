@@ -2,7 +2,7 @@
 const path = require('path');
 const webpack = require('../webpack.config');
 
-const isDebug = arg => arg === '--debug';
+const isDebug = (arg) => arg === '--debug';
 
 module.exports = function configKarma(config) {
   config.set({
@@ -29,7 +29,7 @@ module.exports = function configKarma(config) {
     * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     */
     preprocessors: {
-      'test/karma-bundle.js': ['webpack']
+      'test/karma-bundle.js': ['webpack'],
     },
 
     webpack: webpack({ coverage: true }),
@@ -45,7 +45,7 @@ module.exports = function configKarma(config) {
     coverageReporter: {
       reporters: [{ type: 'json' }, { type: 'lcov' }],
       dir: 'coverage/',
-      subdir: 'coverage-karma/'
+      subdir: 'coverage-karma/',
     },
 
     // Webpack please don't spam the console when running in karma!
@@ -71,13 +71,13 @@ module.exports = function configKarma(config) {
     * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     */
     browsers: [
-      'Chrome'
+      'Chrome',
     ],
 
     /*
     * Continuous Integration mode
     * if true, Karma captures browsers, runs the tests and exits
     */
-    singleRun: true
+    singleRun: true,
   });
 };

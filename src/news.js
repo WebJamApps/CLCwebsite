@@ -1,8 +1,8 @@
 import {
-  inject
+  inject,
 } from 'aurelia-framework';
 import {
-  App
+  App,
 } from './app';
 
 const utils = require('./commons/utils');
@@ -27,7 +27,7 @@ export class News {
     books = this.utils.filterNews(books);
     for (let i = 0; i < books.length; i += 1) {
       if (books[i].created_at !== null && books[i].created_at !== undefined) {
-        books[i].created_at = books[i].created_at.split('T')[0];
+        books[i].created_at = books[i].created_at.split('T')[0];// eslint-disable-line prefer-destructuring
       }
     }
     return this.continueFixBooks(books);

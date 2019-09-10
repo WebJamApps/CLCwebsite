@@ -17,7 +17,7 @@ exports.createBook = async function createBook(controller, doneRoute, json) {
   try {
     await controller.app.httpClient.fetch('/book', {
       method: 'post',
-      body: json(controller.newBook)
+      body: json(controller.newBook),
     });
   } catch (e) { return sessionStorage.setItem(`create${doneRoute}Error`, `${e.message}`); }
   return controller.app.router.navigate(`/${doneRoute}`);
@@ -27,7 +27,7 @@ exports.deleteBookById = async function deleteBookById(id, controller, doneRoute
   let res;
   try {
     res = await controller.app.httpClient.fetch(`/book/${id}`, {
-      method: 'delete'
+      method: 'delete',
     });
     await res.json();
   } catch (e) { return sessionStorage.setItem(`delete${doneRoute}Error`, `${e.message}`); }
@@ -79,7 +79,7 @@ exports.formatDate = function formatDate(today) {
   const dd = today.getDate();
   today = [today.getFullYear(),
     (mm > 9 ? '' : '0') + mm,
-    (dd > 9 ? '' : '0') + dd
+    (dd > 9 ? '' : '0') + dd,
   ].join('');
   return today;
 };
@@ -229,15 +229,15 @@ exports.showCheckboxes = function showCheckboxes(id, forceOpen) {
 
 exports.makeCSVfile = function makeCSVfile(fetchClient, route, fileName) {
   return fetchClient.fetch(route)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((data) => {
       const options = {
         delimiter: '\t',
-        headers: 'key'
+        headers: 'key',
       };
       const myFile = csvjson.toCSV(data, options);
       const file = new File([myFile], fileName, {
-        type: 'text/plain;charset=utf-8'
+        type: 'text/plain;charset=utf-8',
       });
       return filesaver.saveAs(file);
     });

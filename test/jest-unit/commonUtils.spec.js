@@ -21,7 +21,7 @@ const event = [{
   voEndTime: '8:15pm',
   voContactName: '',
   voContactEmail: '',
-  voContactPhone: ''
+  voContactPhone: '',
 }];
 // const controllerStub = { app: { router: { navigate() { return Promise.resolve(true); } },
 //   httpClient: { fetch() { return Promise.resolve(true); } } } };
@@ -66,7 +66,7 @@ describe('the common utils', () => {
     window.sessionStorage = {
       setItem(key, string) {
         expect(string).toBe('bad');
-      }
+      },
     };
     try {
       await utils.createBook(controllerStub, '', () => {});
@@ -84,7 +84,7 @@ describe('the common utils', () => {
     window.sessionStorage = {
       setItem(key, string) {
         expect(string).toBe('bad');
-      }
+      },
     };
     try {
       await utils.deleteBookById('', controllerStub, '');
