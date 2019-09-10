@@ -5,7 +5,7 @@ describe('the showSlides module', () => {
     const doc = {
       getElementById() {
         return null;
-      }
+      },
     };
     let res;
     document.body.innerHTML = '';

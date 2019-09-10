@@ -1,4 +1,4 @@
-const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+const { SpecReporter } = require('jasmine-spec-reporter');
 
 const port = 19876;
 
@@ -10,7 +10,7 @@ exports.config = {
   // use `npm start -- e2e`
 
   specs: [
-    '**/*.e2e.js'
+    '**/*.e2e.js',
   ],
 
   exclude: [],
@@ -24,7 +24,7 @@ exports.config = {
     showColors: true,
     isVerbose: true,
     includeStackTrace: true,
-    defaultTimeoutInterval: 400000
+    defaultTimeoutInterval: 400000,
     // print: function () {},
   },
 
@@ -48,13 +48,13 @@ exports.config = {
         '--window-size=1920,1080',
         '--headless',
         '--no-gpu',
-        '--no-sandbox'
+        '--no-sandbox',
         /* enable these if you'd like to test using Chrome Headless
           '--no-gpu',
           '--headless'
         */
-      ]
-    }
+      ],
+    },
   },
 
   onPrepare() {
@@ -62,7 +62,7 @@ exports.config = {
       displayFailuresSummary: true,
       displayFailuredSpec: true,
       displaySuiteNumber: true,
-      displaySpecDuration: true
+      displaySpecDuration: true,
     }));
     process.env.BABEL_TARGET = 'node';
     process.env.IN_PROTRACTOR = 'true';
@@ -71,6 +71,6 @@ exports.config = {
   },
 
   plugins: [{
-    package: 'aurelia-protractor-plugin'
+    package: 'aurelia-protractor-plugin',
   }],
 };

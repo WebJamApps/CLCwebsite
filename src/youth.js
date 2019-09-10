@@ -1,8 +1,8 @@
 import {
-  inject
+  inject,
 } from 'aurelia-framework';
 import {
-  App
+  App,
 } from './app';
 
 @inject(App)

@@ -4,6 +4,11 @@
     "plugin:jest/recommended", "plugin:security/recommended", "plugin:node/recommended"
   ],
   "rules": {
+    "node/no-unpublished-import": 0,
+    "max-classes-per-file": 0,
+    "no-useless-catch": 0,
+    "node/no-missing-import": 0,
+    "node/no-extraneous-import": 0,
     "security/detect-possible-timing-attacks": 0,
     "lines-between-class-members": "off",
     "node/no-extraneous-require": 0,
@@ -17,7 +22,6 @@
     "no-mixed-operators": 0,
     "no-useless-escape": 0,
     "no-multi-assign": "off",
-    "comma-dangle": [0, "never"],
     "no-undef": [0, "never"],
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
@@ -28,7 +32,6 @@
     "no-restricted-syntax": [0, "never"],
     "newline-per-chained-call": "off",
     "object-curly-newline": "off",
-    "prefer-destructuring": 0,
     "no-param-reassign": [0, "never"],
     "jest/valid-expect-in-promise": "off",
     " jest/no-jasmine-globals": "off",

@@ -1,6 +1,6 @@
 import { App } from '../../src/app';
 import {
-  AuthStub, HttpMock, RouterStub, AppStateStub
+  AuthStub, HttpMock, RouterStub, AppStateStub,
 } from './commons';
 
 const Counter = require('assertions-counter');
@@ -76,7 +76,7 @@ describe('the App module', () => {
       addPipelineStep(a, b) { return null; },
       addPostRenderStep(obj) { return obj; },
       map(list) { return this; },
-      fallbackRoute(arg) { return arg; }
+      fallbackRoute(arg) { return arg; },
     };
     app1.configureRouter(config, {});
     expect(typeof app1.router).toBe('object');
@@ -87,8 +87,8 @@ describe('the App module', () => {
       {
         style: { overflow: '', display: '' },
         addEventListener(a, b) { },
-        removeEventListener(a, b) { }
-      }
+        removeEventListener(a, b) { },
+      },
     ]);
     document.body.innerHTML = '<div class="page-host drawer mobile-menu-toggle main-panel swipe-area"></div>';
     app1.toggleMobileMenu();
@@ -99,15 +99,15 @@ describe('the App module', () => {
     spyOn(document, ['getElementsByClassName']).and.returnValue([
       {
         style: {
-          overflow: '', display: '', marginRight: '', width: ''
+          overflow: '', display: '', marginRight: '', width: '',
         },
         addEventListener(a, b) { },
         removeEventListener(a, b) { },
-        setAttribute(a, b) { }
-      }
+        setAttribute(a, b) { },
+      },
     ]);
     app1.manager = {
-      off(a, b) { }
+      off(a, b) { },
     };
     app1.detached();
     done();

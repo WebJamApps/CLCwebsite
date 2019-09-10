@@ -1,7 +1,7 @@
 class RouterStub {
   currentInstruction = {
     config: { title: 'Howdy is cool', name: 'yoyo' },
-    fragment: {}
+    fragment: {},
   }
 
   configure(handler) {
@@ -101,7 +101,7 @@ class AppStateStub {
         volTalentOther: '',
         volWorkOther: '',
         userDetails: 'newUser',
-        isOhafUser: true
+        isOhafUser: true,
       };
     } else if (uid === '2') {
       this.user = {
@@ -116,7 +116,7 @@ class AppStateStub {
         volTalentOther: '',
         volWorkOther: '',
         userDetails: 'newUser',
-        isOhafUser: true
+        isOhafUser: true,
       };
     } else if (uid === '3') {
       this.user = {
@@ -133,7 +133,7 @@ class AppStateStub {
         volTalentOther: '',
         volWorkOther: '',
         userDetails: 'newUser',
-        isOhafUser: true
+        isOhafUser: true,
       };
     } else {
       this.user = {
@@ -149,7 +149,7 @@ class AppStateStub {
         '',
         volWorkOther: '',
         userDetails: 'newUser',
-        isOhafUser: true
+        isOhafUser: true,
       };
     }
     return new Promise((resolve) => {
@@ -187,7 +187,7 @@ class HttpMock {
       volWorkPrefs: [],
       volCauseOther: '',
       volTalentOther: '',
-      volWorkOther: ''
+      volWorkOther: '',
     };
   }
 
@@ -231,7 +231,7 @@ class HttpMock {
         voEndTime: '',
         voContactName: '',
         voContactEmail: '',
-        voContactPhone: ''
+        voContactPhone: '',
       };
     } else if (url === '/volopp/get/2345') {
       returnValue = {
@@ -253,7 +253,7 @@ class HttpMock {
         voEndTime: '',
         voContactName: '',
         voContactEmail: '',
-        voContactPhone: ''
+        voContactPhone: '',
       };
     } else if (url === '/volopp/get/23456') {
       // console.log('i am in the correct route!');
@@ -276,7 +276,7 @@ class HttpMock {
         voEndTime: '',
         voContactName: '',
         voContactEmail: '',
-        voContactPhone: ''
+        voContactPhone: '',
       };
     } else if (url === '/volopp/get/234567') {
       returnValue = null;
@@ -284,12 +284,12 @@ class HttpMock {
     if (returnValue !== null) {
       return Promise.resolve({
         Headers: this.headers,
-        json: () => Promise.resolve(returnValue)
+        json: () => Promise.resolve(returnValue),
       });
     }
     return Promise.resolve({
       Headers: this.headers,
-      json: () => Promise.reject(new Error('fail'))
+      json: () => Promise.reject(new Error('fail')),
     });
   }
 
@@ -306,8 +306,8 @@ class HttpMock {
           [],
           volCauseOther: '',
           volTalentOther: '',
-          volWorkOther: ''
-        }
+          volWorkOther: '',
+        },
       ];
     } if (id === '2') {
       return null;
@@ -323,8 +323,8 @@ class HttpMock {
           [],
           volCauseOther: '',
           volTalentOther: '',
-          volWorkOther: ''
-        }
+          volWorkOther: '',
+        },
       ];
     }
     return null;
@@ -333,14 +333,14 @@ class HttpMock {
   getSignUpAll() {
     return [
       {
-        _id: '2124', voloppId: '123', userId: '1', numPeople: 1
+        _id: '2124', voloppId: '123', userId: '1', numPeople: 1,
       },
       {
-        _id: '2124', voloppId: '123', userId: '2', numPeople: 1
+        _id: '2124', voloppId: '123', userId: '2', numPeople: 1,
       },
       {
-        _id: '2124', voloppId: '123', userId: '3', numPeople: 1
-      }
+        _id: '2124', voloppId: '123', userId: '3', numPeople: 1,
+      },
     ];
   }
 
@@ -348,12 +348,12 @@ class HttpMock {
     return Promise.resolve({
       Headers: this.headers,
       json: () => Promise.resolve({
-        _id: '123', charityTypeOther: 'tree huggers', charityTypes: ['Home', 'Elderly', 'other'], charityManagers: ['Josh', 'Maria', 'Bob']
-      })
+        _id: '123', charityTypeOther: 'tree huggers', charityTypes: ['Home', 'Elderly', 'other'], charityManagers: ['Josh', 'Maria', 'Bob'],
+      }),
     });
   }
 }
 
 export {
-  RouterStub, ConfigStub, AuthStub, AppStateStub, HttpMock
+  RouterStub, ConfigStub, AuthStub, AppStateStub, HttpMock,
 };

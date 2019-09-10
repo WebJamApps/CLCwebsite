@@ -1,5 +1,5 @@
 const {
-  series, crossEnv, concurrent, rimraf
+  series, crossEnv, concurrent, rimraf,
 } = require('nps-utils');
 const { config: { port: E2E_PORT } } = require('./test/protractor.conf');
 
@@ -11,7 +11,7 @@ module.exports = {
       jest: {
         default: series(
           rimraf('test/coverage-jest'),
-          crossEnv('BABEL_TARGET=node jest')
+          crossEnv('BABEL_TARGET=node jest'),
         ),
         accept: crossEnv('BABEL_TARGET=node jest -u'),
         watch: crossEnv('BABEL_TARGET=node jest --watch'),
@@ -19,46 +19,46 @@ module.exports = {
       karma: {
         default: series(
           rimraf('test/coverage-karma'),
-          'karma start test/karma.conf.js'
+          'karma start test/karma.conf.js',
         ),
         watch: 'karma start test/karma.conf.js --auto-watch --no-single-run',
-        debug: 'karma start test/karma.conf.js --auto-watch --no-single-run --debug'
+        debug: 'karma start test/karma.conf.js --auto-watch --no-single-run --debug',
       },
       lint: {
         default: 'eslint .',
-        fix: 'eslint . --fix'
+        fix: 'eslint . --fix',
       },
       react: {
         default: crossEnv('BABEL_TARGET=node jest --no-cache --config jest.React.json --notify'),
         accept: crossEnv('BABEL_TARGET=node jest -u --no-cache --config jest.React.json --notify --updateSnapshot'),
-        watch: crossEnv('BABEL_TARGET=node jest --watch --no-cache --config jest.React.json --notify')
+        watch: crossEnv('BABEL_TARGET=node jest --watch --no-cache --config jest.React.json --notify'),
       },
       all: concurrent({
         browser: series.nps('test.karma', 'e2e'),
         jest: 'nps test.jest',
-        lint: 'nps test.lint'
-      })
+        lint: 'nps test.lint',
+      }),
     },
     e2e: {
       default: `${concurrent({
         webpack: `webpack-dev-server --inline --port=${E2E_PORT}`,
-        protractor: 'nps e2e.whenReady'
+        protractor: 'nps e2e.whenReady',
       })} --kill-others --success first`,
       protractor: {
         install: 'webdriver-manager update',
         default: series(
           'nps e2e.protractor.install',
-          'protractor test/protractor.conf.js'
+          'protractor test/protractor.conf.js',
         ),
         debug: series(
           'nps e2e.protractor.install',
-          'protractor test/protractor.conf.js --elementExplorer'
-        )
+          'protractor test/protractor.conf.js --elementExplorer',
+        ),
       },
       whenReady: series(
         `wait-on --timeout 120000 http-get://localhost:${E2E_PORT}/index.html`,
-        'nps e2e.protractor'
-      )
+        'nps e2e.protractor',
+      ),
     },
     build: 'nps webpack.build',
     webpack: {
@@ -69,38 +69,38 @@ module.exports = {
         development: {
           default: series(
             'nps webpack.build.before',
-            'webpack --progress -d'
+            'webpack --progress -d',
           ),
           extractCss: series(
             'nps webpack.build.before',
-            'webpack --progress -d --env.extractCss'
+            'webpack --progress -d --env.extractCss',
           ),
           serve: series.nps(
             'webpack.build.development',
-            'serve'
-          )
+            'serve',
+          ),
         },
         production: {
           inlineCss: series(
             'nps webpack.build.before',
-            crossEnv('NODE_ENV=production webpack --progress -p --env.production')
+            crossEnv('NODE_ENV=production webpack --progress -p --env.production'),
           ),
           default: series(
             'nps webpack.build.before',
-            crossEnv('NODE_ENV=production webpack --progress -p --env.production --env.extractCss')
+            crossEnv('NODE_ENV=production webpack --progress -p --env.production --env.extractCss'),
           ),
           serve: series.nps(
             'webpack.build.production',
-            'serve'
-          )
-        }
+            'serve',
+          ),
+        },
       },
       server: {
         default: 'webpack-dev-server -d --inline --env.server',
         extractCss: 'webpack-dev-server -d --inline --env.server --env.extractCss',
-        hmr: 'webpack-dev-server -d --inline --hot --env.server'
-      }
+        hmr: 'webpack-dev-server -d --inline --hot --env.server',
+      },
     },
-    serve: 'node server.js'
-  }
+    serve: 'node server.js',
+  },
 };

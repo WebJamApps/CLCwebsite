@@ -12,7 +12,7 @@ describe('the App module', () => {
       '../static/imgs/ohaf/slideshow3.png',
       '../static/imgs/ohaf/slideshow4.png',
       '../static/imgs/ohaf/slideshow5.png',
-      '../static/imgs/ohaf/slideshow6.png'
+      '../static/imgs/ohaf/slideshow6.png',
     ];
     ps.element = document.getElementById('renderer');
   });
