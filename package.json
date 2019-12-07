@@ -86,7 +86,7 @@
     "babel-loader": "^8.0.0",
     "bluebird": "latest",
     "bootstrap": "latest",
-    "copy-webpack-plugin": "latest",
+    "copy-webpack-plugin": "5.0.5",
     "css-loader": "latest",
     "csvjson": "latest",
     "dotenv": "latest",
