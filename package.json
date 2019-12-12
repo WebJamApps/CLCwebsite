@@ -41,7 +41,7 @@
     "test:stylelint": "stylelint \"src/**/*.html\" && stylelint \"static/**/*.css\"",
     "test:html": "htmlhint src/**/*.html",
     "server:prod": "node server.js",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn run snyk-protect"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -119,7 +119,7 @@
     "react-slick": "latest",
     "redux": "latest",
     "slick-carousel": "latest",
-    "snyk": "^1.230.5",
+    "snyk": "^1.258.2",
     "style-loader": "latest",
     "through2": "^2.0.3",
     "uglify-js": "latest",
